@@ -1,6 +1,8 @@
 import Hero from "./components/Hero";
+import HomeAttractions from "./components/HomeAttractions";
 import HomeIntro from "./components/HomeIntro";
 import HomeLink from "./components/HomeLink";
+import HomeMap from "./components/HomeMap";
 import Navbar from "./components/Navbar";
 
 export default function Home() {
@@ -20,6 +22,8 @@ export default function Home() {
       <Hero />
       <HomeIntro />
       <HomeLink />
+      <HomeAttractions />
+      <HomeMap />
     </div>
   );
 }
