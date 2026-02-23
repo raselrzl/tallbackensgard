@@ -10,7 +10,7 @@ export default function BokningPage() {
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('/b1.jpg')", // change to your image path
+            "url('/bokning.jpg')", // change to your image path
         }}
       />
 

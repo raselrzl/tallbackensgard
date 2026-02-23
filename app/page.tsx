@@ -9,7 +9,6 @@ import Navbar from "./components/Navbar";
 export default function Home() {
   return (
     <div className="relative overflow-hidden">
-
       {/* Shared Background Video */}
       <video
         autoPlay
@@ -24,15 +23,12 @@ export default function Home() {
       {/* Dark overlay for readability */}
       <div className="absolute top-0 left-0 w-full h-225 bg-black/40 -z-10" />
 
-      <Navbar />
-
       {/* Important: remove video from Hero if using shared video */}
       <Hero />
       <HomeIntro />
       <HomeLink />
       <HomeAttractions />
       <HomeMap />
-      <Footer />
     </div>
   );
 }
