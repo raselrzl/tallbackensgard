@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
                 alt="Social logo"
                 width={400}
                 height={400}
-                className="w-60 h-auto"
+                className="w-full h-auto"
               />
             </div>
           </div>
