@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-lg md:text-xl mb-2"
+          className="text-3xl mb-2 font-bold"
         >
           Välkommen till
         </motion.p>
@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-3xl md:text-5xl font-bold leading-tight"
+          className="text-4xl md:text-6xl font-semibold "
         >
           Tallbackens Gård & Vandrarhem
         </motion.h1>

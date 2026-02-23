@@ -57,7 +57,7 @@ export default function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.35 }}
-            className="md:hidden bg-white border-t shadow-md overflow-hidden"
+            className="md:hidden bg-white border-t-4 shadow-md overflow-hidden mx-8"
           >
             <div className="flex flex-col text-center py-8 gap-6 font-semibold text-sm uppercase">
               <Link href="#" onClick={() => setMenuOpen(false)}>
