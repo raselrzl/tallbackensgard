@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full bg-black text-white">
+    <footer className="w-full bg-black text-white px-2">
       <div className="max-w-7xl mx-auto px-6 py-14">
         
         {/* Grid: 1 column mobile / 2 tablet / 4 desktop */}

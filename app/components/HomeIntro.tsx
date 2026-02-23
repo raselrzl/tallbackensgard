@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function HomeIntro() {
   return (
-    <section className="w-full py-16 md:py-20 bg-stone-200 mb-10">
+    <section className="w-full py-16 md:py-20 bg-stone-200 mb-10 px-2">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Title */}

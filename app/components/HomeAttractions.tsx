@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const HomeAttractions: React.FC = () => {
   return (
-    <section className="relative w-full h-120 flex items-center justify-center text-white overflow-hidden">
+    <section className="relative w-full h-120 flex items-center justify-center text-white overflow-hidden px-2">
 
       {/* Background Image */}
       <div
