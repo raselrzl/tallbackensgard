@@ -12,7 +12,7 @@ export default function Home() {
       {/* Shared Background */}
       <div
         className="absolute inset-0 h-225 bg-cover bg-black -z-10"
-        style={{ backgroundImage: "url('/b1.jpg')" }}
+       /*  style={{ backgroundImage: "url('/b1.jpg')" }} */
       />
 
       {/* Dark overlay */}
