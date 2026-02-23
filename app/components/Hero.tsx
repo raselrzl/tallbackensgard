@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/10" />
+      <div className="absolute inset-0 bg-black/20" />
 
       {/* Content */}
       <div className="relative z-10 px-4 max-w-3xl mx-auto flex flex-col items-center">
