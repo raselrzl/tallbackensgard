@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
       /> */}
 
        {/* Background Video */}
-      <video
+   {/*    <video
         autoPlay
         muted
         loop
@@ -20,10 +20,10 @@ const Hero: React.FC = () => {
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src="/homevideo.mp4" type="video/mp4" />
-      </video>
+      </video> */}
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/20" />
+     {/*  <div className="absolute inset-0 bg-black/20" /> */}
 
       {/* Content */}
       <div className="relative z-10 px-4 max-w-3xl mx-auto flex flex-col items-center">

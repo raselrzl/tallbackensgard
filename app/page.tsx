@@ -8,18 +8,25 @@ import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
-    <div className="relative">
-      {/* Shared Background */}
-      <div
-        className="absolute inset-0 h-225 bg-cover bg-black -z-10"
-       /*  style={{ backgroundImage: "url('/b1.jpg')" }} */
-      />
+    <div className="relative overflow-hidden">
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 h-225 bg-black/40 -z-10" />
+      {/* Shared Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute top-0 left-0 w-full h-225 object-cover -z-20"
+      >
+        <source src="/homevideo.mp4" type="video/mp4" />
+      </video>
+
+      {/* Dark overlay for readability */}
+      <div className="absolute top-0 left-0 w-full h-225 bg-black/40 -z-10" />
 
       <Navbar />
 
+      {/* Important: remove video from Hero if using shared video */}
       <Hero />
       <HomeIntro />
       <HomeLink />
