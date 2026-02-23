@@ -57,9 +57,15 @@ export default function Navbar() {
             animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
           />
           <motion.span
-            className="h-0.5 w-5 bg-white rounded"
-            animate={menuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
+            className="h-0.5 w-5 rounded bg-green-600"
+            animate={
+              menuOpen
+                ? { rotate: 45, y: 8, backgroundColor: "#22c55e" } // green
+                : { rotate: 0, y: 0, backgroundColor: "#22c55e" } // white
+            }
+            transition={{ duration: 0.3 }}
           />
+
           <motion.span
             className="h-0.5 w-6 bg-white rounded"
             animate={menuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
