@@ -6,10 +6,21 @@ const Hero: React.FC = () => {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center text-white text-center">
       {/* Background Image */}
-      <div
+    {/*   <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/b1.jpg')" }}
-      />
+      /> */}
+
+       {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/homevideo.mp4" type="video/mp4" />
+      </video>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40" />
