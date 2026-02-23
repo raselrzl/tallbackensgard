@@ -19,7 +19,7 @@ const HomeMap: React.FC = () => {
       </div> */}
 
       {/* Map */}
-      <div className="w-full h-[400px] overflow-hidden">
+      <div className="w-full h-100 overflow-hidden">
         <iframe
           title="Tallbackens Gård Location"
           src={`https://www.google.com/maps?q=${encodeURIComponent(
