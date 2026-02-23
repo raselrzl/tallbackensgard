@@ -12,12 +12,12 @@ export default function HomeIntro() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
-          className="bg-white rounded-2xl p-8 md:p-12"
+          className="bg-white rounded-2xl"
         >
           {/* Title */}
           <h2 className="text-2xl md:text-4xl font-extrabold mb-6 text-left">
             {/* Mobile */}
-            <span className="block md:hidden uppercase">
+            <span className="block md:hidden uppercase pt-8 px-8">
               Tallbackens <br />
               Vandrarhem & <br />
               Apartments
@@ -30,7 +30,7 @@ export default function HomeIntro() {
           </h2>
 
           {/* Green divider */}
-          <div className="w-20 h-1 bg-green-600 mb-8 rounded-full" />
+          <div className="w-20 h-1 bg-green-600 mb-8 mx-8" />
 
           {/* Text */}
           <motion.div
@@ -38,9 +38,9 @@ export default function HomeIntro() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="space-y-6 text-gray-700 text-base md:text-lg leading-relaxed max-w-4xl mx-auto text-left"
+            className="space-y-6 text-gray-700 text-base md:text-lg leading-relaxed max-w-6xl mx-auto text-left"
           >
-            <p className="shadow-lg p-4 md:rounded-2xl">
+            <p className="shadow-lg p-6 md:rounded-2xl text-justify tracking-wide">
               Tallbackens Vandrarhem & Apartments i Svärtinge, strax utanför
               Norrköping, erbjuder bekvämt och prisvärt boende året runt.
               Vandrarhemmet har totalt 60 bäddar fördelade på fyr- och sexbäddsrum,
@@ -48,13 +48,13 @@ export default function HomeIntro() {
               utemöbler.
             </p>
 
-           <p className="shadow-lg p-4 md:rounded-2xl">
+           <p className="shadow-lg p-6 md:rounded-2xl text-justify tracking-wide">
               Vi erbjuder en lugn och familjevänlig miljö med natursköna
               omgivningar, nära Kolmårdens Djurpark, flera golfbanor,
               badplatser och andra populära utflyktsmål.
             </p>
 
-            <p className="shadow-lg p-4 md:rounded-2xl rounded-b-2xl">
+            <p className="shadow-lg p-6 md:rounded-2xl rounded-b-2xl text-justify tracking-wide">
               Utöver vandrarhemmet erbjuder vi fullt utrustade lägenheter på flera
               adresser i och runt Norrköping – ett flexibelt och skräddarsytt
               alternativ för företag, entreprenörer och arbetsgrupper som behöver
