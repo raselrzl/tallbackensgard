@@ -4,7 +4,7 @@ import React from "react";
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative w-full h-150 sm:h-200 flex items-center justify-center text-white mt-20 sm:mt-25">
+    <section className="relative w-full min-h-screen flex items-center justify-center text-white text-center">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -15,7 +15,8 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-black/40" />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-3xl">
+      <div className="relative z-10 px-4 max-w-3xl mx-auto flex flex-col items-center">
+        {/* Subtitle */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -25,33 +26,46 @@ const Hero: React.FC = () => {
           Välkommen till
         </motion.p>
 
+        {/* Title */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-4xl md:text-6xl font-semibold leading-tight"
         >
-          {/* Mobile layout */}
+          {/* Mobile */}
           <span className="block md:hidden">
             Tallbackens <br />
             Gård & <br />
             Vandrarhem
           </span>
 
-          {/* Desktop layout */}
+          {/* Desktop */}
           <span className="hidden md:block whitespace-nowrap">
             Tallbackens Gård & Vandrarhem
           </span>
         </motion.h1>
 
-        <motion.button
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="mt-6 px-6 py-3 bg-white text-black font-medium rounded-lg hover:bg-gray-200 transition"
-        >
-          Boka rum här
-        </motion.button>
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 mt-8 items-center justify-center">
+          <motion.button
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="px-6 py-3 bg-white text-black font-bold rounded-lg hover:bg-gray-200 transition"
+          >
+            Boka rum här
+          </motion.button>
+
+          <motion.button
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="px-6 py-3 bg-white text-black font-bold rounded-lg hover:bg-gray-200 transition"
+          >
+            Boka apartment här
+          </motion.button>
+        </div>
       </div>
 
       {/* Scroll Indicator */}

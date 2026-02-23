@@ -1,14 +1,25 @@
 import Hero from "./components/Hero";
 import HomeIntro from "./components/HomeIntro";
+import HomeLink from "./components/HomeLink";
 import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
-    <div>
+    <div className="relative">
+      {/* Shared Background */}
+      <div
+        className="absolute inset-0 h-225 bg-cover bg-center -z-10"
+        style={{ backgroundImage: "url('/b1.jpg')" }}
+      />
+
+      {/* Dark overlay */}
+      <div className="absolute inset-0 h-225 bg-black/40 -z-10" />
+
       <Navbar />
 
       <Hero />
       <HomeIntro />
+      <HomeLink />
     </div>
   );
 }

@@ -1,26 +1,44 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Detect scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 80); // change after 80px
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="w-full h-20 sm:h-25 shadow-md bg-white fixed top-0 left-0 z-50">
+    <nav
+      className={`w-full h-20 sm:h-24 fixed top-0 left-0 z-50 transition-all duration-300
+      ${
+        scrolled
+          ? "bg-black shadow-md"
+          : "bg-linear-to-b from-black/80 via-black/40 to-transparent"
+      } text-white`}
+    >
       <div className="max-w-7xl mx-auto h-full flex items-center justify-between px-4">
         {/* Logo */}
-       <div className="flex items-center md:pl-10">
-  <Image
-    src="/logo/logo.png"
-    alt="Logo"
-    width={400}
-    height={120}
-    priority
-    className="h-10 w-auto sm:h-12 md:h-14 lg:h-16"
-  />
-</div>
+        <div className="flex items-center md:pl-10">
+          <Image
+            src="/logo/logoc.png"
+            alt="Logo"
+            width={400}
+            height={400}
+            priority
+            className="h-30 w-auto sm:h-40 md:h-48"
+          />
+        </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 font-semibold text-sm uppercase">
@@ -31,42 +49,35 @@ export default function Navbar() {
 
         {/* Mobile Menu Icon */}
         <div
-          className="md:hidden w-10 h-5 flex flex-col justify-between items-end cursor-pointer"
+          className="md:hidden w-8 h-4 flex flex-col justify-between items-end cursor-pointer"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          {/* Middle line (longest) */}
           <motion.span
-            className="h-0.75 w-8 bg-black rounded"
+            className="h-0.5 w-7 bg-white rounded"
             animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
-            transition={{ duration: 0.3 }}
           />
-          {/* Top line (shorter) */}
           <motion.span
-            className="h-0.75 w-5 bg-black rounded"
+            className="h-0.5 w-5 bg-white rounded"
             animate={menuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
-            transition={{ duration: 0.3 }}
           />
-
-          {/* Bottom line (medium) */}
           <motion.span
-            className="h-0.75 w-6.5 bg-black rounded"
+            className="h-0.5 w-6 bg-white rounded"
             animate={menuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
-            transition={{ duration: 0.3 }}
           />
         </div>
       </div>
 
-      {/* Animated Mobile Dropdown */}
+      {/* Mobile Dropdown */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.35 }}
-            className="md:hidden bg-white border-t-4 shadow-md overflow-hidden mx-8"
+            transition={{ duration: 0.3 }}
+            className="md:hidden bg-black overflow-hidden mx-8 border-t-4"
           >
-            <div className="flex flex-col text-center py-8 gap-6 font-semibold text-sm uppercase">
+            <div className="flex flex-col text-center py-6 gap-6 font-semibold text-sm uppercase">
               <Link href="#" onClick={() => setMenuOpen(false)}>
                 Våra rum
               </Link>
