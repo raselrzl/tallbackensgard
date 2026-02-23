@@ -29,7 +29,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto h-full flex items-center justify-between px-6">
         {/* Logo */}
-        <div className="flex items-center md:pl-10">
+        <Link href="/" className="flex items-center md:pl-10">
           <Image
             src="/logo/logoc.png"
             alt="Logo"
@@ -38,7 +38,7 @@ export default function Navbar() {
             priority
             className="h-30 w-auto sm:h-40 md:h-48"
           />
-        </div>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 font-semibold text-sm uppercase">
