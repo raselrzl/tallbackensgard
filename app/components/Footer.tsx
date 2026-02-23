@@ -97,9 +97,9 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-gray-800 text-center py-4 text-sm text-gray-500">
+   {/*    <div className="border-t border-gray-800 text-center py-4 text-sm text-gray-500">
         © {new Date().getFullYear()} Tallbackens Gård & Vandrarhem
-      </div>
+      </div> */}
     </footer>
   );
 };
