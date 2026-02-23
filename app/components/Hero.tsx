@@ -4,7 +4,7 @@ import React from "react";
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative w-full h-150 sm:h-200 flex items-center justify-center text-white mt-25">
+    <section className="relative w-full h-150 sm:h-200 flex items-center justify-center text-white mt-20 sm:mt-25">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
