@@ -24,7 +24,7 @@ export default function HomeIntro() {
             </span>
 
             {/* Desktop */}
-            <span className="hidden md:block whitespace-nowrap uppercase">
+            <span className="hidden md:block whitespace-nowrap uppercase md:pl-6">
               Tallbackens Vandrarhem & Apartments
             </span>
           </h2>
@@ -38,9 +38,9 @@ export default function HomeIntro() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="space-y-6 text-gray-700 text-base md:text-lg leading-relaxed max-w-6xl mx-auto text-left"
+            className="space-y-6 text-gray-700 text-base md:text-lg leading-relaxed max-w-5xl mx-auto text-left px-4"
           >
-            <p className="shadow-lg p-6 md:rounded-2xl text-justify tracking-wide">
+            <p className="shadow-lg p-6 md:rounded-2xl text-justify tracking-wide bg-green-50">
               Tallbackens Vandrarhem & Apartments i Svärtinge, strax utanför
               Norrköping, erbjuder bekvämt och prisvärt boende året runt.
               Vandrarhemmet har totalt 60 bäddar fördelade på fyr- och sexbäddsrum,
@@ -48,13 +48,13 @@ export default function HomeIntro() {
               utemöbler.
             </p>
 
-           <p className="shadow-lg p-6 md:rounded-2xl text-justify tracking-wide">
+           <p className="shadow-lg p-6 md:rounded-2xl text-justify tracking-wide bg-green-50">
               Vi erbjuder en lugn och familjevänlig miljö med natursköna
               omgivningar, nära Kolmårdens Djurpark, flera golfbanor,
               badplatser och andra populära utflyktsmål.
             </p>
 
-            <p className="shadow-lg p-6 md:rounded-2xl rounded-b-2xl text-justify tracking-wide">
+            <p className="shadow-lg p-6 md:rounded-2xl rounded-b-2xl text-justify tracking-wide bg-green-50">
               Utöver vandrarhemmet erbjuder vi fullt utrustade lägenheter på flera
               adresser i och runt Norrköping – ett flexibelt och skräddarsytt
               alternativ för företag, entreprenörer och arbetsgrupper som behöver
