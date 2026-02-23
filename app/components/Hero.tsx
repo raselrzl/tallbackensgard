@@ -5,7 +5,6 @@ import React from "react";
 const Hero: React.FC = () => {
   return (
     <section className="relative w-full h-150 sm:h-200 flex items-center justify-center text-white mt-25">
-      
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -21,7 +20,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl mb-2 font-bold"
+          className="text-xl md:text-2xl mb-2 font-bold"
         >
           Välkommen till
         </motion.p>
@@ -30,9 +29,19 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl font-semibold "
+          className="text-4xl md:text-6xl font-semibold leading-tight"
         >
-          Tallbackens Gård & Vandrarhem
+          {/* Mobile layout */}
+          <span className="block md:hidden">
+            Tallbackens <br />
+            Gård & <br />
+            Vandrarhem
+          </span>
+
+          {/* Desktop layout */}
+          <span className="hidden md:block whitespace-nowrap">
+            Tallbackens Gård & Vandrarhem
+          </span>
         </motion.h1>
 
         <motion.button
