@@ -11,7 +11,7 @@ const links = [
 
 const HomeLink: React.FC = () => {
   return (
-    <section className="w-full py-16 md:py-20 bg-white">
+    <section className="w-full py-20 sm:py-30 bg-white">
       <div className="max-w-7xl mx-auto px-8 sm:px-6">
 
         {/* Grid */}
