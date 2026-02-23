@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import HomeAttractions from "./components/HomeAttractions";
 import HomeIntro from "./components/HomeIntro";
@@ -24,6 +25,7 @@ export default function Home() {
       <HomeLink />
       <HomeAttractions />
       <HomeMap />
+      <Footer />
     </div>
   );
 }
