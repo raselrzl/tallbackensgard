@@ -27,7 +27,7 @@ export default function Navbar() {
           : "bg-linear-to-b from-black/80 via-black/40 to-transparent"
       } text-white`}
     >
-      <div className="max-w-7xl mx-auto h-full flex items-center justify-between px-4">
+      <div className="max-w-7xl mx-auto h-full flex items-center justify-between px-6">
         {/* Logo */}
         <div className="flex items-center md:pl-10">
           <Image
