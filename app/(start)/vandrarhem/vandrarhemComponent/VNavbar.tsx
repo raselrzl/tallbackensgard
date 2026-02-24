@@ -84,13 +84,13 @@ export default function VNavbar() {
             className="md:hidden bg-black overflow-hidden mx-8 border-t-4 border-green-600"
           >
             <div className="flex flex-col text-center py-6 gap-6 font-semibold text-sm uppercase">
-              <Link href="#" onClick={() => setMenuOpen(false)}>
+              <Link href="/vandrarhem/vara-rum" onClick={() => setMenuOpen(false)}>
                 Våra rum
               </Link>
-              <Link href="#" onClick={() => setMenuOpen(false)}>
+              <Link href="/vandrarhem/bokning" onClick={() => setMenuOpen(false)}>
                 Bokning
               </Link>
-              <Link href="#" onClick={() => setMenuOpen(false)}>
+              <Link href="/vandrarhem/kontakta-oss" onClick={() => setMenuOpen(false)}>
                 Kontakta oss
               </Link>
             </div>
