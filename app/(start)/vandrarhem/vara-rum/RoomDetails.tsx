@@ -96,7 +96,7 @@ export default function RoomDetails() {
     ${i % 2 === 0 ? "bg-[#47d7ac]/20" : "bg-[#47d7ac]/10"} hover:bg-[#47d7ac]/30 transition`}
                   >
                     <div className="flex items-center gap-2 text-black">
-                      <User className="w-4 h-4 text-[#047d66]" />
+                      <User className="w-4 h-4 text-black" />
                       <span>{p.persons}</span>
                     </div>
                     <p className="font-bold text-black">{p.price}<span className="text-gray-600 text-[8px] pl-2">Kr/Natt</span> </p>
