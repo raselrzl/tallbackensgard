@@ -31,13 +31,13 @@ export default function HomeIntro() {
 
             {/* Desktop - New style */}
           {/*   <span className="hidden md:flex flex-col md:flex-row md:items-center md:gap-6 uppercase md:pl-6">
-              <span className="text-green-600">Tallbackens</span>
+              <span className="text-[#47d7ac]">Tallbackens</span>
               <span className="text-gray-800">Vandrarhem & Apartments</span>
             </span> */}
           </h2>
 
           {/* Green divider */}
-          {/* <div className="w-20 h-1 bg-green-600 mb-8 mx-8 md:mx-6" /> */}
+          {/* <div className="w-20 h-1 bg-[#47d7ac] mb-8 mx-8 md:mx-6" /> */}
 
           {/* Text */}
           <motion.div

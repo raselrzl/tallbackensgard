@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function Navbar() {
+export default function VNavbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -41,11 +41,11 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Menu */}
-      {/*   <div className="hidden md:flex gap-8 font-semibold text-sm uppercase">
-          <Link href="#">Våra rum</Link>
-          <Link href="#">Bokning</Link>
-          <Link href="#">Kontakta oss</Link>
-        </div> */}
+        <div className="hidden md:flex gap-8 font-semibold text-sm uppercase">
+          <Link href="/vandrarhem/vara-rum">Våra rum</Link>
+          <Link href="/vandrarhem/bokning">Bokning</Link>
+          <Link href="/vandrarhem/kontakta-oss">Kontakta oss</Link>
+        </div>
 
         {/* Mobile Menu Icon */}
         <div
@@ -57,7 +57,7 @@ export default function Navbar() {
             animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
           />
           <motion.span
-            className="h-0.5 w-5 rounded bg-[#47d7ac]"
+            className="h-0.5 w-5 rounded bg-green-600"
             animate={
               menuOpen
                 ? { rotate: 45, y: 8, backgroundColor: "#22c55e" } // green
@@ -81,7 +81,7 @@ export default function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-black overflow-hidden mx-8 border-t-4 border-[#47d7ac]"
+            className="md:hidden bg-black overflow-hidden mx-8 border-t-4 border-green-600"
           >
             <div className="flex flex-col text-center py-6 gap-6 font-semibold text-sm uppercase">
               <Link href="#" onClick={() => setMenuOpen(false)}>

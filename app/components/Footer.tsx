@@ -1,4 +1,5 @@
 "use client";
+import { Link } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -125,9 +126,9 @@ const Footer: React.FC = () => {
               Tallbackens Gård & Vandrarhem drivs av Centralis Group Invest AB.
             </p>
 
-            <p className="block text-sm text-gray-300 underline hover:text-white transition mb-4">
+            <Link href="/vandrarhem/privacy-policy" className="block text-sm text-gray-300 underline hover:text-white transition mb-4">
               GDPR / Integritetspolicy
-            </p>
+            </Link>
           </div>
         </div>
       </div>

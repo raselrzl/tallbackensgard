@@ -33,7 +33,7 @@ export default function ScrollToTop() {
           transition={{ duration: 0.3 }}
           className="fixed bottom-6 right-6 z-50
                      w-8 h-8 sm:w-10 sm:h-10 rounded-full
-                     bg-green-600
+                     bg-[#47d7ac]
                      flex items-center justify-center
                      shadow-lg hover:bg-green-700"
         >

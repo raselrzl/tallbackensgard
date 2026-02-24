@@ -70,7 +70,7 @@ const HomeAttractions: React.FC = () => {
                 transition={{ delay: index * 0.1 }}
                 className="flex items-center gap-3 justify-center sm:justify-center"
               >
-                <Icon size={22} className="text-green-600 shrink-0" />
+                <Icon size={22} className="text-[#47d7ac] shrink-0" />
                 <span className="text-sm sm:text-base md:text-lg">
                   {item.text}
                 </span>
