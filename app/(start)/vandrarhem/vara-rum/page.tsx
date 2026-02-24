@@ -1,16 +1,15 @@
 "use client";
 import { motion } from "framer-motion";
+import RoomDetails from "./RoomDetails";
 
 export default function VaraRumPage() {
   return (
-    <section className="relative w-full h-100 flex items-center justify-center overflow-hidden">
-      
+    <><section className="relative w-full h-100 flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage:
-            "url('/vara-rum1.jpg')", // change to your image path
+          backgroundImage: "url('/vara-rum1.jpg')", // change to your image path
         }}
       />
 
@@ -32,5 +31,8 @@ export default function VaraRumPage() {
         <div className="w-24 h-1 bg-[#47d7ac] mx-auto mt-6" />
       </motion.div>
     </section>
+    <RoomDetails />
+    </>
+    
   );
 }
