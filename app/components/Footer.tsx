@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
               Tallbackens Gård & Vandrarhem
             </p>
             <p className="text-sm text-gray-300 leading-relaxed">
-              <br />
+              
               Finspångsvägen 497 <br />
               605 80 Svärtinge
             </p>
