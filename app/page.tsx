@@ -20,7 +20,7 @@ export default function HomePage() {
           width={400}
           height={400}
           priority
-          className="h-30 md:h-60 w-auto"
+          className="h-40 md:h-60 w-auto"
         />
       </Link>
 
