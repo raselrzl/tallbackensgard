@@ -49,7 +49,7 @@ export default function RoomDetails() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col md:flex-row rounded-md shadow-lg hover:shadow-2xl transition overflow-hidden bg-white"
+            className="flex flex-col md:flex-row rounded-md shadow-lg hover:shadow-2xl transition overflow-hidden bg-gray-100"
           >
             {/* Left: Image */}
             <div className="relative md:w-1/2 min-h-64 md:h-auto">
@@ -60,7 +60,7 @@ export default function RoomDetails() {
               />
               <div className="absolute inset-0 bg-black/25" />
               {/* Room Title */}
-              <h3 className="absolute bottom-4 left-4 text-white text-2xl font-bold z-10">
+              <h3 className="absolute bottom-4 uppercase left-4 text-white text-2xl font-bold z-10">
                 {room.title}
               </h3>
               {/* Amenities */}
@@ -79,7 +79,7 @@ export default function RoomDetails() {
             </div>
 
             {/* Right: Prices */}
-            <div className="md:w-1/2 p-6 bg-stone-50 flex flex-col justify-start">
+            <div className="md:w-1/2 p-6 bg-gray-50 flex flex-col justify-start">
               <h4 className="text-gray-800 font-semibold mb-2 text-lg md:text-right">
                 Pris per person
               </h4>
