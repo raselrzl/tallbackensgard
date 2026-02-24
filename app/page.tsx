@@ -17,7 +17,7 @@ export default function Home() {
         playsInline
         className="absolute top-0 left-0 w-full h-225 object-cover -z-20 bg-black"
       >
-        <source src="/promo-video.mp4" type="video/mp4" />
+        <source src="/promo.mp4" type="video/mp4" />
       </video>
 
       {/* Dark overlay for readability */}
