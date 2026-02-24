@@ -1,17 +1,9 @@
 import type { Metadata } from "next";
-import { Poppins, Syncopate } from "next/font/google"; // <-- import Syncopate
+import { Syncopate } from "next/font/google"; // <-- import Syncopate
 import "./globals.css";
 import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
-// Poppins font
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-poppins",
-  display: "swap",
-});
 
 // Syncopate font
 const syncopate = Syncopate({
