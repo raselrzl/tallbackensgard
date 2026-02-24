@@ -59,15 +59,15 @@ const Hero: React.FC = () => {
 
         {/* Buttons */}
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 mt-140 mr-8 items-center justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 mt-170 mr-8 items-center justify-center">
           <motion.button
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="px-6 py-3 bg-white text-black font-bold rounded-lg hover:bg-gray-200 transition"
-          >
-            Boka rum här
-          </motion.button>
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+  className="px-6 py-3 font-bold rounded-lg text-white bg-gradient-to-r from-[#47d7ac] to-[#6ba4b8] hover:from-[#6ba4b8] hover:to-[#47d7ac] transition-all"
+>
+  Vandrarhem
+</motion.button>
 
           <motion.button
             initial={{ opacity: 0, y: 40 }}
@@ -75,13 +75,13 @@ const Hero: React.FC = () => {
             transition={{ duration: 1 }}
             className="px-6 py-3 bg-white text-black font-bold rounded-lg hover:bg-gray-200 transition"
           >
-            Boka apartment här
+            Apartment
           </motion.button>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div
+  {/*     <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 10, 0] }}
         transition={{ duration: 1.5, repeat: Infinity }}
@@ -90,7 +90,7 @@ const Hero: React.FC = () => {
         <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
           <div className="w-1 h-2 bg-white mt-2 rounded" />
         </div>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 };

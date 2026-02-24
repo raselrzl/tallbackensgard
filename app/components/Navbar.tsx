@@ -41,11 +41,11 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex gap-8 font-semibold text-sm uppercase">
+      {/*   <div className="hidden md:flex gap-8 font-semibold text-sm uppercase">
           <Link href="#">Våra rum</Link>
           <Link href="#">Bokning</Link>
           <Link href="#">Kontakta oss</Link>
-        </div>
+        </div> */}
 
         {/* Mobile Menu Icon */}
         <div
