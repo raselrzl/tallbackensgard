@@ -77,16 +77,25 @@ const Footer: React.FC = () => {
 
             <p className="text-sm text-gray-400 leading-relaxed">
               Företags- och föreningsbokningar kan inte göras via hemsidan.
-              Vänligen kontakta oss direkt.
+            </p>
+            <p className="text-sm text-gray-400 leading-relaxed">
+              Vänligen kontakta oss direkt för att genomföra er bokning.
             </p>
 
             <p className="mt-4 text-sm text-gray-400 leading-relaxed">
-              Avbokning: <br />
-              7+ nätter: 5 dagar före ankomst. <br />
-              Kortare vistelser: 2 dagar före ankomst. <br />
-              Senare avbokning debiteras fullt.
+              Avbokning för företag:
+              <br />
+              För vistelser om 7 nätter eller fler krävs avbokning senast 5
+              dagar före ankomst för full återbetalning.
+            </p>
+            <p className="text-sm text-gray-400 leading-relaxed">
+              För vistelser kortare än 7 nätter gäller avbokning senast 2 dagar
+              före ankomst.
             </p>
 
+            <p className="mt-4 text-sm text-gray-400 leading-relaxed">
+              Vid senare avbokning debiteras hela vistelsen.
+            </p>
             <p className="mt-2 text-sm text-gray-400">
               Avbokning via e-post till{" "}
               <a
@@ -95,6 +104,10 @@ const Footer: React.FC = () => {
               >
                 info@tallbackensgard.se
               </a>
+            </p>
+            <p className="mt-4 text-sm text-gray-400 leading-relaxed">
+              Avbokningar som inkommer efter kl. 16:00 behandlas nästkommande
+              arbetsdag.
             </p>
           </div>
 
