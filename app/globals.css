@@ -4,13 +4,6 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-
-  /* Font variable ready for Julius Sans One */
-  --font-julius: 'Julius Sans One', sans-serif;
-
-  /* Default fonts */
-  --font-sans: Arial, Helvetica, sans-serif;
-  --font-mono: monospace;
 }
 
 /* Dark mode */
@@ -21,17 +14,17 @@
   }
 }
 
-/* Tailwind theme variables (if using @theme inline) */
+/* Tailwind theme variables (if using @theme) */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans); /* default to sans-serif */
-  --font-mono: var(--font-mono);
+  --font-sans: var(--font-julius); /* Use Julius Sans One here */
+  --font-mono: var(--font-geist-mono);
 }
 
-/* Apply default sans-serif globally */
+/* Apply the font to the body */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-julius), Arial, Helvetica, sans-serif;
 }
