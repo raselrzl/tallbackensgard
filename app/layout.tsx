@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Poppins, Syncopate } from "next/font/google"; // <-- import Syncopate
+import { Julius_Sans_One } from "next/font/google"; // <-- import Julius Sans One
 import "./globals.css";
 import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-// Syncopate font
-const syncopate = Syncopate({
+// Julius Sans One font (only 400 weight available)
+const julius = Julius_Sans_One({
   subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-syncopate",
+  weight: "400", // only 400 is supported
+  variable: "--font-julius",
   display: "swap",
 });
 
@@ -25,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${syncopate.variable} antialiased`}>
+      <body className={`${julius.variable} antialiased`}>
         <Navbar />
         {children}
         <Footer />
