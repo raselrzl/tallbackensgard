@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Syncopate } from "next/font/google"; // <-- import Syncopate
+import { Poppins, Syncopate } from "next/font/google"; // <-- import Syncopate
 import "./globals.css";
 import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
