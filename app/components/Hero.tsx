@@ -59,29 +59,29 @@ const Hero: React.FC = () => {
 
         {/* Buttons */}
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 mt-170 mr-8 items-center justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 mt-120 mr-8 items-center justify-center">
           <motion.button
-  initial={{ opacity: 0, y: 40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1 }}
-  className="px-6 py-3 uppercase rounded-lg text-white bg-linear-to-r from-[#47d7ac] to-[#6ba4b8] hover:from-[#6ba4b8] hover:to-[#47d7ac] transition-all"
->
-  Vandrarhem
-</motion.button>
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="px-6 py-3 uppercase rounded-lg text-white bg-linear-to-r from-[#47d7ac] to-[#6ba4b8] hover:from-[#6ba4b8] hover:to-[#47d7ac] transition-all tracking-widest"
+          >
+            Vandrarhem
+          </motion.button>
 
           <motion.button
-  initial={{ opacity: 0, y: 40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1 }}
-  className="px-6 py-3 uppercase rounded-lg text-white bg-linear-to-r from-[#47d7ac] to-[#6ba4b8] hover:from-[#6ba4b8] hover:to-[#47d7ac] transition-all"
->
-  Apartments
-</motion.button>
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="px-6 py-3 uppercase rounded-lg text-white bg-linear-to-r from-[#47d7ac] to-[#6ba4b8] hover:from-[#6ba4b8] hover:to-[#47d7ac] transition-all"
+          >
+            Apartments
+          </motion.button>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-  {/*     <motion.div
+      {/*     <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 10, 0] }}
         transition={{ duration: 1.5, repeat: Infinity }}
