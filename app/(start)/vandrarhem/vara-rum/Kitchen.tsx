@@ -5,7 +5,7 @@ import { Utensils, Refrigerator, Snowflake, CookingPot } from "lucide-react";
 
 export default function Kitchen() {
   return (
-    <section className="relative w-full h-[650px] flex items-center justify-center font-inter">
+    <section className="relative w-full h-140 md:h-110 flex items-center justify-center font-inter overflow-hidden">
       
       {/* Background Image */}
       <img
@@ -15,7 +15,7 @@ export default function Kitchen() {
       />
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-black/70" />
 
       {/* Content */}
       <motion.div
@@ -25,11 +25,11 @@ export default function Kitchen() {
         transition={{ duration: 0.8 }}
         className="relative z-10 max-w-4xl text-center px-6"
       >
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <h2 className="text-2xl md:text-4xl font-bold text-white mb-6">
           Våra kök
         </h2>
 
-        <p className="text-gray-200 mb-10 leading-relaxed text-lg">
+        <p className="text-gray-200 mb-10 leading-relaxed text-md md:text-lg">
           På <span className="font-semibold text-white">
             Tallbackens Gård & Vandrarhem
           </span>{" "}
@@ -39,7 +39,7 @@ export default function Kitchen() {
         </p>
 
         {/* Features */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4">
           <Feature icon={<CookingPot className="w-5 h-5" />} text="Diskmaskin" />
           <Feature icon={<Refrigerator className="w-5 h-5" />} text="Kylskåp" />
           <Feature icon={<Snowflake className="w-5 h-5" />} text="Frys" />
