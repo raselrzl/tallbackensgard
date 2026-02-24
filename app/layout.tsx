@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* Include both font variables */}
-      <body className={` ${julius.variable} antialiased`}>
+      <body className={`${syncopate.variable} ${julius.variable} antialiased`}>
         <Navbar />
         {children}
         <Footer />
