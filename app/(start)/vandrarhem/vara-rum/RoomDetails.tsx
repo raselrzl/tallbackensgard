@@ -64,17 +64,17 @@ export default function RoomDetails() {
                 {room.title}
               </h3>
               <div className="absolute top-4 right-0 flex flex-col gap-1 z-10">
-  {room.amenities.map((amenity, i) => (
-    <motion.div
-      key={i}
-      whileHover={{ y: -2 }}
-      className="flex items-center gap-1 bg-[#47d7ac]/80 px-2 py-1 rounded-l-full text-white text-xs font-medium shadow"
-    >
-      {amenityIcons[amenity as Amenity]}
-      <span>{amenity}</span>
-    </motion.div>
-  ))}
-</div>
+                {room.amenities.map((amenity, i) => (
+                  <motion.div
+                    key={i}
+                    whileHover={{ y: -2 }}
+                    className="flex items-center gap-1 bg-[#47d7ac]/80 px-2 py-1 rounded-l-full text-white text-xs font-medium shadow"
+                  >
+                    {amenityIcons[amenity as Amenity]}
+                    <span>{amenity}</span>
+                  </motion.div>
+                ))}
+              </div>
             </div>
 
             {/* Right: Prices */}
@@ -98,7 +98,12 @@ export default function RoomDetails() {
                       <User className="w-4 h-4 text-black" />
                       <span>{p.persons}</span>
                     </div>
-                    <p className="font-bold text-black">{p.price}<span className="text-gray-600 text-[8px] pl-2">Kr/Natt</span> </p>
+                    <p className="font-bold text-black">
+                      {p.price}
+                      <span className="text-gray-600 text-[8px] pl-2">
+                        Kr/Natt
+                      </span>{" "}
+                    </p>
                   </motion.div>
                 ))}
               </div>
