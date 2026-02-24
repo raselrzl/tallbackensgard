@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import RoomDetails from "./RoomDetails";
 import Kitchen from "./Kitchen";
+import Lounge from "./Lounge";
+import WifiSection from "./Wifi";
 
 export default function VaraRumPage() {
   return (
@@ -34,6 +36,8 @@ export default function VaraRumPage() {
     </section>
     <RoomDetails />
     <Kitchen />
+    <Lounge />
+    <WifiSection />
     </>
     
   );
