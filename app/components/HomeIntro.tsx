@@ -23,14 +23,15 @@ export default function HomeIntro() {
               Apartments
             </span>
 
-            {/* Desktop */}
-            <span className="hidden md:block whitespace-nowrap uppercase md:pl-6">
-              Tallbackens Vandrarhem & Apartments
+            {/* Desktop - New style */}
+            <span className="hidden md:flex flex-col md:flex-row md:items-center md:gap-6 uppercase md:pl-6">
+              <span className="text-green-600">Tallbackens</span>
+              <span className="text-gray-800">Vandrarhem & Apartments</span>
             </span>
           </h2>
 
           {/* Green divider */}
-          <div className="w-20 h-1 bg-green-600 mb-8 mx-8" />
+          <div className="w-20 h-1 bg-green-600 mb-8 mx-8 md:mx-6" />
 
           {/* Text */}
           <motion.div
@@ -38,29 +39,46 @@ export default function HomeIntro() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="space-y-6 text-gray-700 text-base md:text-lg leading-relaxed max-w-5xl mx-auto text-left px-4"
+            className="space-y-8 text-gray-700 text-base md:text-lg leading-relaxed max-w-6xl mx-auto text-left px-4 md:px-6"
           >
-            <p className="shadow-lg p-6 md:rounded-2xl text-justify tracking-wide">
-              Tallbackens Vandrarhem & Apartments i Svärtinge, strax utanför
-              Norrköping, erbjuder bekvämt och prisvärt boende året runt.
-              Vandrarhemmet har totalt 60 bäddar fördelade på fyr- och sexbäddsrum,
-              alla med egen dusch och WC samt direkt utgång till uteplats med egna
-              utemöbler.
-            </p>
+            {/* Card-style layout for desktop */}
+            <div className="shadow-lg md:flex md:gap-6 md:rounded-2xl overflow-hidden">
+              <div className="md:w-1/3 bg-green-100 p-6 flex items-center justify-center">
+                {/* Optional image or icon */}
+                <span className="font-bold text-green-700 text-lg">Vandrarhem</span>
+              </div>
+              <div className="md:w-2/3 p-6 text-justify">
+                Tallbackens Vandrarhem & Apartments i Svärtinge, strax utanför
+                Norrköping, erbjuder bekvämt och prisvärt boende året runt.
+                Vandrarhemmet har totalt 60 bäddar fördelade på fyr- och sexbäddsrum,
+                alla med egen dusch och WC samt direkt utgång till uteplats med egna
+                utemöbler.
+              </div>
+            </div>
 
-           <p className="shadow-lg p-6 md:rounded-2xl text-justify tracking-wide">
-              Vi erbjuder en lugn och familjevänlig miljö med natursköna
-              omgivningar, nära Kolmårdens Djurpark, flera golfbanor,
-              badplatser och andra populära utflyktsmål.
-            </p>
+            <div className="shadow-lg md:flex md:flex-row-reverse md:gap-6 md:rounded-2xl overflow-hidden">
+              <div className="md:w-1/3 bg-green-100 p-6 flex items-center justify-center">
+                <span className="font-bold text-green-700 text-lg">Natur & Utflykter</span>
+              </div>
+              <div className="md:w-2/3 p-6 text-justify">
+                Vi erbjuder en lugn och familjevänlig miljö med natursköna
+                omgivningar, nära Kolmårdens Djurpark, flera golfbanor,
+                badplatser och andra populära utflyktsmål.
+              </div>
+            </div>
 
-            <p className="shadow-lg p-6 md:rounded-2xl rounded-b-2xl text-justify tracking-wide">
-              Utöver vandrarhemmet erbjuder vi fullt utrustade lägenheter på flera
-              adresser i och runt Norrköping – ett flexibelt och skräddarsytt
-              alternativ för företag, entreprenörer och arbetsgrupper som behöver
-              bekvämt och självständigt boende under projekt eller längre
-              arbetsuppdrag.
-            </p>
+            <div className="shadow-lg md:flex md:gap-6 md:rounded-2xl overflow-hidden">
+              <div className="md:w-1/3 bg-green-100 p-6 flex items-center justify-center">
+                <span className="font-bold text-green-700 text-lg">Lägenheter</span>
+              </div>
+              <div className="md:w-2/3 p-6 text-justify">
+                Utöver vandrarhemmet erbjuder vi fullt utrustade lägenheter på flera
+                adresser i och runt Norrköping – ett flexibelt och skräddarsytt
+                alternativ för företag, entreprenörer och arbetsgrupper som behöver
+                bekvämt och självständigt boende under projekt eller längre
+                arbetsuppdrag.
+              </div>
+            </div>
           </motion.div>
         </motion.div>
       </div>
