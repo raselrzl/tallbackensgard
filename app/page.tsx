@@ -12,7 +12,7 @@ export default function HomePage() {
       {/* Logo - top center */}
       <Link
         href="/"
-        className="absolute top-5 left-1/2 transform -translate-x-1/2 z-20"
+        className="absolute -top-8 left-1/2 transform -translate-x-1/2 z-20"
       >
         <Image
           src="/logo/logoc.png"
@@ -39,13 +39,13 @@ export default function HomePage() {
       <div className="absolute top-0 left-0 w-full h-full bg-black/40" />
 
       {/* Hero Buttons at bottom center */}
-      <section className="relative w-full h-screen flex items-end justify-center text-white text-center z-10 pb-12">
+      <section className="relative w-full h-screen flex items-end justify-center text-white text-center z-10 pb-12 md:pb-28">
         <div className="flex flex-col sm:flex-row gap-4">
           <motion.button
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="px-6 py-3 min-w-48 uppercase rounded-lg text-white bg-linear-to-r from-[#47d7ac] to-[#6ba4b8] hover:from-[#6ba4b8] hover:to-[#47d7ac] transition-all tracking-widest font-julius"
+            className="px-3 py-2 min-w-48 uppercase rounded text-white bg-linear-to-r from-[#47d7ac] to-[#6ba4b8] hover:from-[#6ba4b8] hover:to-[#47d7ac] transition-all tracking-widest font-syncopate"
           >
             Vandrarhem
           </motion.button>
@@ -54,7 +54,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="px-6 py-3 min-w-48 uppercase rounded-lg text-white bg-linear-to-r from-[#47d7ac] to-[#6ba4b8] hover:from-[#6ba4b8] hover:to-[#47d7ac] transition-all font-julius"
+            className="px-3 py-2 min-w-48 uppercase rounded text-white bg-linear-to-r from-[#47d7ac] to-[#6ba4b8] hover:from-[#6ba4b8] hover:to-[#47d7ac] transition-all font-syncopate"
           >
             Apartments
           </motion.button>

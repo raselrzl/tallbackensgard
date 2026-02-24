@@ -29,7 +29,7 @@ export default function BokningPage() {
         </h1>
 
         {/* Elegant Divider */}
-        <div className="w-24 h-1 bg-green-600 mx-auto mt-6" />
+        <div className="w-24 h-1 bg-[#47d7ac] mx-auto mt-6" />
       </motion.div>
     </section>
   );

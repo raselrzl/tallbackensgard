@@ -1,9 +1,10 @@
+// app/layout.tsx
 import type { Metadata } from "next";
-import { Julius_Sans_One, Syncopate } from "next/font/google"; // import both
+import { Julius_Sans_One, Syncopate, Inter } from "next/font/google";
 import VNavbar from "./vandrarhemComponent/VNavbar";
 import Footer from "@/app/components/Footer";
 
-// Julius Sans One (for button)
+// Fonts
 export const julius = Julius_Sans_One({
   subsets: ["latin"],
   weight: "400",
@@ -11,11 +12,17 @@ export const julius = Julius_Sans_One({
   display: "swap",
 });
 
-// Syncopate (for global text)
 export const syncopate = Syncopate({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--font-syncopate",
+  display: "swap",
+});
+
+export const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -30,13 +37,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      {/* Include both font variables */}
-      <body className={`${syncopate.variable} ${julius.variable} antialiased`}>
-        <VNavbar />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <>
+      <VNavbar />
+      {children}
+      <Footer />
+    </>
   );
 }

@@ -6,13 +6,13 @@ const Hero: React.FC = () => {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center text-white text-center">
       {/* Background Image */}
-        <div
+      <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/b1.jpg')" }}
       />
 
       {/* Background Video */}
-         <video
+      <video
         autoPlay
         muted
         loop
@@ -28,11 +28,11 @@ const Hero: React.FC = () => {
       {/* Content */}
       <div className="relative z-10 px-4 max-w-3xl mx-auto flex flex-col items-center">
         {/* Subtitle */}
-         <motion.p
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-xl md:text-2xl mb-2 font-bold"
+          className="text-xl md:text-2xl mb-2 font-bold font-julius"
         >
           Välkommen till
         </motion.p>
@@ -45,23 +45,21 @@ const Hero: React.FC = () => {
           className="text-4xl md:text-6xl font-semibold leading-tight"
         >
           {/* Mobile */}
-          <span className="block md:hidden">
+          <span className="block md:hidden font-julius">
             Tallbackens <br />
             Gård & <br />
             Vandrarhem
           </span>
 
           {/* Desktop */}
-           <span className="hidden md:block whitespace-nowrap">
+          <span className="hidden md:block whitespace-nowrap font-julius">
             Tallbackens Gård & Vandrarhem
           </span>
         </motion.h1>
-
-    
       </div>
 
       {/* Scroll Indicator */}
-          <motion.div
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 10, 0] }}
         transition={{ duration: 1.5, repeat: Infinity }}

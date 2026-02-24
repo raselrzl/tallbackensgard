@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Julius_Sans_One, Syncopate } from "next/font/google"; // import both
+import { Inter, Julius_Sans_One, Syncopate } from "next/font/google"; // import both
 import "./globals.css";
 import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
@@ -21,6 +21,13 @@ export const syncopate = Syncopate({
   display: "swap",
 });
 
+export const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300","400","500","600","700"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Tallbackens",
   description: "Tallbackens Gård & Vandrarhem",
@@ -34,9 +41,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* Include both font variables */}
-      <body className={`${syncopate.variable} ${julius.variable} antialiased`}>
+      <body className={`${syncopate.variable} ${julius.variable} ${inter.variable} antialiased`}>
         {children}
       </body>
     </html>
   );
 }
+
+

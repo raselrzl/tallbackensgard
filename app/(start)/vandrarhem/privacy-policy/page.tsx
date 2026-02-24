@@ -32,7 +32,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-2xl font-semibold mb-4">
               Information Collection
             </h2>
-            <div className="w-16 h-0.5 bg-green-600 mb-6" />
+            <div className="w-16 h-0.5 bg-[#47d7ac] mb-6" />
             <p>
               On our website www.tallbackensgard.se we collect information from
               you when you contact us via a contact form. The information
@@ -53,7 +53,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-2xl font-semibold mb-4">
               Use of Information and Purpose
             </h2>
-            <div className="w-16 h-0.5 bg-green-600 mb-6" />
+            <div className="w-16 h-0.5 bg-[#47d7ac] mb-6" />
             <ul className="list-disc list-inside space-y-2">
               <li>Contact you via email or phone number.</li>
               <li>Improve our website.</li>
@@ -66,7 +66,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-2xl font-semibold mb-4">
               Disclosure to Third Parties
             </h2>
-            <div className="w-16 h-0.5 bg-green-600 mb-6" />
+            <div className="w-16 h-0.5 bg-[#47d7ac] mb-6" />
             <p>
               We do not sell, trade, or otherwise transfer personally
               identifiable information to outside parties. This does not include
@@ -80,7 +80,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-2xl font-semibold mb-4">
               Information Protection
             </h2>
-            <div className="w-16 h-0.5 bg-green-600 mb-6" />
+            <div className="w-16 h-0.5 bg-[#47d7ac] mb-6" />
             <p>
               We take a variety of security measures to protect your personal
               information. We use advanced encryption methods to protect
@@ -97,7 +97,7 @@ export default function PrivacyPolicyPage() {
           {/* Section */}
           <div>
             <h2 className="text-2xl font-semibold mb-4">Cookies</h2>
-            <div className="w-16 h-0.5 bg-green-600 mb-6" />
+            <div className="w-16 h-0.5 bg-[#47d7ac] mb-6" />
             <p>
               We use cookies to improve access to our website and identify
               repeat visitors. In addition, cookies improve the user experience
@@ -111,12 +111,12 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-2xl font-semibold mb-4">
               Delete Personal Data
             </h2>
-            <div className="w-16 h-0.5 bg-green-600 mb-6" />
+            <div className="w-16 h-0.5 bg-[#47d7ac] mb-6" />
             <p>
               You can contact us at{" "}
               <a
                 href="mailto:info@tallbackensgard.se"
-                className="underline decoration-green-600 underline-offset-4 hover:text-green-700 transition"
+                className="underline decoration-[#47d7ac] underline-offset-4 hover:text-[#47d7ac] transition"
               >
                 info@tallbackensgard.se
               </a>{" "}
@@ -128,7 +128,7 @@ export default function PrivacyPolicyPage() {
           {/* Section */}
           <div>
             <h2 className="text-2xl font-semibold mb-4">Consent</h2>
-            <div className="w-16 h-0.5 bg-green-600 mb-6" />
+            <div className="w-16 h-0.5 bg-[#47d7ac] mb-6" />
             <p>
               By using our website and contact form, you agree to our privacy
               policy.

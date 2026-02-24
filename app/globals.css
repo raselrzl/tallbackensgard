@@ -26,5 +26,18 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-julius), Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), sans-serif;
+}
+
+
+.font-julius {
+  font-family: var(--font-julius), sans-serif;
+}
+
+.font-syncopate {
+  font-family: var(--font-syncopate), sans-serif;
+}
+
+.font-inter {
+  font-family: var(--font-inter), sans-serif;
 }

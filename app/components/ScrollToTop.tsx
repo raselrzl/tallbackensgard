@@ -35,7 +35,7 @@ export default function ScrollToTop() {
                      w-8 h-8 sm:w-10 sm:h-10 rounded-full
                      bg-[#47d7ac]
                      flex items-center justify-center
-                     shadow-lg hover:bg-green-700"
+                     shadow-lg hover:bg-[#47d7ac]"
         >
           {/* Arrow Icon */}
           <svg

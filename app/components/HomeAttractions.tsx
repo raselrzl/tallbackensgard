@@ -53,12 +53,12 @@ const HomeAttractions: React.FC = () => {
         transition={{ duration: 0.8 }}
         className="relative z-10 w-full max-w-5xl text-center"
       >
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-8 font-julius">
           Utflyktsmål
         </h2>
 
         {/* Attractions List */}
-        <div className="grid gap-4 grid-cols-1 text-center items-center justify-center">
+        <div className="grid gap-4 grid-cols-1 text-center items-center justify-center font-inter">
           {attractions.map((item, index) => {
             const Icon = item.icon;
             return (

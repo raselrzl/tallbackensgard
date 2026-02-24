@@ -20,7 +20,7 @@ export default function VNavbar() {
 
   return (
     <nav
-      className={`w-full h-20 sm:h-24 fixed top-0 left-0 z-50 transition-all duration-300
+      className={`w-full h-20 sm:h-24 fixed top-0 left-0 z-50 transition-all duration-300 font-julius
       ${
         scrolled
           ? "bg-black shadow-md"
@@ -57,7 +57,7 @@ export default function VNavbar() {
             animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
           />
           <motion.span
-            className="h-0.5 w-5 rounded bg-green-600"
+            className="h-0.5 w-5 rounded bg-[#47d7ac]"
             animate={
               menuOpen
                 ? { rotate: 45, y: 8, backgroundColor: "#22c55e" } // green
@@ -81,7 +81,7 @@ export default function VNavbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-black overflow-hidden mx-8 border-t-4 border-green-600"
+            className="md:hidden bg-black overflow-hidden mx-8 border-t-4 border-[#47d7ac]"
           >
             <div className="flex flex-col text-center py-6 gap-6 font-semibold text-sm uppercase">
               <Link href="/vandrarhem/vara-rum" onClick={() => setMenuOpen(false)}>

@@ -17,20 +17,19 @@ export default function HomeIntro() {
           <h2 className="text-2xl md:text-4xl font-extrabold mb-6 text-left">
             {/* Mobile */}
             <span className="block md:hidden uppercase pt-8 px-8 text-center relative">
-  {/* Logo GIF */}
-  <img 
-    src="/logo.gif" 
-    alt="Tallbackens Logo" 
-    className="mx-auto mb-4 w-24 h-auto"
-  />
-{/*   Tallbackens <br />
+              {/* Logo GIF */}
+              <img
+                src="/logo.gif"
+                alt="Tallbackens Logo"
+                className="mx-auto mb-4 w-24 h-auto"
+              />
+              {/*   Tallbackens <br />
   Vandrarhem & <br />
   Apartments */}
-</span>
-            
+            </span>
 
             {/* Desktop - New style */}
-          {/*   <span className="hidden md:flex flex-col md:flex-row md:items-center md:gap-6 uppercase md:pl-6">
+            {/*   <span className="hidden md:flex flex-col md:flex-row md:items-center md:gap-6 uppercase md:pl-6">
               <span className="text-[#47d7ac]">Tallbackens</span>
               <span className="text-gray-800">Vandrarhem & Apartments</span>
             </span> */}
@@ -49,7 +48,7 @@ export default function HomeIntro() {
           >
             {/* Card-style layout for desktop */}
             <div className="shadow-lg md:flex md:gap-6 md:rounded-2xl overflow-hidden">
-               <div className="md:w-1/3 p-6 flex items-center justify-center relative bg-black">
+              <div className="md:w-1/3 p-6 flex items-center justify-center relative bg-black">
                 {/* Background image */}
                 <img
                   src="/b1.jpg"
@@ -57,11 +56,11 @@ export default function HomeIntro() {
                   className="absolute inset-0 w-full h-full object-cover opacity-80"
                 />
                 {/* Span text */}
-                <span className="font-bold text-gray-100 text-lg relative z-10">
+                <span className="font-bold text-gray-100 text-lg relative z-10 font-julius">
                   Vandrarhem
                 </span>
               </div>
-              <div className="md:w-2/3 p-6 text-justify">
+              <div className="md:w-2/3 p-6 text-justify font-inter">
                 Tallbackens Vandrarhem & Apartments i Svärtinge, strax utanför
                 Norrköping, erbjuder bekvämt och prisvärt boende året runt.
                 Vandrarhemmet har totalt 60 bäddar fördelade på fyr- och
@@ -71,7 +70,7 @@ export default function HomeIntro() {
             </div>
 
             <div className="shadow-lg md:flex md:flex-row-reverse md:gap-6 md:rounded-2xl overflow-hidden">
-               <div className="md:w-1/3 p-6 flex items-center justify-center relative bg-black">
+              <div className="md:w-1/3 p-6 flex items-center justify-center relative bg-black">
                 {/* Background image */}
                 <img
                   src="/b1.jpg"
@@ -79,11 +78,11 @@ export default function HomeIntro() {
                   className="absolute inset-0 w-full h-full object-cover opacity-80"
                 />
                 {/* Span text */}
-                <span className="font-bold text-gray-100 text-lg relative z-10">
+                <span className="font-bold text-gray-100 text-lg relative z-10 font-julius">
                   Natur & Utflykter
                 </span>
               </div>
-              <div className="md:w-2/3 p-6 text-justify">
+              <div className="md:w-2/3 p-6 text-justify font-inter">
                 Vi erbjuder en lugn och familjevänlig miljö med natursköna
                 omgivningar, nära Kolmårdens Djurpark, flera golfbanor,
                 badplatser och andra populära utflyktsmål.
@@ -99,11 +98,11 @@ export default function HomeIntro() {
                   className="absolute inset-0 w-full h-full object-cover opacity-80"
                 />
                 {/* Span text */}
-                <span className="font-bold text-gray-100 text-lg relative z-10">
+                <span className="font-bold text-gray-100 text-lg relative z-10 font-julius">
                   Lägenheter
                 </span>
               </div>
-              <div className="md:w-2/3 p-6 text-justify">
+              <div className="md:w-2/3 p-6 text-justify font-inter">
                 Utöver vandrarhemmet erbjuder vi fullt utrustade lägenheter på
                 flera adresser i och runt Norrköping – ett flexibelt och
                 skräddarsytt alternativ för företag, entreprenörer och
