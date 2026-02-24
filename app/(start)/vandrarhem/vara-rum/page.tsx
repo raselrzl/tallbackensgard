@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import RoomDetails from "./RoomDetails";
+import Kitchen from "./Kitchen";
 
 export default function VaraRumPage() {
   return (
@@ -9,7 +10,7 @@ export default function VaraRumPage() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/vara-rum1.jpg')", // change to your image path
+          backgroundImage: "url('/vararum/kitchen.jpg')", // change to your image path
         }}
       />
 
@@ -32,6 +33,7 @@ export default function VaraRumPage() {
       </motion.div>
     </section>
     <RoomDetails />
+    <Kitchen />
     </>
     
   );
