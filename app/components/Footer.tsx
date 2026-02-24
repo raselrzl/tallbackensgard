@@ -93,6 +93,7 @@ const Footer: React.FC = () => {
               För vistelser om 7 nätter eller fler krävs avbokning senast 5
               dagar före ankomst för full återbetalning.
             </p>
+            <br/>
             <p className="text-sm text-gray-400 leading-relaxed">
               För vistelser kortare än 7 nätter gäller avbokning senast 2 dagar
               före ankomst.
