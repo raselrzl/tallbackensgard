@@ -27,8 +27,11 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">Kontakt</h3>
 
+            <p className="text-md text-gray-300 font-bold ">
+              Tallbackens Gård & Vandrarhem
+            </p>
             <p className="text-sm text-gray-300 leading-relaxed">
-              Tallbackens Gård & Vandrarhem <br />
+              <br />
               Finspångsvägen 497 <br />
               605 80 Svärtinge
             </p>
@@ -59,7 +62,9 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">Företag</h3>
 
-            <p className="text-sm text-gray-300">Företagsbokningar</p>
+            <p className="text-md text-gray-300 font-bold ">
+              Företagsbokningar
+            </p>
 
             <a
               href="tel:+46103333536"
@@ -81,10 +86,11 @@ const Footer: React.FC = () => {
             <p className="text-sm text-gray-400 leading-relaxed">
               Vänligen kontakta oss direkt för att genomföra er bokning.
             </p>
-
-            <p className="mt-4 text-sm text-gray-400 leading-relaxed">
-              Avbokning för företag:
-              <br />
+            <br />
+            <p className="text-md text-gray-300 font-bold ">
+              Avbokning för företag
+            </p>
+            <p className=" text-sm text-gray-400 leading-relaxed">
               För vistelser om 7 nätter eller fler krävs avbokning senast 5
               dagar före ankomst för full återbetalning.
             </p>
