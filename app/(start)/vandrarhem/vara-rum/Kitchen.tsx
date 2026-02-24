@@ -5,7 +5,7 @@ import { Utensils, Refrigerator, Snowflake, CookingPot } from "lucide-react";
 
 export default function Kitchen() {
   return (
-    <section className="relative w-full h-140 md:h-110 flex items-center justify-center font-inter overflow-hidden">
+    <section className="relative w-full h-140 md:h-100 flex items-center justify-center font-inter overflow-hidden">
       
       {/* Background Image */}
       <img
