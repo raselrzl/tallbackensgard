@@ -13,7 +13,7 @@ export default function Home() {
       <video
         autoPlay
         muted
-        loop
+        
         playsInline
         className="absolute top-0 left-0 w-full h-225 object-cover -z-20 bg-black"
       >
