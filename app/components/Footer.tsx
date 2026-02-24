@@ -31,7 +31,6 @@ const Footer: React.FC = () => {
               Tallbackens Gård & Vandrarhem
             </p>
             <p className="text-sm text-gray-300 leading-relaxed">
-              
               Finspångsvägen 497 <br />
               605 80 Svärtinge
             </p>
@@ -125,7 +124,7 @@ const Footer: React.FC = () => {
               Tallbackens Gård & Vandrarhem drivs av Centralis Group Invest AB.
             </p>
 
-            <p className="mt-4 text-sm text-gray-400 cursor-pointer hover:text-white transition">
+            <p className="block text-sm text-gray-300 underline hover:text-white transition mb-4">
               GDPR / Integritetspolicy
             </p>
           </div>
