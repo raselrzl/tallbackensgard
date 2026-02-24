@@ -64,9 +64,9 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="px-6 py-3 min-w-46 uppercase rounded-lg text-white bg-gradient-to-r from-[#47d7ac] to-[#6ba4b8] hover:from-[#6ba4b8] hover:to-[#47d7ac] transition-all tracking-widest font-[50]"
+            className="px-6 py-3 min-w-46 uppercase rounded-lg text-white bg-linear-to-r from-[#47d7ac] to-[#6ba4b8] hover:from-[#6ba4b8] hover:to-[#47d7ac] transition-all tracking-widest font-[50]"
           >
-            Vandrarhem
+            Vandrarhem g
           </motion.button>
 
           <motion.button
