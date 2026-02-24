@@ -63,19 +63,18 @@ export default function RoomDetails() {
               <h3 className="absolute bottom-4 uppercase left-4 text-white text-2xl font-bold z-10">
                 {room.title}
               </h3>
-              {/* Amenities */}
-              <div className="absolute top-4 right-0 md:-right-6 flex flex-col gap-2 z-10">
-                {room.amenities.map((amenity, i) => (
-                  <motion.div
-                    key={i}
-                    whileHover={{ y: -2 }}
-                    className="flex items-center gap-1 bg-[#47d7ac]/80 px-2 py-1 rounded-full text-white text-xs font-medium shadow"
-                  >
-                    {amenityIcons[amenity as Amenity]}
-                    <span>{amenity}</span>
-                  </motion.div>
-                ))}
-              </div>
+              <div className="absolute top-4 right-0 flex flex-col gap-1 z-10">
+  {room.amenities.map((amenity, i) => (
+    <motion.div
+      key={i}
+      whileHover={{ y: -2 }}
+      className="flex items-center gap-1 bg-[#47d7ac]/80 px-2 py-1 rounded-l-full text-white text-xs font-medium shadow"
+    >
+      {amenityIcons[amenity as Amenity]}
+      <span>{amenity}</span>
+    </motion.div>
+  ))}
+</div>
             </div>
 
             {/* Right: Prices */}
