@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 export default function HomePage() {
   return (
     <div
-      className="relative w-screen h-screen overflow-hidden bg-cover bg-center"
-      style={{ backgroundImage: "url('/b1.jpg')" }} // fallback image
+      className="relative w-screen h-screen overflow-hidden bg-cover bg-center bg-black"
+      
     >
       {/* Logo - top center */}
       <Link
