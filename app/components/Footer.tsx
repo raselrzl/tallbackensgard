@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
               href="tel:+46103333536"
               className="block  text-sm text-gray-300 underline hover:text-white transition"
             >
-              010-333 35 36
+              010-333 35 36 
             </a>
 
             <p className="text-xs text-gray-400 mt-1">
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
               href="/vandrarhem/companybooking"
               className="block text-sm text-gray-300 underline hover:text-white transition mb-4"
             >
-              Info
+              Bokningsinformation
             </Link>
 
             <br />
@@ -82,21 +82,24 @@ const Footer: React.FC = () => {
 
           {/* Section 4 – Övrigt */}
           <div>
+             <h3 className="text-lg font-bold mb-2">
+              Info
+            </h3>
            <Link
               href="/vandrarhem/privacy-policy"
-              className="block text-sm text-gray-300 underline hover:text-white transition"
+              className="block text-gray-300 underline text-sm font-bold hover:text-white transition"
             >
               Integritetspolicy
             </Link>
             <Link
               href="/vandrarhem/cancellationpolicy"
-              className="block text-sm text-gray-300 underline hover:text-white transition "
+              className="block text-sm font-bold text-gray-300 underline hover:text-white transition "
             >
               Avbokning
             </Link>
               <Link
               href="/vandrarhem/about"
-              className="block text-sm text-gray-300 underline hover:text-white transition mb-4"
+              className="block text-sm font-bold text-gray-300 underline hover:text-white transition mb-4"
             >
               Om oss
             </Link>
