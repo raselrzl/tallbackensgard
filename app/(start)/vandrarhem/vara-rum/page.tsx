@@ -15,7 +15,7 @@ export default function VaraRumPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/vararum/kitchen.jpg')", // change to your image path
+            backgroundImage: "url('/vararum/Jaber1.png')", // change to your image path
           }}
         />
 
