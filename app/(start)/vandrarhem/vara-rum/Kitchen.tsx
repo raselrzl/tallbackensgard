@@ -5,7 +5,7 @@ import { Utensils, Refrigerator, Snowflake, CookingPot } from "lucide-react";
 
 export default function Kitchen() {
   return (
-    <section className="relative w-full h-140 md:h-100 flex items-center justify-center font-inter overflow-hidden">
+    <section id="kok" className="relative w-full h-140 md:h-100 flex items-center justify-center font-inter overflow-hidden">
       
       {/* Background Image */}
       <img
@@ -29,7 +29,7 @@ export default function Kitchen() {
           Våra kök
         </h2>
 
-        <p className="text-gray-200 mb-10 leading-relaxed text-md md:text-lg text-left">
+        <p className="text-gray-200 mb-10 leading-relaxed text-md md:text-lg text-justify">
           På <span className="font-semibold text-white">
             Tallbackens Gård & Vandrarhem
           </span>{" "}

@@ -52,6 +52,42 @@ const introData: IntroItem[] = [
     ic: "/ic/apartment.png",
     points: ["Fullt utrustade", "Flera adresser", "Självständigt boende"],
   },
+  {
+  title: "Fullt Utrustat Kök",
+  ic: "/ic/kitchen.png", // byt till din bild när du laddar upp
+  points: [
+    "Modernt & välutrustat",
+    "Möjlighet att laga egen mat",
+    "Allt du behöver för vardagen",
+  ],
+},
+{
+  title: "Tvättmöjligheter",
+  ic: "/ic/laundry.png", // byt ikon senare
+  points: [
+    "Tvättmaskin i lägenhet eller hus",
+    "Gemensam tvättstuga",
+    "Smidigt vid längre vistelser",
+  ],
+},
+{
+  title: "Mer Utrymme",
+  ic: "/ic/relax.png", // byt ikon senare
+  points: [
+    "Rymliga & bekväma boenden",
+    "Känn dig som hemma",
+    "Perfekt för avkoppling",
+  ],
+},
+{
+  title: "Skräddarsydd Service",
+  ic: "/ic/service.png", // byt ikon senare
+  points: [
+    "Anpassade lösningar",
+    "Parkering för större fordon",
+    "Extra sängkläder vid behov",
+  ],
+},
 ];
 
 export default function HomeIntroSlider() {

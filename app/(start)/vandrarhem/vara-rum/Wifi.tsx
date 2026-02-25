@@ -5,7 +5,7 @@ import { Wifi, Zap } from "lucide-react";
 
 export default function WifiSection() {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-10 font-inter">
+    <section className="max-w-7xl mx-auto px-4 py-10 font-inter" id="wifi">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

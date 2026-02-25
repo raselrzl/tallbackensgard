@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -7,16 +8,23 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function VNavbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname(); // 👈 current route
 
-  // Detect scroll
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 80); // change after 80px
+      setScrolled(window.scrollY > 80);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Active link style function
+  const linkStyle = (path: string) =>
+    `relative transition-colors duration-300 ${
+      pathname === path
+        ? "text-[#47d7ac]"
+        : "text-white hover:text-[#47d7ac]"
+    }`;
 
   return (
     <nav
@@ -28,6 +36,7 @@ export default function VNavbar() {
       } text-white`}
     >
       <div className="max-w-7xl mx-auto h-full flex items-center justify-between px-6">
+
         {/* Logo */}
         <Link href="/" className="flex items-center md:pl-10">
           <Image
@@ -42,12 +51,20 @@ export default function VNavbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 font-semibold text-sm uppercase">
-          <Link href="/vandrarhem/vara-rum">Våra rum</Link>
-          <Link href="/vandrarhem/bokning">Bokning</Link>
-          <Link href="/vandrarhem/kontakta-oss">Kontakta oss</Link>
+          <Link href="/vandrarhem/vara-rum" className={linkStyle("/vandrarhem/vara-rum")}>
+            Våra rum
+          </Link>
+
+          <Link href="/vandrarhem/bokning" className={linkStyle("/vandrarhem/bokning")}>
+            Bokning
+          </Link>
+
+          <Link href="/vandrarhem/kontakta-oss" className={linkStyle("/vandrarhem/kontakta-oss")}>
+            Kontakta oss
+          </Link>
         </div>
 
-        {/* Mobile Menu Icon */}
+        {/* Mobile Icon */}
         <div
           className="md:hidden w-8 h-4 flex flex-col justify-between items-end cursor-pointer"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -60,12 +77,11 @@ export default function VNavbar() {
             className="h-0.5 w-5 rounded bg-[#47d7ac]"
             animate={
               menuOpen
-                ? { rotate: 45, y: 8, backgroundColor: "#22c55e" } // green
-                : { rotate: 0, y: 0, backgroundColor: "#22c55e" } // white
+                ? { rotate: 45, y: 8 }
+                : { rotate: 0, y: 0 }
             }
             transition={{ duration: 0.3 }}
           />
-
           <motion.span
             className="h-0.5 w-6 bg-white rounded"
             animate={menuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
@@ -84,15 +100,31 @@ export default function VNavbar() {
             className="md:hidden bg-black overflow-hidden mx-8 border-t-4 border-[#47d7ac]"
           >
             <div className="flex flex-col text-center py-6 gap-6 font-semibold text-sm uppercase">
-              <Link href="/vandrarhem/vara-rum" onClick={() => setMenuOpen(false)}>
+
+              <Link
+                href="/vandrarhem/vara-rum"
+                className={linkStyle("/vandrarhem/vara-rum")}
+                onClick={() => setMenuOpen(false)}
+              >
                 Våra rum
               </Link>
-              <Link href="/vandrarhem/bokning" onClick={() => setMenuOpen(false)}>
+
+              <Link
+                href="/vandrarhem/bokning"
+                className={linkStyle("/vandrarhem/bokning")}
+                onClick={() => setMenuOpen(false)}
+              >
                 Bokning
               </Link>
-              <Link href="/vandrarhem/kontakta-oss" onClick={() => setMenuOpen(false)}>
+
+              <Link
+                href="/vandrarhem/kontakta-oss"
+                className={linkStyle("/vandrarhem/kontakta-oss")}
+                onClick={() => setMenuOpen(false)}
+              >
                 Kontakta oss
               </Link>
+
             </div>
           </motion.div>
         )}
