@@ -23,13 +23,13 @@ export default function Kitchen() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 max-w-4xl text-center px-6"
+        className="relative z-10 max-w-4xl text-left px-6"
       >
-        <h2 className="text-2xl md:text-4xl font-bold text-white mb-6">
+        <h2 className="text-2xl md:text-4xl font-bold text-white mb-6 font-julius">
           Våra kök
         </h2>
 
-        <p className="text-gray-200 mb-10 leading-relaxed text-md md:text-lg">
+        <p className="text-gray-200 mb-10 leading-relaxed text-md md:text-lg text-left">
           På <span className="font-semibold text-white">
             Tallbackens Gård & Vandrarhem
           </span>{" "}
