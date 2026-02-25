@@ -5,7 +5,7 @@ import { Phone, Mail, Users, Home, Leaf } from "lucide-react";
 
 export default function AboutPage() {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-gray-50 min-h-screen">
       {/* 1. Hero Section */}
       <section className="relative w-full h-[50vh] flex items-center justify-center overflow-hidden">
         <Image
@@ -28,14 +28,14 @@ export default function AboutPage() {
 
       {/* 2. Introduction */}
       <section className="max-w-4xl mx-auto px-6 py-20 space-y-8 text-gray-700 dark:text-gray-300 leading-relaxed">
-        <p className="text-gray-700 dark:text-gray-300">
+        <p className="text-gray-700 dark:text-gray-300 text-justify">
           Tallbackens Gård & Vandrarhem drivs av{" "}
           <span className="font-semibold">Centralis Group Invest AB</span> och
           ligger idylliskt vid Finspångsvägen i Svärtinge. Vi erbjuder en unik
           kombination av charmigt boende, natursköna omgivningar och modern
           komfort.
         </p>
-        <p className="text-gray-700 dark:text-gray-300">
+        <p className="text-gray-700 dark:text-gray-300 text-justify">
           Vårt mål är att skapa en personlig och varm atmosfär där
           privatpersoner, familjer och grupper kan känna sig som hemma. Oavsett
           om du planerar en weekend, längre vistelse eller företagsevent,
@@ -95,13 +95,13 @@ export default function AboutPage() {
           <h2 className="text-2xl md:text-3xl font-julius font-bold text-gray-900 dark:text-white">
             Vår verksamhet
           </h2>
-          <p className="text-gray-700 dark:text-gray-300">
+          <p className="text-gray-700 dark:text-gray-300 text-justify">
             Tallbackens Gård & Vandrarhem är en plats för avkoppling, naturnära
             upplevelser och högkvalitativt boende. Vi har ett starkt fokus på
             personlig service och kvalitet, vilket gör att våra gäster alltid
             känner sig välkomna och trygga.
           </p>
-          <p className="text-gray-700 dark:text-gray-300 text-sm">
+          <p className="text-gray-700 dark:text-gray-300 text-justify">
             Vi drivs av{" "}
             <span className="font-semibold">Centralis Group Invest AB</span>,
             vilket säkerställer professionalism, långsiktighet och stabilitet i
