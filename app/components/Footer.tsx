@@ -97,6 +97,12 @@ const Footer: React.FC = () => {
             >
               Avbokning
             </Link>
+             <Link
+              href="/vandrarhem/bokning#betalningsalternativ"
+              className="block text-sm font-bold text-gray-300 underline hover:text-white transition "
+            >
+              Betalningsalternativ
+            </Link>
               <Link
               href="/vandrarhem/about"
               className="block text-sm font-bold text-gray-300 underline hover:text-white transition mb-4"
