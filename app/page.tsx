@@ -39,7 +39,7 @@ export default function HomePage() {
 
       {/* Hero Buttons at bottom center */}
       <section className="relative w-full h-screen flex items-end justify-center text-white text-center z-10 pb-12 md:pb-28">
-        <div className="flex flex-col sm:flex-row gap-4 md:mr-9">
+        <div className="flex flex-col sm:flex-row gap-4 md:mr-9.5">
           <Link href="/vandrarhem">
             <motion.p
               initial={{ opacity: 0, y: 40 }}
