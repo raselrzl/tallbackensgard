@@ -28,7 +28,6 @@ export default function HomePage() {
       <video
         autoPlay
         muted
-        
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
@@ -41,23 +40,27 @@ export default function HomePage() {
       {/* Hero Buttons at bottom center */}
       <section className="relative w-full h-screen flex items-end justify-center text-white text-center z-10 pb-12 md:pb-28">
         <div className="flex flex-col sm:flex-row gap-4">
-          <motion.button
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="px-3 py-2 min-w-48 uppercase rounded text-white bg-linear-to-r from-[#47d7ac] to-[#6ba4b8] hover:from-[#6ba4b8] hover:to-[#47d7ac] transition-all tracking-widest font-syncopate"
-          >
-            Vandrarhem
-          </motion.button>
+          <Link href="/vandrarhem">
+            <motion.p
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              className="px-3 py-2 min-w-48 uppercase rounded text-white bg-linear-to-r from-[#47d7ac] to-[#6ba4b8] hover:from-[#6ba4b8] hover:to-[#47d7ac] transition-all tracking-widest font-syncopate inline-block text-center"
+            >
+              Vandrarhem
+            </motion.p>
+          </Link>
 
-          <motion.button
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="px-3 py-2 min-w-48 uppercase rounded text-white bg-linear-to-r from-[#47d7ac] to-[#6ba4b8] hover:from-[#6ba4b8] hover:to-[#47d7ac] transition-all font-syncopate"
-          >
-            Apartments
-          </motion.button>
+          <Link href="/apartments">
+            <motion.p
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              className="px-3 py-2 min-w-48 uppercase rounded text-white bg-linear-to-r from-[#47d7ac] to-[#6ba4b8] hover:from-[#6ba4b8] hover:to-[#47d7ac] transition-all tracking-widest font-syncopate inline-block text-center"
+            >
+              Apartments
+            </motion.p>
+          </Link>
         </div>
       </section>
     </div>

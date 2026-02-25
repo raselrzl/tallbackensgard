@@ -1,0 +1,46 @@
+// app/layout.tsx
+import type { Metadata } from "next";
+import { Julius_Sans_One, Syncopate, Inter } from "next/font/google";
+import Footer from "@/app/components/Footer";
+import VNavbar from "@/app/(start)/vandrarhem/vandrarhemComponent/VNavbar";
+
+// Fonts
+export const julius = Julius_Sans_One({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-julius",
+  display: "swap",
+});
+
+export const syncopate = Syncopate({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-syncopate",
+  display: "swap",
+});
+
+export const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "Tallbackens",
+  description: "Tallbackens Gård & Vandrarhem",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <>
+      <VNavbar />
+      {children}
+      <Footer />
+    </>
+  );
+}
