@@ -37,7 +37,7 @@ export default function WifiSection() {
             på hela anläggningen.
           </p>
 
-          <div className="space-y-2">
+          <div className="space-y-2 font-julius">
             <Feature icon={<Zap className="w-4 h-4" />} text="Snabb & stabil fiber" />
             <Feature icon={<Wifi className="w-4 h-4" />} text="Fri tillgång överallt" />
           </div>

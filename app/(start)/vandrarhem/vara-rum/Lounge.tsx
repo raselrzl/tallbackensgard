@@ -36,7 +36,7 @@ export default function Lounge() {
             på exempelvis Kolmårdens djurpark eller Norrköping.
           </p>
 
-          <div className="space-y-2">
+          <div className="space-y-2 font-julius">
             <Feature icon={<Tv className="w-4 h-4" />} text="TV & Avkoppling" />
             <Feature icon={<Wifi className="w-4 h-4" />} text="Fri Wifi" />
             <Feature

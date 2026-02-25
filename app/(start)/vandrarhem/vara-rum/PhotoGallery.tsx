@@ -8,7 +8,12 @@ const images = [
   "/vararum/kitchen.jpg",
   "/vararum/lounge1.jpg",
   "/vararum/wifi1.jpg",
-  "/vararum/room.jpg",
+  "/vararum/p1.jpg",
+  "/vararum/p2.jpg",
+  "/vararum/p3.jpg",
+  "/vararum/p4.jpg",
+  "/vararum/p5.jpg",
+  "/vararum/p6.jpg",
 ];
 
 export default function CoverflowCarousel() {
@@ -46,7 +51,7 @@ export default function CoverflowCarousel() {
 
       {/* Heading */}
       <div className="absolute top-20 left-1/2 -translate-x-1/2 z-40">
-        <h2 className="text-white text-3xl md:text-4xl font-semibold tracking-wide">
+        <h2 className="text-white text-3xl md:text-4xl font-semibold tracking-wide font-julius">
           Bilder
         </h2>
       </div>
