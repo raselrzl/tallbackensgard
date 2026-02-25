@@ -28,11 +28,22 @@ export default function CoverflowCarousel() {
   const next = () => setActive((prev) => (prev + 1) % total);
   const prev = () => setActive((prev) => (prev - 1 + total) % total);
 
+  // Popup navigation
+  const nextLightbox = () => {
+    const currentIndex = images.indexOf(lightbox!);
+    setLightbox(images[(currentIndex + 1) % total]);
+  };
+
+  const prevLightbox = () => {
+    const currentIndex = images.indexOf(lightbox!);
+    setLightbox(images[(currentIndex - 1 + total) % total]);
+  };
+
   return (
     <div className="relative h-screen w-full bg-black flex items-center justify-center overflow-hidden">
       {/* Heading */}
       <div className="absolute top-20 left-1/2 -translate-x-1/2 z-40">
-        <h2 className="text-white text-3xl md:text-4xl font-semibold tracking-wide">
+        <h2 className="text-white text-3xl md:text-4xl font-semibold tracking-wide font-julius">
           Bilder
         </h2>
       </div>
@@ -41,12 +52,9 @@ export default function CoverflowCarousel() {
       <div
         className="relative w-full max-w-7xl h-125 flex items-center justify-center perspective-[2000px]"
         onClick={(e) => {
-          // If clicking the + button, do nothing here
           if ((e.target as HTMLElement).closest("button")) return;
-
           const { clientX } = e;
           const middle = window.innerWidth / 2;
-
           if (clientX > middle) next();
           else prev();
         }}
@@ -72,7 +80,6 @@ export default function CoverflowCarousel() {
               <div className="relative w-80 h-105 rounded-2xl overflow-hidden shadow-2xl">
                 <img src={src} alt="" className="w-full h-full object-cover" />
 
-                {/* Dark overlay for side images */}
                 {!isActive && <div className="absolute inset-0 bg-black/60" />}
 
                 {/* PLUS BUTTON (only active image) */}
@@ -81,6 +88,7 @@ export default function CoverflowCarousel() {
                     onClick={(e) => {
                       e.stopPropagation();
                       setLightbox(src);
+                      setZoom(1);
                     }}
                     className="absolute inset-0 flex items-center justify-center"
                   >
@@ -101,7 +109,7 @@ export default function CoverflowCarousel() {
         })}
       </div>
 
-      {/* FULLSCREEN POPUP */}
+      {/* FULLSCREEN POPUP WITH SWIPE */}
       <AnimatePresence>
         {lightbox && (
           <motion.div
@@ -126,19 +134,14 @@ export default function CoverflowCarousel() {
               ×
             </button>
 
-            {/* Zoomable image */}
             <motion.img
               src={lightbox}
-              drag={zoom > 1}
-              dragConstraints={{
-                left: -500,
-                right: 500,
-                top: -300,
-                bottom: 300,
-              }}
+              drag={zoom === 1} // only allow drag when not zoomed
+              dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
               onClick={(e) => {
                 e.stopPropagation();
-                setZoom((z) => (z === 1 ? 2 : 1)); // click to toggle zoom
+                // Toggle zoom
+                setZoom((z) => (z === 1 ? 2 : 1));
               }}
               onWheel={(e) => {
                 e.stopPropagation();
@@ -147,11 +150,20 @@ export default function CoverflowCarousel() {
                   return Math.min(Math.max(next, 1), 4);
                 });
               }}
+              onPanEnd={(e, info) => {
+                if (zoom === 1) {
+                  // Detect swipe
+                  if (info.offset.x < -50) nextLightbox();
+                  if (info.offset.x > 50) prevLightbox();
+                }
+              }}
               initial={{ scale: 0.8 }}
               animate={{ scale: zoom }}
               exit={{ scale: 0.8 }}
               transition={{ type: "spring", stiffness: 200, damping: 30 }}
-              className="max-w-[90%] max-h-[90%] object-contain cursor-zoom-in"
+              className={`max-w-[90%] max-h-[90%] object-contain ${
+                zoom > 1 ? "cursor-grab" : "cursor-zoom-in"
+              }`}
               style={{ touchAction: "none" }}
             />
           </motion.div>
