@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import BookingInfo from "./BookingInfo";
 import PaymentInfo from "./PaymentInfo";
 import SearchBookingModal from "./SearchBookingModal"; // new modal component
+import AdditionalServices from "../vara-rum/AdditionalService";
 
 export default function BokningPage() {
   return (

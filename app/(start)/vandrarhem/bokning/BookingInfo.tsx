@@ -35,7 +35,7 @@ export default function BookingInfo() {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto p-4 md:p-8 space-y-6">
+    <section className="max-w-7xl mx-auto p-4 md:p-8 space-y-6 mb-10">
       {/* Section Heading */}
       <h2 className="text-2xl md:text-3xl font-julius font-bold text-gray-900 dark:text-white text-center mb-6">
         Bokningsinformation
