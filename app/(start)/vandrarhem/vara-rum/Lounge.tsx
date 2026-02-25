@@ -31,16 +31,18 @@ export default function Lounge() {
         {/* Content */}
         <div className="p-5">
           <p className="text-gray-600 leading-relaxed mb-5 text-sm">
-            Stort ljust sällskapsrum och matsal där du kan titta på TV
-            eller äta frukost och middag. I loungen kan du med fri Wifi
-            planera ditt besök på exempelvis Kolmårdens djurpark eller
-            Norrköping.
+            Stort ljust sällskapsrum och matsal där du kan titta på TV eller äta
+            frukost och middag. I loungen kan du med fri Wifi planera ditt besök
+            på exempelvis Kolmårdens djurpark eller Norrköping.
           </p>
 
           <div className="space-y-2">
             <Feature icon={<Tv className="w-4 h-4" />} text="TV & Avkoppling" />
             <Feature icon={<Wifi className="w-4 h-4" />} text="Fri Wifi" />
-            <Feature icon={<Coffee className="w-4 h-4" />} text="Frukost & Middag" />
+            <Feature
+              icon={<Coffee className="w-4 h-4" />}
+              text="Frukost & Middag"
+            />
           </div>
         </div>
       </motion.div>

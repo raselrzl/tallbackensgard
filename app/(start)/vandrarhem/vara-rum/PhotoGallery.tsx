@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 const images = [
   "/vararum/room.jpg",
@@ -8,52 +9,154 @@ const images = [
   "/vararum/lounge1.jpg",
   "/vararum/wifi1.jpg",
   "/vararum/room.jpg",
-  "/vararum/kitchen.jpg",
-  "/vararum/lounge1.jpg",
-  "/vararum/wifi1.jpg",
 ];
 
-// Layout: custom column/row spans to simulate gallery hanging
-const layout = [
-  { mobileCol: 2, mobileRow: 2, desktopCol: 2, desktopRow: 2 },
-  { mobileCol: 1, mobileRow: 1, desktopCol: 1, desktopRow: 2 },
-  { mobileCol: 1, mobileRow: 2, desktopCol: 1, desktopRow: 1 },
-  { mobileCol: 2, mobileRow: 1, desktopCol: 2, desktopRow: 1 },
-  { mobileCol: 1, mobileRow: 1, desktopCol: 1, desktopRow: 1 },
-  { mobileCol: 1, mobileRow: 1, desktopCol: 1, desktopRow: 2 },
-  { mobileCol: 2, mobileRow: 1, desktopCol: 2, desktopRow: 2 },
-  { mobileCol: 2, mobileRow: 1, desktopCol: 1, desktopRow: 1 },
-];
+export default function CoverflowCarousel() {
+  const [active, setActive] = useState(0);
+  const [lightbox, setLightbox] = useState<string | null>(null);
+  const total = images.length;
+  const [zoom, setZoom] = useState(1);
 
-export default function ArtGallery() {
+  // Circular offset logic
+  const getOffset = (index: number) => {
+    let offset = index - active;
+    if (offset > total / 2) offset -= total;
+    if (offset < -total / 2) offset += total;
+    return offset;
+  };
+
+  const next = () => setActive((prev) => (prev + 1) % total);
+  const prev = () => setActive((prev) => (prev - 1 + total) % total);
+
   return (
-    <section className="max-w-6xl mx-auto px-4 py-16 font-inter">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 auto-rows-[150px] md:auto-rows-[200px]">
-        {images.map((src, idx) => {
-          const span = layout[idx % layout.length];
+    <div className="relative h-screen w-full bg-black flex items-center justify-center overflow-hidden">
+      {/* Heading */}
+      <div className="absolute top-20 left-1/2 -translate-x-1/2 z-40">
+        <h2 className="text-white text-3xl md:text-4xl font-semibold tracking-wide">
+          Bilder
+        </h2>
+      </div>
+
+      {/* Carousel */}
+      <div
+        className="relative w-full max-w-7xl h-125 flex items-center justify-center perspective-[2000px]"
+        onClick={(e) => {
+          // If clicking the + button, do nothing here
+          if ((e.target as HTMLElement).closest("button")) return;
+
+          const { clientX } = e;
+          const middle = window.innerWidth / 2;
+
+          if (clientX > middle) next();
+          else prev();
+        }}
+      >
+        {images.map((src, index) => {
+          const offset = getOffset(index);
+          const isActive = offset === 0;
 
           return (
             <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.15 }}
-              className={`
-                relative w-full overflow-hidden
-                col-span-${span.mobileCol} row-span-${span.mobileRow}
-                md:col-span-${span.desktopCol} md:row-span-${span.desktopRow}
-              `}
+              key={index}
+              animate={{
+                x: offset * 260,
+                rotateY: offset * -45,
+                scale: isActive ? 1 : 0.8,
+                zIndex: total - Math.abs(offset),
+                opacity: Math.abs(offset) > 3 ? 0 : 1,
+              }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              className="absolute"
+              style={{ transformStyle: "preserve-3d" }}
             >
-              <img
-                src={src}
-                alt={`Gallery image ${idx + 1}`}
-                className="w-full h-full object-cover border-4 border-white"
-              />
+              <div className="relative w-80 h-105 rounded-2xl overflow-hidden shadow-2xl">
+                <img src={src} alt="" className="w-full h-full object-cover" />
+
+                {/* Dark overlay for side images */}
+                {!isActive && <div className="absolute inset-0 bg-black/60" />}
+
+                {/* PLUS BUTTON (only active image) */}
+                {isActive && (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setLightbox(src);
+                    }}
+                    className="absolute inset-0 flex items-center justify-center"
+                  >
+                    <div
+                      className="bg-black/20 backdrop-blur-md 
+                                    w-16 h-16 rounded-full 
+                                    flex items-center justify-center
+                                    text-white text-3xl 
+                                    hover:scale-110 transition"
+                    >
+                      +
+                    </div>
+                  </button>
+                )}
+              </div>
             </motion.div>
           );
         })}
       </div>
-    </section>
+
+      {/* FULLSCREEN POPUP */}
+      <AnimatePresence>
+        {lightbox && (
+          <motion.div
+            className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 overflow-hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => {
+              setLightbox(null);
+              setZoom(1);
+            }}
+          >
+            {/* Close button */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setLightbox(null);
+                setZoom(1);
+              }}
+              className="absolute top-6 right-6 text-white text-4xl z-50"
+            >
+              ×
+            </button>
+
+            {/* Zoomable image */}
+            <motion.img
+              src={lightbox}
+              drag={zoom > 1}
+              dragConstraints={{
+                left: -500,
+                right: 500,
+                top: -300,
+                bottom: 300,
+              }}
+              onClick={(e) => {
+                e.stopPropagation();
+                setZoom((z) => (z === 1 ? 2 : 1)); // click to toggle zoom
+              }}
+              onWheel={(e) => {
+                e.stopPropagation();
+                setZoom((z) => {
+                  const next = z - e.deltaY * 0.001;
+                  return Math.min(Math.max(next, 1), 4);
+                });
+              }}
+              initial={{ scale: 0.8 }}
+              animate={{ scale: zoom }}
+              exit={{ scale: 0.8 }}
+              transition={{ type: "spring", stiffness: 200, damping: 30 }}
+              className="max-w-[90%] max-h-[90%] object-contain cursor-zoom-in"
+              style={{ touchAction: "none" }}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }
