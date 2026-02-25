@@ -5,7 +5,7 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full bg-black text-white px-2 font-inter">
+    <footer className="w-full bg-black text-white px-2 font-inter border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-6 py-14">
         {/* Grid: 1 column mobile / 2 tablet / 4 desktop */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
               010-333 35 36 
             </a>
 
-            <p className="text-xs text-gray-400 mt-1">
+            <p className="text-[12px] text-gray-500 mt-1">
               Telefontider för bokningar & förfrågningar <br />
               10:00–17:00 alla dagar.
             </p>

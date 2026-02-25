@@ -78,7 +78,7 @@ export default function RoomDetails() {
             </div>
 
             {/* Right: Prices */}
-            <div className="md:w-1/2 p-6 bg-gray-50 flex flex-col justify-start">
+            <div className="md:w-1/2 p-6 bg-white flex flex-col justify-start">
               <h4 className="text-gray-800 font-semibold mb-2 text-lg md:text-right font-julius">
                 Pris per person
               </h4>
@@ -92,7 +92,7 @@ export default function RoomDetails() {
                     key={i}
                     whileHover={{ scale: 1.03 }}
                     className={`flex items-center justify-between font-semibold px-4 py-2 text-sm text-[#047d66]
-    ${i % 2 === 0 ? "bg-[#47d7ac]/20" : "bg-[#47d7ac]/10"} hover:bg-[#47d7ac]/30 transition`}
+    ${i % 2 === 0 ? "bg-gray-200" : "bg-gray-200"} hover:bg-[#47d7ac]/30 transition`}
                   >
                     <div className="flex items-center gap-2 text-black font-julius">
                       <User className="w-4 h-4 text-black" />
