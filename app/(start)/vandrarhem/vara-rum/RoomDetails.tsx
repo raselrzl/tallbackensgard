@@ -49,7 +49,7 @@ export default function RoomDetails() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col md:flex-row rounded-md shadow-lg hover:shadow-2xl transition overflow-hidden bg-gray-100"
+            className="flex flex-col md:flex-row rounded-lg shadow shadow-gray-800 hover:shadow-2xl transition overflow-hidden bg-gray-100"
           >
             {/* Left: Image */}
             <div className="relative md:w-1/2 min-h-64 md:h-auto">
