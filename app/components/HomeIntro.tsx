@@ -1,117 +1,86 @@
 "use client";
 import { motion } from "framer-motion";
 
+const cards = [
+  {
+    title: "Vandrarhem",
+    img: "/b1.jpg",
+    description:
+      "Tallbackens Vandrarhem & Apartments i Svärtinge, strax utanför Norrköping, erbjuder bekvämt och prisvärt boende året runt. Vandrarhemmet har totalt 60 bäddar fördelade på fyr- och sexbäddsrum, alla med egen dusch och WC samt direkt utgång till uteplats med egna utemöbler.",
+  },
+  {
+    title: "Natur & Utflykter",
+    img: "/b1.jpg",
+    description:
+      "Vi erbjuder en lugn och familjevänlig miljö med natursköna omgivningar, nära Kolmårdens Djurpark, flera golfbanor, badplatser och andra populära utflyktsmål.",
+  },
+  {
+    title: "Lägenheter",
+    img: "/b1.jpg",
+    description:
+      "Utöver vandrarhemmet erbjuder vi fullt utrustade lägenheter på flera adresser i och runt Norrköping – ett flexibelt och skräddarsytt alternativ för företag, entreprenörer och arbetsgrupper som behöver bekvämt och självständigt boende under projekt eller längre arbetsuppdrag.",
+  },
+];
+
 export default function HomeIntro() {
+  const cardVariants = {
+    left: {
+      hidden: { x: "-45%", y: 100, opacity: 0 }, // diagonal bottom-left
+      visible: { x: 0, y: 0, opacity: 1 },
+    },
+    middle: {
+      hidden: { y: 100, opacity: 0 }, // bottom
+      visible: { y: 0, opacity: 1 },
+    },
+    right: {
+      hidden: { x: "45%", y: 100, opacity: 0 }, // diagonal bottom-right
+      visible: { x: 0, y: 0, opacity: 1 },
+    },
+  };
+
   return (
-    <section className="w-full py-16 md:py-24 px-4">
+    <section className="max-w-7xl mx-auto py-16 md:py-24 px-4">
       <div className="max-w-7xl mx-auto">
-        {/* Card Container */}
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7 }}
-          className="bg-white rounded-2xl"
-        >
-          {/* Title */}
-          <h2 className="text-2xl md:text-4xl font-extrabold mb-6 text-left">
-            {/* Mobile */}
-            <span className="block md:hidden uppercase pt-8 px-8 text-center relative">
-              {/* Logo GIF */}
-              <img
-                src="/logo.gif"
-                alt="Tallbackens Logo"
-                className="mx-auto mb-4 w-24 h-auto"
-              />
-              {/*   Tallbackens <br />
-  Vandrarhem & <br />
-  Apartments */}
-            </span>
+        <h2 className="text-3xl md:text-4xl font-extrabold mb-12 text-center">
+          Upptäck Tallbackens
+        </h2>
 
-            {/* Desktop - New style */}
-            {/*   <span className="hidden md:flex flex-col md:flex-row md:items-center md:gap-6 uppercase md:pl-6">
-              <span className="text-[#47d7ac]">Tallbackens</span>
-              <span className="text-gray-800">Vandrarhem & Apartments</span>
-            </span> */}
-          </h2>
+        {/* Container for desktop 3-card, mobile horizontal scroll */}
+        <div className="flex gap-6 md:flex-row flex-col md:overflow-visible overflow-x-auto snap-x snap-mandatory">
+          {cards.map((card, i) => {
+            // Determine direction per card
+            let direction: "left" | "middle" | "right" = "middle";
+            if (i === 0) direction = "left";
+            else if (i === 2) direction = "right";
 
-          {/* Green divider */}
-          {/* <div className="w-20 h-1 bg-[#47d7ac] mb-8 mx-8 md:mx-6" /> */}
+            return (
+              <motion.div
+                key={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.6 }} // triggers when 60% visible
+                variants={cardVariants[direction]}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="md:w-1/3 w-80 shrink-0 bg-white rounded-2xl shadow-lg overflow-hidden snap-start"
+              >
+                {/* Image */}
+                <div className="relative h-48 w-full">
+                  <img
+                    src={card.img}
+                    alt={card.title}
+                    className="absolute inset-0 w-full h-full object-cover opacity-80"
+                  />
+                  <span className="font-bold text-gray-100 text-lg absolute z-10 top-4 left-4">
+                    {card.title}
+                  </span>
+                </div>
 
-          {/* Text */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className=" space-y-8 md:space-y-20 text-gray-700 text-base md:text-lg leading-relaxed max-w-7xl mx-auto text-left px-4 md:px-6"
-          >
-            {/* Card-style layout for desktop */}
-            <div className="shadow-lg md:flex md:gap-6 md:rounded-2xl overflow-hidden">
-              <div className="md:w-1/3 p-6 flex items-center justify-center relative bg-black">
-                {/* Background image */}
-                <img
-                  src="/b1.jpg"
-                  alt="Background"
-                  className="absolute inset-0 w-full h-full object-cover opacity-80"
-                />
-                {/* Span text */}
-                <span className="font-bold text-gray-100 text-lg relative z-10 font-julius">
-                  Vandrarhem
-                </span>
-              </div>
-              <div className="md:w-2/3 p-6 text-justify font-inter">
-                Tallbackens Vandrarhem & Apartments i Svärtinge, strax utanför
-                Norrköping, erbjuder bekvämt och prisvärt boende året runt.
-                Vandrarhemmet har totalt 60 bäddar fördelade på fyr- och
-                sexbäddsrum, alla med egen dusch och WC samt direkt utgång till
-                uteplats med egna utemöbler.
-              </div>
-            </div>
-
-            <div className="shadow-lg md:flex md:flex-row-reverse md:gap-6 md:rounded-2xl overflow-hidden">
-              <div className="md:w-1/3 p-6 flex items-center justify-center relative bg-black">
-                {/* Background image */}
-                <img
-                  src="/b1.jpg"
-                  alt="Background"
-                  className="absolute inset-0 w-full h-full object-cover opacity-80"
-                />
-                {/* Span text */}
-                <span className="font-bold text-gray-100 text-lg relative z-10 font-julius">
-                  Natur & Utflykter
-                </span>
-              </div>
-              <div className="md:w-2/3 p-6 text-justify font-inter">
-                Vi erbjuder en lugn och familjevänlig miljö med natursköna
-                omgivningar, nära Kolmårdens Djurpark, flera golfbanor,
-                badplatser och andra populära utflyktsmål.
-              </div>
-            </div>
-
-            <div className="shadow-lg md:flex md:gap-6 md:rounded-2xl overflow-hidden">
-              <div className="md:w-1/3 p-6 flex items-center justify-center relative bg-black">
-                {/* Background image */}
-                <img
-                  src="/b1.jpg"
-                  alt="Background"
-                  className="absolute inset-0 w-full h-full object-cover opacity-80"
-                />
-                {/* Span text */}
-                <span className="font-bold text-gray-100 text-lg relative z-10 font-julius">
-                  Lägenheter
-                </span>
-              </div>
-              <div className="md:w-2/3 p-6 text-justify font-inter">
-                Utöver vandrarhemmet erbjuder vi fullt utrustade lägenheter på
-                flera adresser i och runt Norrköping – ett flexibelt och
-                skräddarsytt alternativ för företag, entreprenörer och
-                arbetsgrupper som behöver bekvämt och självständigt boende under
-                projekt eller längre arbetsuppdrag.
-              </div>
-            </div>
-          </motion.div>
-        </motion.div>
+                {/* Description */}
+                <div className="p-6 text-gray-700 text-justify">{card.description}</div>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

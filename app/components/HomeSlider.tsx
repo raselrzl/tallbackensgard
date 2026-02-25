@@ -1,24 +1,57 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
-import { Check, ChevronLeft, ChevronRight, CircleCheck } from "lucide-react";
+import Image from "next/image";
+import {
+  Check,
+  CircleCheck,
+  ChevronRight,
+  ChevronLeft,
+} from "lucide-react";
 
 type IntroItem = {
   title: string;
-  img: string;
+  ic: string; // renamed from image -> ic
   points: string[];
 };
 
 const introData: IntroItem[] = [
-  { title: "Vandrarhem", img: "/b1.jpg", points: ["60 bäddar", "Fyr- & sexbäddsrum", "Öppet året runt"] },
-  { title: "Rum & Komfort", img: "/b1.jpg", points: ["Egen dusch & WC", "Privat uteplats", "Egna utemöbler"] },
-  { title: "Familjevänligt", img: "/b1.jpg", points: ["Lugnt område", "Trygg miljö", "Nära natur"] },
-  { title: "Natur & Bad", img: "/b1.jpg", points: ["Badplatser", "Skog & promenader", "Avkoppling året runt"] },
-  { title: "Utflykter", img: "/b1.jpg", points: ["Nära Kolmården", "Flera golfbanor", "Norrköping centrum"] },
-  { title: "Företagsboende", img: "/b1.jpg", points: ["Perfekt för entreprenörer", "Projektboende", "Längre vistelser"] },
-  { title: "Lägenheter", img: "/b1.jpg", points: ["Fullt utrustade", "Flera adresser", "Självständigt boende"] },
+  {
+    title: "Vandrarhem",
+    ic: "/ic/bed.png",
+    points: ["60 bäddar", "Fyr- & sexbäddsrum", "Öppet året runt"],
+  },
+  {
+    title: "Rum & Komfort",
+    ic: "/ic/rum.png",
+    points: ["Egen dusch & WC", "Privat uteplats", "Egna utemöbler"],
+  },
+  {
+    title: "Familjevänligt",
+    ic: "/ic/family.png",
+    points: ["Lugnt område", "Trygg miljö", "Nära natur"],
+  },
+  {
+    title: "Natur & Bad",
+    ic: "/ic/nature.png",
+    points: ["Badplatser", "Skog & promenader", "Avkoppling året runt"],
+  },
+  {
+    title: "Utflykter",
+    ic: "/ic/zoo.png",
+    points: ["Nära Kolmården", "Flera golfbanor", "Norrköping centrum"],
+  },
+  {
+    title: "Företagsboende",
+    ic: "/ic/corporate.png",
+    points: ["Perfekt för entreprenörer", "Projektboende", "Längre vistelser"],
+  },
+  {
+    title: "Lägenheter",
+    ic: "/ic/apartment.png",
+    points: ["Fullt utrustade", "Flera adresser", "Självständigt boende"],
+  },
 ];
 
 export default function HomeIntroSlider() {
@@ -26,16 +59,15 @@ export default function HomeIntroSlider() {
   const [cardWidth, setCardWidth] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Duplicate items for infinite effect
-  const extendedData = [...introData, ...introData, ...introData]; // left-clone + original + right-clone
-  const middleIndexOffset = introData.length; // middle set starting index
+  const extendedData = [...introData, ...introData, ...introData];
+  const middleIndexOffset = introData.length;
 
   useEffect(() => {
     const firstChild = carouselRef.current?.children[0] as HTMLElement | undefined;
     if (firstChild) {
-      setCardWidth(firstChild.clientWidth + 24);
-      // Start in the middle set
-      carouselRef.current!.scrollLeft = middleIndexOffset * (firstChild.clientWidth + 24);
+      const width = firstChild.clientWidth + 24;
+      setCardWidth(width);
+      carouselRef.current!.scrollLeft = middleIndexOffset * width;
       setActiveIndex(0);
     }
   }, []);
@@ -44,40 +76,43 @@ export default function HomeIntroSlider() {
     if (!carouselRef.current || !cardWidth) return;
 
     let newIndex = activeIndex + (direction === "right" ? 1 : -1);
+    const normalizedIndex =
+      (newIndex + introData.length) % introData.length;
 
-    // Keep within original data length for active indicator
-    const normalizedIndex = (newIndex + introData.length) % introData.length;
     setActiveIndex(normalizedIndex);
 
-    // Scroll carousel
     const currentScroll = carouselRef.current.scrollLeft;
     const scrollAmount = direction === "right" ? cardWidth : -cardWidth;
+
     carouselRef.current.scrollTo({
       left: currentScroll + scrollAmount,
       behavior: "smooth",
     });
   };
 
-  // Infinite loop adjustment after scroll ends
   useEffect(() => {
     const carousel = carouselRef.current;
     if (!carousel) return;
+
     let timeout: any;
 
     const handleScrollEnd = () => {
       clearTimeout(timeout);
       timeout = setTimeout(() => {
-        // If scroll is beyond the middle set, reset to middle
         if (carousel.scrollLeft <= 0) {
           carousel.scrollLeft += introData.length * cardWidth;
-        } else if (carousel.scrollLeft >= 2 * introData.length * cardWidth) {
+        } else if (
+          carousel.scrollLeft >=
+          2 * introData.length * cardWidth
+        ) {
           carousel.scrollLeft -= introData.length * cardWidth;
         }
       }, 150);
     };
 
     carousel.addEventListener("scroll", handleScrollEnd);
-    return () => carousel.removeEventListener("scroll", handleScrollEnd);
+    return () =>
+      carousel.removeEventListener("scroll", handleScrollEnd);
   }, [cardWidth]);
 
   return (
@@ -87,7 +122,7 @@ export default function HomeIntroSlider() {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-center mb-12"
+          className="text-3xl md:text-4xl font-bold text-left mb-12 font-julius"
         >
           Upptäck Tallbackens
         </motion.h2>
@@ -109,7 +144,6 @@ export default function HomeIntroSlider() {
             <ChevronRight className="w-6 h-6 text-gray-700" />
           </button>
 
-          {/* Carousel wrapper hides scrollbar */}
           <div className="overflow-hidden">
             <motion.div
               ref={carouselRef}
@@ -117,40 +151,55 @@ export default function HomeIntroSlider() {
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
-              style={{ overflowX: "auto", scrollbarWidth: "none", msOverflowStyle: "none" }}
+              style={{
+                overflowX: "auto",
+                scrollbarWidth: "none",
+                msOverflowStyle: "none",
+              }}
             >
               {extendedData.map((item, index) => (
                 <div
                   key={index}
-                  className="min-w-70 md:min-w-85 bg-white rounded-xl overflow-hidden shadow-md snap-start shrink-0"
+                  className="min-w-70 bg-white rounded border border-gray-200 shadow-md snap-start shrink-0 flex flex-col items-start p-6"
+                  style={{ minHeight: "300px" }}
                 >
-                  <div className="relative h-48 w-full">
-                    <Image src={item.img} alt={item.title} fill className="object-cover" />
+                  {/* ic image */}
+                  <div className="mb-6">
+                    <Image
+                      src={item.ic}
+                      alt={item.title}
+                      width={56}
+                      height={56}
+                      className="object-contain"
+                    />
                   </div>
 
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
-                    <ul className="space-y-3 text-gray-600 text-sm">
-                      {item.points.map((point, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <Check className="w-4 h-4 mt-1 text-[#47d7ac] shrink-0" />
-                          <span>{point}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <h3 className="text-xl font-semibold mb-3 font-julius">
+                    {item.title}
+                  </h3>
+
+                  <ul className="space-y-2 text-gray-600 text-sm">
+                    {item.points.map((point, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <Check className="w-4 h-4 mt-1 text-[#47d7ac]" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </motion.div>
           </div>
 
-          {/* CircleCheck Indicators */}
+          {/* Indicators */}
           <div className="flex justify-center mt-8 gap-3 flex-wrap">
             {introData.map((_, index) => (
-              <button key={index} onClick={() => scrollToIndex("right")} className="transition">
+              <button key={index} onClick={() => scrollToIndex("right")}>
                 <CircleCheck
-                  className={`w-4 h-4 transition-transform ${
-                    activeIndex === index ? "text-[#47d7ac] scale-110" : "text-gray-300 scale-100"
+                  className={`w-4 h-4 ${
+                    activeIndex === index
+                      ? "text-[#47d7ac] scale-110"
+                      : "text-gray-300"
                   }`}
                 />
               </button>
@@ -158,13 +207,6 @@ export default function HomeIntroSlider() {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        /* Hide scrollbar for Chrome, Safari and Opera */
-        div::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </section>
   );
 }
