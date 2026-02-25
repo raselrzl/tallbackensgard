@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import SocialLinks from "./SocialLinks";
 
 const Footer: React.FC = () => {
   return (
@@ -103,12 +104,19 @@ const Footer: React.FC = () => {
             >
               Betalningsalternativ
             </Link>
-              <Link
+             <Link
               href="/vandrarhem/about"
-              className="block text-sm font-bold text-gray-300 underline hover:text-white transition mb-4"
+              className="block text-sm font-bold text-gray-300 underline hover:text-white transition"
             >
               Om oss
             </Link>
+              <Link
+              href="/vandrarhem/karriar"
+              className="block text-sm font-bold text-gray-300 underline hover:text-white transition mb-4"
+            >
+              Karriärmöjligheter
+            </Link>
+            <SocialLinks />
           </div>
         </div>
       </div>

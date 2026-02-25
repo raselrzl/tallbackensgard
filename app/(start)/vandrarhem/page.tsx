@@ -20,7 +20,7 @@ export default function VandrarhemHomePage() {
       {/* Dark overlay for readability */}
       <div className="absolute top-0 left-0 w-full h-225 bg-black/40 -z-10" />
       <Hero />
-     {/*  <HomeIntro /> */}
+      {/*  <HomeIntro /> */}
       <HomeIntroSlider />
       <HomeAttractions />
       <HomeLink />
