@@ -23,7 +23,7 @@ export default function WifiSection() {
           <div className="absolute inset-0 bg-black/40" />
 
           {/* Heading centered on image */}
-          <h2 className="absolute inset-0 flex items-center justify-center text-white text-xl md:text-2xl font-bold text-center px-4">
+          <h2 className="absolute inset-0 font-julius flex items-center justify-center text-white text-xl md:text-2xl font-bold text-center px-4">
             WiFi
           </h2>
         </div>

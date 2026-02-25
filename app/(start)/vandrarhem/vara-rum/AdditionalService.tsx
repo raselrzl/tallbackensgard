@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function AdditionalServices() {
   return (
-    <section className="relative w-full py-16 font-inter">
+    <section className="relative w-full py-16 font-julius">
       {/* Background Image */}
       <img
         src="/vararum/service.jpg" // replace with your image

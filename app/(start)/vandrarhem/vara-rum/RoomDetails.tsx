@@ -60,7 +60,7 @@ export default function RoomDetails() {
               />
               <div className="absolute inset-0 bg-black/25" />
               {/* Room Title */}
-              <h3 className="absolute bottom-4 uppercase left-4 text-white text-2xl font-bold z-10">
+              <h3 className="absolute bottom-4 uppercase font-julius left-4 text-white text-2xl font-bold z-10">
                 {room.title}
               </h3>
               <div className="absolute top-4 right-0 flex flex-col gap-1 z-10">
@@ -79,7 +79,7 @@ export default function RoomDetails() {
 
             {/* Right: Prices */}
             <div className="md:w-1/2 p-6 bg-gray-50 flex flex-col justify-start">
-              <h4 className="text-gray-800 font-semibold mb-2 text-lg md:text-right">
+              <h4 className="text-gray-800 font-semibold mb-2 text-lg md:text-right font-julius">
                 Pris per person
               </h4>
               <p className="text-gray-600 text-xs mb-4 md:text-right">
@@ -94,11 +94,11 @@ export default function RoomDetails() {
                     className={`flex items-center justify-between font-semibold px-4 py-2 text-sm text-[#047d66]
     ${i % 2 === 0 ? "bg-[#47d7ac]/20" : "bg-[#47d7ac]/10"} hover:bg-[#47d7ac]/30 transition`}
                   >
-                    <div className="flex items-center gap-2 text-black">
+                    <div className="flex items-center gap-2 text-black font-julius">
                       <User className="w-4 h-4 text-black" />
                       <span>{p.persons}</span>
                     </div>
-                    <p className="font-bold text-black">
+                    <p className="font-bold text-black font-julius">
                       {p.price}
                       <span className="text-gray-600 text-[8px] pl-2">
                         Kr/Natt

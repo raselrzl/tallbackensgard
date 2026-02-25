@@ -29,7 +29,7 @@ export default function VaraRumPage() {
           transition={{ duration: 0.8 }}
           className="relative text-center px-4"
         >
-          <h1 className="text-white text-4xl md:text-6xl font-extrabold tracking-wide">
+          <h1 className="text-white text-4xl md:text-6xl font-extrabold tracking-wide font-julius">
             Våra rum
           </h1>
 
