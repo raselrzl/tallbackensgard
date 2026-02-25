@@ -1,9 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
+import ContactForm from "./ContactForm";
 
 export default function ContactOssPage() {
   return (
-    <section className="relative w-full h-100 flex items-center justify-center overflow-hidden">
+    <>
+    <section className="relative font-julius w-full h-100 flex items-center justify-center overflow-hidden">
       
       {/* Background Image */}
       <div
@@ -32,5 +34,7 @@ export default function ContactOssPage() {
         <div className="w-24 h-1 bg-[#47d7ac] mx-auto mt-6" />
       </motion.div>
     </section>
+    <ContactForm />
+    </>
   );
 }
