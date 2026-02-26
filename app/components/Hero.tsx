@@ -6,10 +6,7 @@ const Hero: React.FC = () => {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center text-white text-center">
       {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/b1.jpg')" }}
-      />
+      <div className="absolute inset-0 bg-cover bg-center bg-black" />
 
       {/* Background Video */}
       <video

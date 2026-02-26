@@ -8,23 +8,27 @@ export default function AboutPage() {
     <div className="bg-gray-50 min-h-screen">
 
       {/* 1. Hero Section */}
-      <section className="relative w-full h-[50vh] flex items-center justify-center overflow-hidden">
-        <Image
-          src="/hero.png"
-          alt="Tallbackens Gård Hero"
-          fill
-          className="object-cover"
-          priority
+      <section className="relative w-full h-100 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
+        <video
+          src="/v7.mp4" // video file in /public folder
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black" />
-        <motion.h1
+        <div className="absolute inset-0 bg-black/50" />
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative text-white text-4xl md:text-5xl font-julius font-bold tracking-wide text-center px-4"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white text-2xl md:text-5xl font-julius tracking-widest text-center"
         >
-          Om Tallbackens Gård & Vandrarhem
-        </motion.h1>
+          <h1 className="text-sm sm:text-4xl font-extrabold tracking-wide text-white">
+            Om Tallbackens Gård & Vandrarhem
+          </h1>
+          <div className="w-16 sm:w-20 md:w-24 h-1 bg-[#47d7ac] mx-auto mt-4 sm:mt-6" />
+        </motion.div>
       </section>
 
       {/* 2. Introduction */}

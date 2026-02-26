@@ -8,7 +8,9 @@ import HomeMap from "@/app/components/HomeMap";
 import ContactInfoCard from "@/app/components/ContactInfoCard";
 
 export default function ContactOssPage() {
-  const [activeModal, setActiveModal] = useState<"private" | "corporate" | null>(null);
+  const [activeModal, setActiveModal] = useState<
+    "private" | "corporate" | null
+  >(null);
 
   const options = [
     {
@@ -35,19 +37,23 @@ export default function ContactOssPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative font-julius w-full h-100 flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/b1.jpg')" }}
+      <section className="relative font-julius w-full h-100 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
+        <video
+          src="/v4.mp4" // video file in /public folder
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative text-center px-4"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white text-2xl md:text-5xl font-julius tracking-widest text-center"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wide text-white">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wide text-white">
             Kontakta oss
           </h1>
           <div className="w-16 sm:w-20 md:w-24 h-1 bg-[#47d7ac] mx-auto mt-4 sm:mt-6" />
@@ -94,7 +100,7 @@ export default function ContactOssPage() {
           </div>
         </div>
       </section>
-<ContactInfoCard />
+      <ContactInfoCard />
       {/* Map Section */}
       <HomeMap />
 
