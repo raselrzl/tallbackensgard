@@ -50,11 +50,11 @@ export default function CoverflowCarousel() {
     <div className="relative h-screen w-full bg-black flex items-center justify-center overflow-hidden">
 
       {/* Heading */}
-      <div className="absolute top-20 left-1/2 -translate-x-1/2 z-40">
+   {/*    <div className="absolute top-20 left-1/2 -translate-x-1/2 z-40">
         <h2 className="text-white text-3xl md:text-4xl font-semibold tracking-wide font-julius">
           Bilder
         </h2>
-      </div>
+      </div> */}
 
       {/* Carousel */}
       <div
