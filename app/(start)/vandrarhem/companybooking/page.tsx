@@ -18,15 +18,20 @@ export default function CompanyBookingPage() {
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/40" />
 
-        {/* Motion Heading */}
-        <motion.h1
+        {/* Center Content */}
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white text-2xl md:text-5xl font-julius tracking-widest px-4 text-center"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white text-3xl md:text-5xl font-julius tracking-widest text-center"
         >
-          Företagsbokningar
-        </motion.h1>
+          <h1 className="text-white text-4xl md:text-6xl font-extrabold tracking-wide font-julius">
+            Företagsbokningar
+          </h1>
+
+          {/* Elegant Divider */}
+          <div className="w-24 h-1 bg-[#47d7ac] mx-auto mt-6" />
+        </motion.div>
       </section>
 
       {/* Content Section */}

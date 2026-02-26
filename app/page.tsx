@@ -35,7 +35,7 @@ export default function HomePage() {
       </video>
 
       {/* Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black/40" />
+      <div className="absolute top-0 left-0 w-full h-full bg-black/70" />
 
       {/* Hero Buttons at bottom center */}
       <section className="relative w-full h-screen flex items-end justify-center text-white text-center z-10 pb-12 md:pb-28">
