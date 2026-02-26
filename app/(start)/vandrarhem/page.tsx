@@ -4,6 +4,7 @@ import HomeIntro from "@/app/components/HomeIntro";
 import HomeLink from "@/app/components/HomeLink";
 import HomeMap from "@/app/components/HomeMap";
 import HomeIntroSlider from "@/app/components/HomeSlider";
+import ServicesSlider from "@/app/components/ServicesSlider";
 
 export default function VandrarhemHomePage() {
   return (
@@ -21,10 +22,11 @@ export default function VandrarhemHomePage() {
       <div className="absolute top-0 left-0 w-full h-225 bg-black/40 -z-10" />
       <Hero />
       {/*  <HomeIntro /> */}
-      <HomeIntroSlider />
+      {/* <HomeIntroSlider /> */}
+      <ServicesSlider />
       <HomeAttractions />
       <HomeLink />
-      <HomeMap />
+     {/*  <HomeMap /> */}
     </div>
   );
 }

@@ -38,7 +38,7 @@ export default function VNavbar() {
       <div className="max-w-7xl mx-auto h-full flex items-center justify-between px-6">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center md:pl-10">
+        <Link href="/vandrarhem" className="flex items-center md:pl-10">
           <Image
             src="/logo/logoc.png"
             alt="Logo"

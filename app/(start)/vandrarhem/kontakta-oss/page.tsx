@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import ContactForm from "./ContactForm";
+import HomeMap from "@/app/components/HomeMap";
 
 export default function ContactOssPage() {
   return (
@@ -35,6 +36,7 @@ export default function ContactOssPage() {
       </motion.div>
     </section>
     <ContactForm />
+    <HomeMap />
     </>
   );
 }
