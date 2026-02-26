@@ -14,7 +14,7 @@ export default function ContactForm() {
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const target = e.target as HTMLInputElement;
     const { name, type } = target;
@@ -33,10 +33,10 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="max-w-7xl mx-auto my-20  font-julius">
-      <div className="grid grid-cols-1 md:grid-cols-2">
+    <section className="max-w-5xl mx-auto my-20  font-julius">
+      <div className="grid grid-cols-1">
         {/* Left Side: Image + Contact Info */}
-        <div
+        {/*      <div
           className="relative h-96 md:h-auto bg-cover bg-center flex flex-col justify-end p-10 text-black"
           style={{
             backgroundImage: "url('/contact4.png')", // replace with your image
@@ -58,13 +58,14 @@ export default function ContactForm() {
               </a>
             </p>
           </div>
-        </div>
+        </div> */}
 
         {/* Right Side: Form */}
         <div className="bg-white dark:bg-gray-900 p-8 md:p-12">
-
-
-          <form className="space-y-6 rounded-2xl overflow-hidden shadow-xl p-8" onSubmit={handleSubmit}>
+          <form
+            className="space-y-6 rounded-2xl overflow-hidden shadow-xl p-8"
+            onSubmit={handleSubmit}
+          >
             <div className="flex items-center gap-3 bg-gray-100 dark:bg-gray-800 rounded-xl p-3">
               <User className="w-5 h-5 text-gray-500 dark:text-gray-300" />
               <input
