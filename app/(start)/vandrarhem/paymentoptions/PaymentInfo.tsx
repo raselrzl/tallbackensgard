@@ -1,57 +1,86 @@
 "use client";
 
-import { CreditCard, Smartphone, FileText, Phone, Info } from "lucide-react";
+import Image from "next/image";
+import { FileText, Phone, Info } from "lucide-react";
 
 export default function PaymentInfo() {
   const paymentMethods = [
     {
-      icon: <CreditCard className="w-8 h-8 text-white" />,
+      icon: (
+        <Image
+          src="/card.png"
+          alt="Betalkort"
+          width={80}
+          height={80}
+          className="object-contain"
+        />
+      ),
       title: "Betalkort",
-      description:
-        "Fyll i dina uppgifter och följ instruktionerna kring kortbetalningen i bokningsprogrammet.",
-      gradient: "bg-gradient-to-tr from-blue-400 to-blue-600",
+      points: [
+        "Fyll i dina uppgifter",
+        "Följ instruktionerna i bokningsprogrammet",
+        "Accepterar alla typer av kort",
+      ],
+      gradient: "",
     },
     {
-      icon: <Smartphone className="w-8 h-8 text-white" />,
+      icon: (
+        <Image
+          src="/swish.png"
+          alt="Swish"
+          width={90}
+          height={90}
+          className="object-contain rounded-4xl"
+        />
+      ),
       title: "Swish",
-      description:
-        "Skriv i alla uppgifter och klicka på bokningsförfrågan. Bekräftelse skickas via mail med bokningsnummer. Swisha belopp + bokningsnumret (123 11 533 11) till Centralis Group.",
-      gradient: "bg-gradient-to-tr from-green-400 to-green-600",
+      points: [
+        "Skriv in uppgifter och klicka på bokningsförfrågan",
+        "Bekräftelse skickas via mail",
+        "Swisha belopp + bokningsnummer till Centralis Group",
+      ],
+      gradient: "",
     },
     {
       icon: <FileText className="w-8 h-8 text-white" />,
       title: "Faktura",
-      description:
-        "Endast företag & föreningar. Bokning av företag kan ej göras på hemsida. Ring för bokningar.",
+      points: [
+        "Endast företag & föreningar",
+        "Bokning via telefon, ej på hemsidan",
+      ],
       gradient: "bg-gradient-to-tr from-yellow-400 to-yellow-500",
     },
     {
       icon: <Info className="w-8 h-8 text-white" />,
       title: "Säker betalning",
-      description:
-        "Dina kontouppgifter sparas inte hos oss utan hanteras av vår betalningsleverantör Stripe. I vissa fall hanteras fakturabetalningen av vår samarbetspartner.",
+      points: [
+        "Kontouppgifter sparas ej hos oss",
+        "Hanteras av betalningsleverantör Stripe",
+        "Fakturabetalning via samarbetspartner",
+      ],
       gradient: "bg-gradient-to-tr from-purple-400 to-purple-600",
     },
     {
       icon: <Phone className="w-8 h-8 text-white" />,
       title: "Kontakt",
-      description:
-        "Maila info@tallbackensgard.se eller ring 010-3333536. Telefontider: 10:00–17:00 alla dagar.",
+      points: [
+        "Maila info@tallbackensgard.se",
+        "Ring 010-3333536",
+        "Telefontider: 10:00–17:00 alla dagar",
+      ],
       gradient: "bg-gradient-to-tr from-red-400 to-red-600",
     },
   ];
 
   return (
     <section className="max-w-7xl mx-auto p-4 md:p-8 space-y-8 mt-10" id="betalningsalternativ">
-
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
         {paymentMethods.map((method, idx) => (
           <div
             key={idx}
             className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300"
           >
-            {/* Icon */}
+            {/* Icon / Logo */}
             <div
               className={`w-16 h-16 flex items-center justify-center rounded-full mb-4 ${method.gradient}`}
             >
@@ -63,15 +92,14 @@ export default function PaymentInfo() {
               {method.title}
             </h3>
 
-            {/* Description */}
-            <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base">
-              {method.description}
-            </p>
+            {/* Dotted Points */}
+            <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm md:text-base space-y-1 text-left">
+              {method.points.map((point, i) => (
+                <li key={i}>{point}</li>
+              ))}
+            </ul>
           </div>
         ))}
-
-        {/* Search Booking Button */}
-       
       </div>
     </section>
   );
