@@ -12,12 +12,12 @@ export default function PaymentPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/payment-bg.jpg')", // Replace with your image
+            backgroundImage: "url('/pay1.png')", // Replace with your image
           }}
         />
 
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black" />
+        <div className="absolute inset-0 bg-black/70" />
 
         {/* Centered Content */}
         <motion.div

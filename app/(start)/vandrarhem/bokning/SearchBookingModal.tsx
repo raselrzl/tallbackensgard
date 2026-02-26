@@ -28,7 +28,7 @@ export default function SearchBookingModal() {
       {/* Trigger Button */}
       <button
         onClick={() => setOpen(true)}
-        className="px-8 py-3 bg-[#47d7ac] text-white font-julius font-semibold rounded-full shadow-lg hover:bg-[#36b795] transition duration-300"
+        className="px-8 py-3 bg-[#47d7ac] text-xs text-white font-julius font-semibold rounded-full shadow-lg hover:bg-[#36b795] transition duration-300"
       >
         Sök befintlig bokning här
       </button>

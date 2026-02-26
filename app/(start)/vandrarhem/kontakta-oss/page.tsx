@@ -35,7 +35,7 @@ export default function ContactOssPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative font-julius w-full h-[60vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative font-julius w-full h-100 flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/b1.jpg')" }}
