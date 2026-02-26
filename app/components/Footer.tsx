@@ -6,7 +6,7 @@ import SocialLinks from "./SocialLinks";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full bg-black text-white px-2 font-inter border-t border-gray-800">
+    <footer className="w-full bg-black text-white px-2 font-inter border-t font-julius border-gray-800">
       <div className="max-w-7xl mx-auto px-6 py-14">
         {/* Grid: 1 column mobile / 2 tablet / 4 desktop */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -26,11 +26,11 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Section 2 – Kontakt */}
-          <div>
-            <h3 className="text-lg font-bold mb-2">
+          <div className="font-julius">
+            <h3 className="text-lg font-bold mb-2 font-julius">
               Tallbackens Gård & Vandrarhem
             </h3>
-            <p className="text-sm text-gray-300 leading-relaxed">
+            <p className="text-sm text-gray-300 leading-relaxed font-julius">
               Finspångsvägen 497 <br />
               605 80 Svärtinge
             </p>
@@ -48,15 +48,15 @@ const Footer: React.FC = () => {
               010-333 35 36 
             </a>
 
-            <p className="text-[12px] text-gray-500 mt-1">
+            <p className="text-[10px] text-gray-500 mt-1 font-julius">
               Telefontider för bokningar & förfrågningar <br />
               10:00–17:00 alla dagar.
             </p>
           </div>
 
           {/* Section 3 – Företag */}
-          <div>
-            <h3 className="text-lg font-bold mb-4">Företagsbokningar</h3>
+          <div className="font-julius">
+            <h3 className="text-lg font-bold mb-4 font-julius">Företagsbokningar</h3>
 
             <a
               href="tel:+46103333536"
@@ -82,8 +82,8 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Section 4 – Övrigt */}
-          <div>
-             <h3 className="text-lg font-bold mb-2">
+          <div className="font-julius">
+             <h3 className="text-lg font-bold mb-2 font-julius">
               Info
             </h3>
            <Link

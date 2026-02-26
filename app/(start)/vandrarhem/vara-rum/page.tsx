@@ -6,6 +6,7 @@ import Lounge from "./Lounge";
 import WifiSection from "./Wifi";
 import AdditionalServices from "./AdditionalService";
 import PhotoGallery from "./PhotoGallery";
+import KitchenSection from "./KitchenSection";
 
 export default function VaraRumPage() {
   return (
@@ -40,11 +41,11 @@ export default function VaraRumPage() {
 
       <RoomDetails />
 
-      <Kitchen />
+      <KitchenSection />
 
       <Lounge />
       
-      <WifiSection />
+    {/*   <WifiSection /> */}
       <AdditionalServices />
       <PhotoGallery />
     </>
