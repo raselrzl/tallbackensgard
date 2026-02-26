@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import AdditionalServices from "../vara-rum/AdditionalService";
-import PaymentInfo from "../bokning/PaymentInfo";
+import PaymentInfo from "./PaymentInfo";
 
 export default function PaymentPage() {
   return (

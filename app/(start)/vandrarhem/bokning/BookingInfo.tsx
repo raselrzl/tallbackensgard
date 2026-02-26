@@ -8,40 +8,41 @@ export default function BookingInfo() {
       icon: <XCircle className="w-6 h-6 text-red-500" />,
       bg: "bg-red-100",
       title: "Rökning förbjuden",
-      description:
-        "Rökning är strikt förbjuden i samtliga rum. Vid överträdelse sker omedelbar avvisning och en avgift om 10 000 SEK debiteras.",
+      points: [
+        "Rökning är förbjuden i samtliga rum",
+        "Omedelbar avvisning vid överträdelse",
+        "Avgift: 10 000 SEK",
+      ],
     },
     {
       icon: <Calendar className="w-6 h-6 text-blue-500" />,
       bg: "bg-blue-100",
       title: "Avbokning",
-      description:
-        "Fri avbokning gäller fram till 48 timmar före ankomst. Vid senare avbokning debiteras hela bokningsbeloppet (100%).",
+      points: [
+        "Fri avbokning upp till 48 timmar före ankomst",
+        "Senare avbokning: 100% debitering",
+      ],
     },
     {
       icon: <Phone className="w-6 h-6 text-green-500" />,
       bg: "bg-green-100",
       title: "Mobilnummer",
-      description:
-        "Ett giltigt mobilnummer måste anges vid bokning för att dörrkod ska kunna skickas ut inför ankomst.",
+      points: ["Giltigt mobilnummer krävs", "Dörrkod skickas vid ankomst"],
     },
     {
       icon: <Clock className="w-6 h-6 text-yellow-500" />,
       bg: "bg-yellow-100",
       title: "Incheckning / Utcheckning",
-      description:
-        "Incheckning från kl. 16:00 • Utcheckning senast kl. 11:00",
+      points: ["Incheckning från 16:00", "Utcheckning senast 11:00"],
     },
   ];
 
   return (
     <section className="max-w-7xl mx-auto p-4 md:p-8 space-y-6 mb-10">
-      {/* Section Heading */}
       <h2 className="text-2xl md:text-3xl font-julius font-bold text-gray-900 dark:text-white text-center mb-6">
         Bokningsinformation
       </h2>
 
-      {/* Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {infoData.map((item, idx) => (
           <div
@@ -60,14 +61,16 @@ export default function BookingInfo() {
                 {item.icon}
               </div>
 
-              {/* Heading + Text */}
+              {/* Heading + Bullet Points */}
               <div>
                 <h3 className="font-julius font-semibold text-gray-900 dark:text-white mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-700 dark:text-gray-300 text-sm">
-                  {item.description}
-                </p>
+                <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm space-y-1">
+                  {item.points.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
