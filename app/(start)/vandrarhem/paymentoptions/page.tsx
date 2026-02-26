@@ -7,7 +7,7 @@ export default function PaymentPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative w-full h-100 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
+      <section className="relative w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
          <video
           src="/pay.mp4" // video file in /public folder
           autoPlay
@@ -18,7 +18,7 @@ export default function PaymentPage() {
         />
 
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/70" />
 
         {/* Centered Content */}
         <motion.div
@@ -35,7 +35,7 @@ export default function PaymentPage() {
       </section>
 
       {/* Payment Methods Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="">
         <div className="max-w-7xl mx-auto px-6">
 
           <PaymentInfo />

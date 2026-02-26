@@ -11,7 +11,7 @@ import KitchenSection from "./KitchenSection";
 export default function VaraRumPage() {
   return (
     <>
-      <section className="relative w-full h-100 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
+      <section className="relative w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
         {/* Background Image */}
          <video
           src="/ved7.mp4" // video file in /public folder
@@ -23,7 +23,7 @@ export default function VaraRumPage() {
         />
 
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/50" />
 
         {/* Center Content */}
         <motion.div

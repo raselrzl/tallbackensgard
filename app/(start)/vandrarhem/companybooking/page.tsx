@@ -5,7 +5,7 @@ export default function CompanyBookingPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative w-full h-100 sm:h-130 2xl:h-160 flex items-center justify-center bg-black">
+      <section className="relative w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center bg-black">
         {/* Background Video */}
         <video
           src="/contact.mp4" // video file in /public folder
@@ -16,7 +16,7 @@ export default function CompanyBookingPage() {
           className="absolute top-0 left-0 w-full h-full object-cover"
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/60" />
 
         {/* Center Content */}
         <motion.div
@@ -25,7 +25,7 @@ export default function CompanyBookingPage() {
           transition={{ duration: 0.8 }}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white text-3xl md:text-5xl font-julius tracking-widest text-center"
         >
-          <h1 className="text-white text-4xl md:text-6xl font-extrabold tracking-wide font-julius">
+          <h1 className="text-white text-2xl md:text-6xl font-extrabold tracking-wide font-julius">
             Företagsbokningar
           </h1>
 

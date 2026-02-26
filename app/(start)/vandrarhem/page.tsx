@@ -9,8 +9,6 @@ import ServicesSlider from "@/app/components/ServicesSlider";
 export default function VandrarhemHomePage() {
   return (
     <div className="relative overflow-hidden bg-black">
-      {/* Dark overlay for readability */}
-      <div className="absolute top-0 left-0 w-full h-225 bg-black/40 -z-10" />
       <Hero />
       {/*  <HomeIntro /> */}
       {/* <HomeIntroSlider /> */}

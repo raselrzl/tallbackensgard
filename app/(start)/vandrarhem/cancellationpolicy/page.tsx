@@ -6,7 +6,7 @@ export default function CancellationPolicyPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative w-full h-100 sm:h-130 2xl:h-160 flex items-center justify-center bg-black">
+      <section className="relative w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center bg-black">
         <video
           src="/ved8.mp4" // video file in /public folder
           autoPlay
@@ -15,7 +15,7 @@ export default function CancellationPolicyPage() {
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/70" />
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}

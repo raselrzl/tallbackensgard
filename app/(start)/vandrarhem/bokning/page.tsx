@@ -6,7 +6,7 @@ import SearchBookingModal from "./SearchBookingModal";
 export default function BokningPage() {
   return (
     <>
-      <section className="relative w-full h-100 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
+      <section className="relative w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
         {/* Background Image */}
          <video
           src="/ved5.mp4" // video file in /public folder
@@ -18,7 +18,7 @@ export default function BokningPage() {
         />
 
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/50" />
 
         {/* Center Content */}
         <motion.div
