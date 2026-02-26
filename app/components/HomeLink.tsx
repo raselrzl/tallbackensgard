@@ -7,15 +7,15 @@ const links = [
   { title: "Våra rum", image: "/card/rum.jpg", href: "/vandrarhem/vara-rum" },
   { title: "Kök", image: "/card/kok.jpg", href: "/vandrarhem/vara-rum#kok" },
   { title: "Lounge/Matsal", image: "/card/lounge.jpg", href: "/vandrarhem/vara-rum#lounge" },
-  { title: "WiFi", image: "/card/wifi.jpg", href: "/vandrarhem/vara-rum#wifi" },
-];
+  /* { title: "WiFi", image: "/card/wifi.jpg", href: "/vandrarhem/vara-rum#wifi" },
+ */];
 
 const HomeLink: React.FC = () => {
   return (
     <section className="w-full py-20 sm:py-30 bg-white font-julius">
       <div className="max-w-7xl mx-auto px-8 sm:px-6">
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
 
           {links.map((item, index) => (
             <motion.div
