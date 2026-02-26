@@ -1,42 +1,130 @@
 "use client";
-import { motion } from "framer-motion";
-import ContactForm from "./ContactForm";
+
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import ContactForm from "./ContactForm"; // your form
 import HomeMap from "@/app/components/HomeMap";
 
 export default function ContactOssPage() {
+  const [showModal, setShowModal] = useState(false);
+
+  const options = [
+    {
+      title: "Privatperson",
+      description:
+        "Letar du efter ett boende för dig själv eller familjen? Vi hjälper dig att hitta det perfekta boendet.",
+      buttonText: "Kontakta oss",
+      action: () => setShowModal(true),
+    },
+    {
+      title: "Företag / Projektboende",
+      description:
+        "Söker du tillfälligt boende för projektanställda eller företagsflytt? Vi kan hjälpa dig.",
+      buttonText: "Få offert",
+      action: () => alert("Redirect to corporate offer form or page"),
+    },
+  ];
+
   return (
     <>
-    <section className="relative font-julius w-full h-100 flex items-center justify-center overflow-hidden">
-      
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('/b1.jpg')", // change to your image path
-        }}
-      />
+      {/* Hero Section */}
+      <section className="relative font-julius w-full h-[60vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/b1.jpg')",
+          }}
+        />
+        <div className="absolute inset-0 bg-black/40" />
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative text-center px-4"
+        >
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wide text-white">
+            Kontakta oss
+          </h1>
+          <div className="w-16 sm:w-20 md:w-24 h-1 bg-[#47d7ac] mx-auto mt-4 sm:mt-6" />
+        </motion.div>
+      </section>
 
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/40" />
+      {/* Options Section */}
+      <section className="py-16 sm:py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-10 sm:mb-12 font-julius"
+          >
+            Välj typ av boende
+          </motion.h1>
 
-      {/* Center Content */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="relative text-center px-4"
-      >
-        <h1 className="text-white text-4xl md:text-6xl font-extrabold tracking-wide">
-          Kontakta oss
-        </h1>
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
+            {options.map((option, index) => (
+              <motion.div
+                key={index}
+                whileHover={{
+                  y: -2,
+                  boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
+                }}
+                className="bg-white rounded-2xl border border-gray-200 shadow-md p-6 sm:p-8 flex flex-col justify-between transition"
+              >
+                <div>
+                  <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 font-julius">
+                    {option.title}
+                  </h2>
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                    {option.description}
+                  </p>
+                </div>
+                <div className="mt-4 sm:mt-6">
+                  <button
+                    onClick={option.action}
+                    className="bg-[#47d7ac] hover:bg-[#36b795] text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-xl w-full sm:w-auto transition"
+                  >
+                    {option.buttonText}
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        {/* Elegant Divider */}
-        <div className="w-24 h-1 bg-[#47d7ac] mx-auto mt-6" />
-      </motion.div>
-    </section>
-    <ContactForm />
-    <HomeMap />
+      {/* Map Section */}
+      <HomeMap />
+
+      {/* ContactForm Modal */}
+      <AnimatePresence>
+        {showModal && (
+          <motion.div
+            className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.8 }}
+              className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl w-full max-w-lg sm:max-w-xl m-2 overflow-hidden relative"
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setShowModal(false)}
+                className="absolute top-4 right-4 text-gray-600 dark:text-gray-300 text-2xl sm:text-3xl"
+              >
+                ×
+              </button>
+
+              {/* Contact Form */}
+              <ContactForm />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
