@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import ContactForm from "./ContactForm"; // Private person form
 import CorporateContactForm from "./CorporateContactForm"; // Corporate form
 import HomeMap from "@/app/components/HomeMap";
+import ContactInfoCard from "@/app/components/ContactInfoCard";
 
 export default function ContactOssPage() {
   const [activeModal, setActiveModal] = useState<"private" | "corporate" | null>(null);
@@ -65,7 +66,7 @@ export default function ContactOssPage() {
             Välj typ av boende
           </motion.h1>
 
-          <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-2 max-w-5xl mx-auto">
             {options.map((option, index) => (
               <motion.div
                 key={index}
@@ -93,7 +94,7 @@ export default function ContactOssPage() {
           </div>
         </div>
       </section>
-
+<ContactInfoCard />
       {/* Map Section */}
       <HomeMap />
 
