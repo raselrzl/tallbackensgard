@@ -19,9 +19,14 @@ export default function CorporateContactForm({
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
-    const target = e.target as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
+    const target = e.target as
+      | HTMLInputElement
+      | HTMLTextAreaElement
+      | HTMLSelectElement;
     let value: string | boolean = target.value;
 
     if (target instanceof HTMLInputElement && target.type === "checkbox") {
@@ -43,13 +48,13 @@ export default function CorporateContactForm({
 
   return (
     <section className="font-julius w-full px-4 sm:px-6 md:px-8">
-      <div className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto bg-white dark:bg-gray-900 py-8 px-4 rounded-2xl overflow-y-auto max-h-[90vh]">
+      <div className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto bg-white dark:bg-gray-900 pb-8 px-4 rounded-2xl overflow-y-auto max-h-[90vh]">
         {/* GIF */}
         <div className="flex justify-center mb-4 sm:mb-6">
           <img
             src="/logo.gif"
             alt="Företagskontakt"
-            className="w-24 h-24 sm:w-32 sm:h-32 object-contain"
+            className="h-40 object-contain"
           />
         </div>
 
@@ -65,7 +70,7 @@ export default function CorporateContactForm({
             <input
               type="text"
               name="firstName"
-              placeholder="Förnamn (Obligatoriskt)"
+              placeholder="Förnamn"
               value={formData.firstName}
               onChange={handleChange}
               className="w-full p-3 rounded-xl bg-gray-100 dark:bg-gray-800 outline-none text-gray-900 dark:text-white"
@@ -74,7 +79,7 @@ export default function CorporateContactForm({
             <input
               type="text"
               name="lastName"
-              placeholder="Efternamn (Obligatoriskt)"
+              placeholder="Efternamn"
               value={formData.lastName}
               onChange={handleChange}
               className="w-full p-3 rounded-xl bg-gray-100 dark:bg-gray-800 outline-none text-gray-900 dark:text-white"
@@ -86,7 +91,7 @@ export default function CorporateContactForm({
             <input
               type="email"
               name="email"
-              placeholder="E-post (Obligatoriskt)"
+              placeholder="Email"
               value={formData.email}
               onChange={handleChange}
               className="w-full p-3 rounded-xl bg-gray-100 dark:bg-gray-800 outline-none text-gray-900 dark:text-white"
@@ -95,7 +100,7 @@ export default function CorporateContactForm({
             <input
               type="tel"
               name="phone"
-              placeholder="+358 Ange telefonnummer"
+              placeholder="Phone Number"
               value={formData.phone}
               onChange={handleChange}
               className="w-full p-3 rounded-xl bg-gray-100 dark:bg-gray-800 outline-none text-gray-900 dark:text-white"
@@ -111,24 +116,20 @@ export default function CorporateContactForm({
               className="w-full p-3 rounded-xl bg-gray-100 dark:bg-gray-800 outline-none text-gray-900 dark:text-white"
               required
             >
-              <option value="">Kundtyp (Obligatoriskt)</option>
+              <option value="">Kundtyp </option>
               <option value="company">Företag</option>
               <option value="project">Projektboende</option>
             </select>
 
-            <select
+            <input
+              type="text"
               name="country"
               value={formData.country}
               onChange={handleChange}
+              placeholder="Land"
               className="w-full p-3 rounded-xl bg-gray-100 dark:bg-gray-800 outline-none text-gray-900 dark:text-white"
               required
-            >
-              <option value="">Land (Obligatoriskt)</option>
-              <option value="fi">Finland</option>
-              <option value="se">Sverige</option>
-              <option value="no">Norge</option>
-              <option value="other">Annat</option>
-            </select>
+            />
           </div>
 
           <textarea
@@ -142,7 +143,7 @@ export default function CorporateContactForm({
             required
           />
 
-          <label className="flex items-center gap-2 text-gray-700 dark:text-gray-300 text-xs">
+          <label className="flex items-center gap-2 text-gray-700 dark:text-gray-300 text-[10px]">
             <input
               type="checkbox"
               name="consent"

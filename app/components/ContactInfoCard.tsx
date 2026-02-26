@@ -3,12 +3,12 @@
 export default function ContactInfoCard() {
   return (
     <section className="w-full flex items-center justify-center bg-gray-50 dark:bg-gray-900 ">
-      <div className="max-w-5xl w-full dark:bg-gray-800 rounded-2xl px-4 sm:px-6 lg:px-8 py-5 my-10 mx-3 font-julius text-black dark:text-white shadow-md space-y-6 bg-white">
-        <div className="flex justify-center mb-6">
+      <div className="max-w-5xl w-full dark:bg-gray-800 rounded-2xl px-4 sm:px-6 lg:px-8 pb-8 mb-10 mx-3 font-julius text-black dark:text-white shadow-md border border-gray-200 space-y-6 bg-white">
+        <div className="flex justify-center mb-2">
           <img
             src="/logo.gif" // put your GIF in public folder
             alt="Contact"
-            className="w-24 h-24 sm:w-32 sm:h-32 object-contain"
+            className="w-50 h-50 object-contain"
           />
         </div>
         {/* Header */}

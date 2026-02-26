@@ -34,13 +34,13 @@ export default function ContactForm() {
 
   return (
     <section className="font-julius w-full px-4 sm:px-6 md:px-8">
-      <div className="max-w-2xl mx-auto bg-white dark:bg-gray-900 py-8 px-4">
+      <div className="max-w-2xl mx-auto bg-white dark:bg-gray-900 pb-8 px-4">
         {/* GIF at the top */}
-        <div className="flex justify-center mb-6">
+        <div className="flex justify-center">
           <img
             src="/logo.gif" // put your GIF in public folder
             alt="Contact"
-            className="w-24 h-24 sm:w-32 sm:h-32 object-contain"
+            className="h-40 object-contain"
           />
         </div>
 
@@ -100,7 +100,7 @@ export default function ContactForm() {
             />
           </div>
 
-          <label className="flex items-center gap-2 text-gray-700 dark:text-gray-300 text-xs">
+          <label className="flex items-center gap-2 text-gray-700 dark:text-gray-300 text-[10px] ">
             <input
               type="checkbox"
               name="consent"
