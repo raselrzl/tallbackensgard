@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { Home } from "lucide-react";
 
 export default function VNavbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,9 +22,7 @@ export default function VNavbar() {
   // Active link style function
   const linkStyle = (path: string) =>
     `relative transition-colors duration-300 ${
-      pathname === path
-        ? "text-[#47d7ac]"
-        : "text-white hover:text-[#47d7ac]"
+      pathname === path ? "text-[#47d7ac]" : "text-white hover:text-[#47d7ac]"
     }`;
 
   return (
@@ -36,7 +35,6 @@ export default function VNavbar() {
       } text-white`}
     >
       <div className="max-w-7xl mx-auto h-full flex items-center justify-between px-6">
-
         {/* Logo */}
         <Link href="/vandrarhem" className="flex items-center md:pl-10">
           <Image
@@ -51,16 +49,33 @@ export default function VNavbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 font-semibold text-sm uppercase">
-          <Link href="/vandrarhem/vara-rum" className={linkStyle("/vandrarhem/vara-rum")}>
+          <Link
+            href="/vandrarhem/vara-rum"
+            className={linkStyle("/vandrarhem/vara-rum")}
+          >
             Våra rum
           </Link>
 
-          <Link href="/vandrarhem/bokning" className={linkStyle("/vandrarhem/bokning")}>
+          <Link
+            href="/vandrarhem/bokning"
+            className={linkStyle("/vandrarhem/bokning")}
+          >
             Bokning
           </Link>
 
-          <Link href="/vandrarhem/kontakta-oss" className={linkStyle("/vandrarhem/kontakta-oss")}>
+          <Link
+            href="/vandrarhem/kontakta-oss"
+            className={linkStyle("/vandrarhem/kontakta-oss")}
+          >
             Kontakta oss
+          </Link>
+
+          <Link
+            href="/"
+            className="flex justify-center items-center"
+            onClick={() => setMenuOpen(false)}
+          >
+            <Image src="/icon.png" alt="Home" width={24} height={24} />
           </Link>
         </div>
 
@@ -75,11 +90,7 @@ export default function VNavbar() {
           />
           <motion.span
             className="h-0.5 w-5 rounded bg-[#47d7ac]"
-            animate={
-              menuOpen
-                ? { rotate: 45, y: 8 }
-                : { rotate: 0, y: 0 }
-            }
+            animate={menuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
             transition={{ duration: 0.3 }}
           />
           <motion.span
@@ -100,7 +111,6 @@ export default function VNavbar() {
             className="md:hidden bg-black overflow-hidden mx-8 border-t-4 border-[#47d7ac]"
           >
             <div className="flex flex-col text-center py-6 gap-6 font-semibold text-sm uppercase">
-
               <Link
                 href="/vandrarhem/vara-rum"
                 className={linkStyle("/vandrarhem/vara-rum")}
@@ -124,7 +134,13 @@ export default function VNavbar() {
               >
                 Kontakta oss
               </Link>
-
+              <Link
+                href="/"
+                className="flex justify-center items-center"
+                onClick={() => setMenuOpen(false)}
+              >
+                <Image src="/icon.png" alt="Home" width={24} height={24} />
+              </Link>
             </div>
           </motion.div>
         )}
