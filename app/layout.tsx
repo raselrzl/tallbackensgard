@@ -23,7 +23,7 @@ export const syncopate = Syncopate({
 
 export const inter = Inter({
   subsets: ["latin"],
-  weight: ["300","400","500","600","700"],
+  weight: ["300","400","500","600","700", "900"],
   variable: "--font-inter",
   display: "swap",
 });
