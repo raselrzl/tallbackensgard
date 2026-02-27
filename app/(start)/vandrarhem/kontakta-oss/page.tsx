@@ -39,13 +39,13 @@ export default function ContactOssPage() {
       {/* Hero Section */}
       <section className="relative font-julius w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
         <video
-  src="/v12.mp4"
-  autoPlay
-  loop
-  muted
-  playsInline
-  className="absolute top-0 left-0 w-full h-full object-cover"
-/>
+          src="/v12.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-black/70" />
         <motion.div
           initial={{ opacity: 0, y: 40 }}
