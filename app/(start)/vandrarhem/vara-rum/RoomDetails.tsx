@@ -63,12 +63,12 @@ export default function RoomDetails() {
               <h3 className="absolute bottom-4 uppercase font-julius left-4 text-white text-2xl font-bold z-10">
                 {room.title}
               </h3>
-              <div className="absolute top-4 right-0 flex flex-col gap-1 z-10">
+              <div className="absolute top-2 left-2 flex flex-col items-start gap-1 z-10">
                 {room.amenities.map((amenity, i) => (
                   <motion.div
                     key={i}
                     whileHover={{ y: -2 }}
-                    className="flex items-center gap-1 bg-[#47d7ac]/80 px-2 py-1 rounded-l-full text-white text-xs font-medium shadow"
+                    className="inline-flex items-center gap-1 bg-[#47d7ac]/90 px-3 py-1 rounded-full text-white text-[9px] font-medium shadow-md w-fit"
                   >
                     {amenityIcons[amenity as Amenity]}
                     <span>{amenity}</span>
