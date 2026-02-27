@@ -10,7 +10,7 @@ import KitchenSection from "./KitchenSection";
 
 export default function VaraRumPage() {
   return (
-    <>
+    <div className="bg-gray-100">
       <section className="relative w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
         {/* Background Image */}
          <video
@@ -51,6 +51,6 @@ export default function VaraRumPage() {
     {/*   <WifiSection /> */}
       <AdditionalServices />
       <PhotoGallery />
-    </>
+    </div>
   );
 }

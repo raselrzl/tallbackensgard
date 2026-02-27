@@ -40,7 +40,7 @@ export default function RoomDetails() {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-12 font-inter">
+    <section className="max-w-7xl mx-auto px-2 py-10 font-inter mt-10">
       <div className="grid gap-10 md:grid-cols-2">
         {rooms.map((room, idx) => (
           <motion.div
@@ -49,16 +49,16 @@ export default function RoomDetails() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col md:flex-row rounded-md shadow hover:shadow-xl transition overflow-hidden bg-gray-100"
+            className="flex flex-col md:flex-row rounded-2xl shadow hover:shadow-xl transition overflow-hidden bg-white"
           >
             {/* Left: Image */}
-            <div className="relative md:w-1/2 min-h-64 md:h-auto">
+            <div className="relative md:w-1/2 min-h-64 md:h-auto m-6 rounded-2xl">
               <img
                 src={room.image}
                 alt={room.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-2xl"
               />
-              <div className="absolute inset-0 bg-black/25" />
+              <div className="absolute inset-0 bg-black/40 rounded-2xl" />
               {/* Room Title */}
               <h3 className="absolute bottom-4 uppercase font-julius left-4 text-white text-2xl font-bold z-10">
                 {room.title}
@@ -78,7 +78,7 @@ export default function RoomDetails() {
             </div>
 
             {/* Right: Prices */}
-            <div className="md:w-1/2 p-6 bg-white flex flex-col justify-start">
+            <div className="md:w-1/2 py-6 px-10 bg-white flex flex-col justify-start">
               <h4 className="text-gray-800 font-semibold mb-2 text-lg md:text-right font-julius">
                 Pris per person
               </h4>
@@ -92,7 +92,7 @@ export default function RoomDetails() {
                     key={i}
                     whileHover={{ scale: 1.03 }}
                     className={`flex items-center justify-between font-semibold px-4 py-2 text-sm text-[#047d66]
-    ${i % 2 === 0 ? "bg-gray-200" : "bg-gray-200"} hover:bg-[#47d7ac]/30 transition`}
+    ${i % 2 === 0 ? "bg-gray-50" : "bg-gray-50"} hover:bg-[#47d7ac]/30 transition rounded-2xl`}
                   >
                     <div className="flex items-center gap-2 text-black font-julius">
                       <User className="w-4 h-4 text-black" />

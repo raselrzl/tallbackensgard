@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 export default function AdditionalServices() {
   return (
     <section className="relative w-full py-20 font-julius overflow-hidden">
+      <div className="absolute bottom-0 left-0 w-full h-30 bg-linear-to- from-black to-transparent pointer-events-none z-20" />
+
       
       {/* Background Image */}
       <img
@@ -24,7 +26,7 @@ export default function AdditionalServices() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
-        className="relative z-30 max-w-4xl mx-auto px-6 text-center"
+        className="relative z-30 max-w-4xl mx-auto px-8 text-center"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
           Tillägstjänster du kan köpa

@@ -5,22 +5,22 @@ import { ChefHat, Refrigerator, Snowflake, CookingPot } from "lucide-react";
 
 export default function KitchenSection() {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-10 font-inter" id="kok">
+    <section className="max-w-7xl mx-auto px-2 py-10 font-inter " id="kok">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="grid md:grid-cols-2 gap-6 items-center bg-white rounded-md shadow-md overflow-hidden"
+        className="grid md:grid-cols-2 gap-6 items-center bg-white p-6 rounded-2xl shadow-md overflow-hidden"
       >
         {/* Image RIGHT */}
         <div className="relative h-52 md:h-64 order-1 md:order-2">
           <img
             src="/vararum/kitchen.jpg"
             alt="Våra kök"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-2xl"
           />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/40 rounded-2xl" />
 
           <h2 className="absolute inset-0 font-julius flex items-center justify-center text-white text-xl md:text-2xl font-bold text-center px-4">
             Kök
@@ -28,8 +28,8 @@ export default function KitchenSection() {
         </div>
 
         {/* Content LEFT */}
-        <div className="p-5 order-2 md:order-1">
-          <p className="text-gray-600 leading-relaxed mb-5 text-sm">
+        <div className=" order-2 md:order-1 p-4">
+          <p className="text-gray-600 leading-relaxed mb-5 text-sm text-justify">
             Vi erbjuder{" "}
             <span className="font-semibold text-gray-900">
               två fullt utrustade kök
@@ -39,7 +39,7 @@ export default function KitchenSection() {
             hemtrevlig miljö med allt du behöver.
           </p>
 
-          <div className="space-y-1 font-julius">
+          <div className="space-y-1 font-julius p-4">
             <Feature icon={<ChefHat className="w-4 h-4" />} text="Två fullt utrustade kök" />
             <Feature icon={<Refrigerator className="w-4 h-4" />} text="Rymliga kylskåp & förvaring" />
             <Feature icon={<Snowflake className="w-4 h-4" />} text="Frys för längre vistelser" />
