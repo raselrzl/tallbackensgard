@@ -18,6 +18,14 @@ import {
   ShelvingUnit,
   BadgeDollarSign,
   MessagesSquare,
+  Car,
+  Truck,
+  UtensilsCrossed,
+  CookingPot,
+  WashingMachine,
+  ShieldCheck,
+  BedDouble,
+  Bath,
 } from "lucide-react";
 
 type ServiceItem = {
@@ -28,6 +36,14 @@ type ServiceItem = {
 
 const servicesData: ServiceItem[] = [
   {
+    title: "Företags- & projektboende",
+    icon: <HousePlus className="w-10 h-10 text-[#47d7ac]" />,
+    points: [
+      "Skräddarsytt boende för företag, föreningar och byggprojekt",
+      "Kort- eller långtidsvistelser, helt anpassat efter era behov",
+    ],
+  },
+  {
     title: "Kontakt",
     icon: <MessagesSquare className="w-10 h-10 text-[#47d7ac]" />,
     points: [
@@ -36,30 +52,52 @@ const servicesData: ServiceItem[] = [
     ],
   },
   {
-    title: "Lägenhetsvisning",
-    icon: <HousePlus className="w-10 h-10 text-[#47d7ac]" />,
-    points: ["Vi besöker lägenheten", "Presenterar ett förslag till hyresavtal"],
-  },
-  {
-    title: "Möblering",
-    icon: <ShelvingUnit className="w-10 h-10 text-[#47d7ac]" />,
-    points: [
-      "Vi tar hand om möbleringen",
-      "I vissa fall kan befintliga möbler användas",
-    ],
-  },
-  {
-    title: "Månatlig Hyra",
-    icon: <BadgeDollarSign className="w-10 h-10 text-[#47d7ac]" />,
-    points: [
-      "Hyra betalas varje månad utan bekymmer",
-      "Proportionerlig mot aktuellt marknadsläge",
-    ],
-  },
-  {
     title: "WiFi",
     icon: <Wifi className="w-10 h-10 text-[#47d7ac]" />,
-    points: ["Ny fiber 1000/1000 Mbit/s", "Fritt att använda på hela anläggningen"],
+    points: [
+      "Ny fiber 1000/1000 Mbit/s",
+      "Fritt att använda på hela anläggningen",
+    ],
+  },
+  {
+    title: "Fri och trygg parkering",
+    icon: <Car className="w-10 h-10 text-[#47d7ac]" />,
+    points: [
+      "Kostnadsfri parkering för personbil, skåpbil och lastbil",
+      "Kameraövervakad parkering för din trygghet",
+    ],
+  },
+  {
+    title: "Två fullt utrustade kök",
+    icon: <CookingPot className="w-10 h-10 text-[#47d7ac]" />,
+    points: [
+      "Tillgång till två fullt utrustade kök",
+      "Laga dina egna måltider under vistelsen",
+    ],
+  },
+  {
+    title: "Tvättmöjligheter",
+    icon: <WashingMachine className="w-10 h-10 text-[#47d7ac]" />,
+    points: [
+      "Tillgång till gemensam tvättstuga",
+      "Enkelt att tvätta under din vistelse",
+    ],
+  },
+  {
+    title: "Kundservice 24/7",
+    icon: <Headphones className="w-10 h-10 text-[#47d7ac]" />,
+    points: [
+      "Tillgängliga dygnet runt",
+      "Ett samtal bort när du behöver oss",
+    ],
+  },
+  {
+    title: "Mer utrymme för avkoppling",
+    icon: <BedDouble className="w-10 h-10 text-[#47d7ac]" />,
+    points: [
+      "Rymliga och bekväma rum",
+      "Privat dusch och WC i alla rum",
+    ],
   },
 ];
 

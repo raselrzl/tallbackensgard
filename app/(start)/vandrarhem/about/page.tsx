@@ -10,7 +10,7 @@ export default function AboutPage() {
       {/* 1. Hero Section */}
       <section className="relative w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
         <video
-          src="/v7.mp4" // video file in /public folder
+          src="/v7.mp4"
           autoPlay
           loop
           muted
@@ -24,28 +24,74 @@ export default function AboutPage() {
           transition={{ duration: 0.8 }}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white text-2xl md:text-5xl font-julius tracking-widest text-center"
         >
-          <h1 className="text-sm sm:text-4xl font-extrabold tracking-wide text-white">
+          <h1 className="text-sm sm:text-4xl font-extrabold tracking-wide text-white font-julius">
             Om Tallbackens Gård & Vandrarhem
           </h1>
           <div className="w-16 sm:w-20 md:w-24 h-1 bg-[#47d7ac] mx-auto mt-4 sm:mt-6" />
         </motion.div>
       </section>
 
-      {/* 2. Introduction */}
-      <section className="max-w-4xl mx-auto px-6 py-20 space-y-8 text-gray-700 dark:text-gray-300 leading-relaxed text-base md:text-lg">
+      {/* 2. About Us / Introduction */}
+      <section className="max-w-5xl mx-auto px-6 py-20 space-y-10 text-gray-700 dark:text-gray-300 leading-relaxed text-base md:text-lg">
+
+        {/* Main Heading */}
+        <div className="text-left space-y-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white font-julius">
+           Skräddarsydda boendelösningar över hela Sverige
+          </h2>
+
+        </div>
+
+        {/* Intro Text */}
         <p className="text-justify">
-          Tallbackens Gård & Vandrarhem drivs av{" "}
-          <span className="font-semibold">Centralis Group Invest AB</span> och
-          ligger idylliskt vid Finspångsvägen i Svärtinge. Vi erbjuder en unik
-          kombination av charmigt boende, natursköna omgivningar och modern
-          komfort.
+          Vi är din partner för flexibla och prisvärda boenden. Vi erbjuder allt från 
+          enskilda rum till fullt möblerade lägenheter, helt anpassade efter era 
+          specifika behov.
         </p>
-        <p className="text-justify">
-          Vårt mål är att skapa en personlig och varm atmosfär där
-          privatpersoner, familjer och grupper kan känna sig som hemma. Oavsett
-          om du planerar en weekend, längre vistelse eller företagsevent,
-          erbjuder vi flexibla lösningar anpassade efter dina behov.
-        </p>
+
+        {/* Section Block */}
+        <div className="space-y-4">
+          <h4 className="text-xl font-semibold text-gray-900 dark:text-white font-julius">
+            Vi löser boendet – över hela landet
+          </h4>
+          <p className="text-justify">
+            Vi har specialiserat oss på att skräddarsy boendelösningar för företag över 
+            hela Sverige. Oavsett ort, omfattning eller tidsperiod hittar vi rätt 
+            lösning för er personal. Vi erbjuder smidiga och kostnadseffektiva alternativ 
+            till traditionella hotell, alltid till konkurrenskraftiga priser.
+          </p>
+        </div>
+
+        {/* Section Block */}
+        <div className="space-y-4">
+          <h4 className="text-xl font-semibold text-gray-900 dark:text-white font-julius">
+            Ni har önskemålen – vi gör dem till verklighet
+          </h4>
+          <p className="text-justify">
+            Vår verksamhet bygger på lyhördhet. Vi utgår från era unika krav och ser till 
+            att logistiken kring boendet fungerar felfritt, så att ni kan fokusera på 
+            er kärnverksamhet.
+          </p>
+        </div>
+
+        {/* Feature List */}
+        <div className="grid md:grid-cols-3 gap-6 pt-6">
+          <div className="p-6 border border-gray-300 rounded-xl shadow-sm">
+            <h5 className="font-semibold mb-2 font-julius">Rikstäckande</h5>
+            <p>Boende var ni än behöver det i Sverige.</p>
+          </div>
+
+          <div className="p-6 border border-gray-300 rounded-xl shadow-sm">
+            <h5 className="font-semibold mb-2 font-julius">Flexibelt</h5>
+            <p>Allt från enstaka rum till möblerade lägenheter.</p>
+          </div>
+
+          <div className="p-6 border border-gray-300 rounded-xl shadow-sm">
+            <h5 className="font-semibold mb-2 font-julius">Prisvärt</h5>
+            <p>Kvalitativa lösningar till konkurrenskraftiga priser.</p>
+          </div>
+        </div>
+
       </section>
 
       {/* 3. Features / Philosophy */}
@@ -109,10 +155,8 @@ export default function AboutPage() {
             känner sig välkomna och trygga.
           </p>
           <p className="text-justify">
-            Vi drivs av{" "}
-            <span className="font-semibold">Centralis Group Invest AB</span>,
-            vilket säkerställer professionalism, långsiktighet och stabilitet i
-            all vår verksamhet.
+            Vår ägare, <span className="font-semibold">Centralis Group Invest AB</span>, 
+            garanterar långsiktig stabilitet och professionalism i all verksamhet.
           </p>
         </motion.div>
       </section>
@@ -130,22 +174,20 @@ export default function AboutPage() {
           </h2>
           <div className="w-16 h-0.5 bg-[#47d7ac] mb-4 rounded-full" />
           <p>
-            <span className="font-semibold">Adress:</span>
-            <br />
             Tallbackens Gård & Vandrarhem
             <br />
             Finspångsvägen 497, 605 80 Svärtinge
           </p>
           <p className="flex items-center gap-2">
             <Phone className="w-5 h-5 text-[#47d7ac]" />
-            <a href="tel:0103333536" className="hover:underline">
-              010-333 35 36
+            <a href="tel:+46103333536" className="hover:underline">
+              +46 10-333 35 36
             </a>
           </p>
           <p className="flex items-center gap-2">
             <Phone className="w-5 h-5 text-[#47d7ac]" />
-            <a href="tel:0708307411" className="hover:underline">
-              070-830 74 11
+            <a href="tel:+46708307411" className="hover:underline">
+              +46 70-830 74 11
             </a>
           </p>
           <p className="flex items-center gap-2">
@@ -156,9 +198,6 @@ export default function AboutPage() {
             >
               info@tallbackensgard.se
             </a>
-          </p>
-          <p className="text-sm text-gray-400 mt-4">
-            Telefontider för bokningar & förfrågningar: 10:00–17:00 alla dagar.
           </p>
         </motion.div>
       </section>

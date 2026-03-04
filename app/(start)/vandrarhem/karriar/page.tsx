@@ -25,7 +25,7 @@ export default function KarriarPage() {
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white text-2xl md:text-5xl font-julius tracking-widest text-center"
         >
           <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wide text-white">
-            Karriärmöjligheter
+            Bli en del av vårt team
           </h1>
           <div className="w-16 sm:w-20 md:w-24 h-1 bg-[#47d7ac] mx-auto mt-4 sm:mt-6" />
         </motion.div>
@@ -34,12 +34,10 @@ export default function KarriarPage() {
       {/* 2. Introduction */}
       <section className="max-w-4xl mx-auto px-6 py-20 space-y-8 text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed">
         <p className="text-justify">
-          Vill du bli en del av vårt team på <span className="font-semibold">Tallbackens Gård & Vandrarhem</span>? 
-          Vi söker engagerade och serviceinriktade personer som vill bidra till en varm och personlig gästupplevelse.
+          Vi tar gärna emot spontana ansökningar från drivna och serviceinriktade personer som vill bidra till en personlig och välkomnande gästupplevelse.
         </p>
         <p className="text-justify">
-          Oavsett om du är nyexaminerad, erfaren inom hotell & service, eller bara vill arbeta i en naturnära och inspirerande miljö, 
-          vill vi gärna höra från dig.
+          Oavsett om du är ny inom hotell- och servicebranschen eller har lång erfarenhet, erbjuder vår naturnära miljö en inspirerande arbetsplats där engagemang värderas högt.
         </p>
       </section>
 

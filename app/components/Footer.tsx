@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
           {/* Section 2 – Kontakt */}
           <div className="font-julius">
             <h3 className="text-lg font-bold mb-2 font-julius">
-              Tallbackens Gård & Vandrarhem
+              Tallbackens Vandrarhem & Apartments 
             </h3>
             <p className="text-sm text-gray-300 leading-relaxed font-julius">
               Finspångsvägen 497 <br />
@@ -45,13 +45,8 @@ const Footer: React.FC = () => {
               href="tel:+46103333536"
               className="block  text-sm text-gray-300 underline hover:text-white transition"
             >
-              010-333 35 36 
+              +46 10-333 35 36 
             </a>
-
-            <p className="text-[10px] text-gray-500 mt-1 font-julius">
-              Telefontider för bokningar & förfrågningar <br />
-              10:00–17:00 alla dagar.
-            </p>
           </div>
 
           {/* Section 3 – Företag */}
@@ -62,14 +57,14 @@ const Footer: React.FC = () => {
               href="tel:+46103333536"
               className="block text-sm text-gray-300 underline hover:text-white transition"
             >
-              010-333 35 36
+              +46 10-333 35 36
             </a>
 
             <a
               href="tel:+46708307411"
               className="block text-sm text-gray-300 underline hover:text-white transition"
             >
-              070-830 74 11
+              +46 70-830 74 11
             </a>
             <Link
               href="/vandrarhem/companybooking"
