@@ -59,11 +59,11 @@ export default function BusinessTravelHousing() {
           className="relative"
         >
           <Image
-            src="/ap.jpg"
+            src="/ap1.png"
             alt="Talbackans företagsboende"
             width={600}
             height={450}
-            className="rounded-xl shadow-xl object-cover w-full h-[420px]"
+            className="rounded-xl shadow-xl object-cover w-full h-105"
           />
         </motion.div>
 
