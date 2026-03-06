@@ -9,11 +9,11 @@ export default function VaraLagenheterPage() {
 
       {/* 1. Hero Section */}
       <section className="relative w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden">
-
+  
         {/* Background Video */}
         <video
           src="/lg1.mp4"
-          autoPlay
+          autoPlay 
           loop
           muted
           playsInline
