@@ -90,7 +90,7 @@ const AHero: React.FC = () => {
           </div>
         </motion.div>
       </section>
-      {/* SECTION 2 WITH CARD */}
+      {/* SECTION WITH CARD */}
       <section className="w-full bg-stone-100">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch">
           {/* IMAGE */}
@@ -222,16 +222,29 @@ const AHero: React.FC = () => {
         </div>
       </section>
 
-      {/* SECTION 1 */}
+      {/* SECTION */}
       <section className="w-full bg-sky-100">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch">
           {/* IMAGE */}
-          <div className="order-1 w-full md:w-1/2">
+          <div className="order-1 w-full md:w-1/2 relative">
             <img
               src="/ap2.png"
               alt="Apartments"
               className="w-full h-full object-cover"
             />
+
+            {/* DISCOUNT CIRCLE */}
+            <div className="absolute top-4 left-4 bg-white rounded-full w-24 h-24 md:w-30 md:h-30 flex flex-col items-center justify-center text-center shadow-lg">
+              <span className="text-xs md:text-sm font-semibold text-gray-700">
+                up till
+              </span>
+              <span className="text-2xl md:text-3xl font-bold text-gray-900">
+                -25%
+              </span>
+              <span className="text-xs md:text-sm font-semibold text-gray-700">
+                på boende
+              </span>
+            </div>
           </div>
 
           {/* TEXT */}
