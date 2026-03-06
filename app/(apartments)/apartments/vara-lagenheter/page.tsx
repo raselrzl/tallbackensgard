@@ -18,7 +18,7 @@ export default function VaraLagenheterPage() {
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
-        />
+        /> 
 
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/30" />
