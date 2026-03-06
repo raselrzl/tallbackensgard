@@ -90,9 +90,72 @@ const AHero: React.FC = () => {
           </div>
         </motion.div>
       </section>
+      {/* SECTION 2 WITH CARD */}
+      <section className="w-full bg-stone-100">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch">
+          {/* IMAGE */}
+          <div className="order-1 md:order-2 w-full md:w-1/2 relative pb-32 md:pb-0">
+            <img
+              src="/ap.jpg"
+              alt="Apartments"
+              className="w-full h-full object-cover"
+            />
 
+            {/* Desktop Card */}
+            <div className="hidden sm:flex absolute -top-30 left-8 right-8 md:right-auto md:w-105 bg-white/95 backdrop-blur-md shadow-xl rounded-2xl p-8 flex-col justify-center">
+              <h3 className="text-2xl font-julius font-semibold text-gray-900 mb-3">
+                Tallbackens för företag
+              </h3>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                Vi gör företagsboende enkelt – så att ni kan fokusera på er
+                verksamhet. Berätta om era behov och få ett erbjudande inom 48
+                timmar.
+              </p>
+              <button className="bg-[#3db190] px-6 py-3 rounded-full text-white font-semibold hover:opacity-90 transition">
+                Kontakta oss
+              </button>
+            </div>
+
+            {/* Mobile Card */}
+            <div className="flex sm:hidden absolute top-[50%] left-4 right-4 bg-white/90 backdrop-blur-md shadow-lg rounded-xl p-4 flex-col justify-center">
+              <h3 className="text-lg font-julius font-semibold text-gray-900 mb-2">
+                Företagsboende med Tallbackens
+              </h3>
+              <p className="text-gray-600 leading-snug mb-4 text-sm">
+                Vi förenklar företagsboendet så att ni kan fokusera på ert
+                arbete. Få ett erbjudande snabbt!
+              </p>
+              <button className="bg-[#3db190] px-5 py-2 rounded-full text-white font-semibold hover:opacity-90 transition text-sm">
+                Kontakta oss
+              </button>
+            </div>
+          </div>
+
+          {/* TEXT */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="order-2 md:order-2 w-full md:w-1/2 px-6 py-20 flex flex-col justify-center space-y-6"
+          >
+            <h2 className="text-4xl md:text-5xl font-julius font-bold text-gray-900">
+              Flexibla boendelösningar för företag
+            </h2>
+            <p className="text-lg text-gray-700">
+              Som en pålitlig partner inom företagsboende hjälper Tallbackens
+              Apartments dig att hitta rätt lösning – oavsett om det gäller ett
+              kort besök på huvudkontoret eller ett längre projekt i en annan
+              stad.
+            </p>
+            <button className="w-fit bg-[#3db190] px-8 py-3 rounded-full text-white font-semibold hover:opacity-90 transition">
+              Läs mer
+            </button>
+          </motion.div>
+        </div>
+      </section>
       {/* CORPORATE SECTION */}
-      <section className="relative w-full overflow-hidden ">
+      <section className="relative w-full overflow-hidden pt-10">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
           <div className="order-1 md:order-2 w-full md:w-auto flex justify-center">
             <video
@@ -160,12 +223,12 @@ const AHero: React.FC = () => {
       </section>
 
       {/* SECTION 1 */}
-      <section className="w-full bg-stone-100">
+      <section className="w-full bg-sky-100">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch">
           {/* IMAGE */}
-          <div className="order-1 md:order-2 w-full md:w-1/2">
+          <div className="order-1 w-full md:w-1/2">
             <img
-              src="/ap.jpg"
+              src="/ap2.png"
               alt="Apartments"
               className="w-full h-full object-cover"
             />
@@ -186,70 +249,6 @@ const AHero: React.FC = () => {
               Som Europas ledande aktör inom möblerade lägenheter hjälper vi dig
               att hitta rätt lösning – oavsett om det gäller ett kort besök på
               huvudkontoret eller ett längre uppdrag i en annan stad.
-            </p>
-            <button className="w-fit bg-[#3db190] px-8 py-3 rounded-full text-white font-semibold hover:opacity-90 transition">
-              Läs mer
-            </button>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* SECTION 2 WITH CARD */}
-      <section className="w-full bg-stone-100">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch">
-          {/* IMAGE */}
-          <div className="order-1 md:order-2 w-full md:w-1/2 relative pb-32 md:pb-0">
-            <img
-              src="/ap.jpg"
-              alt="Apartments"
-              className="w-full h-full object-cover"
-            />
-
-            {/* Desktop Card */}
-            <div className="hidden sm:flex absolute bottom-8 left-8 right-8 md:right-auto md:w-[420px] bg-white/95 backdrop-blur-md shadow-xl rounded-2xl p-8 flex-col justify-center">
-              <h3 className="text-2xl font-julius font-semibold text-gray-900 mb-3">
-                Tallbackens för företag
-              </h3>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                Vi gör företagsboende enkelt – så att ni kan fokusera på er
-                verksamhet. Berätta om era behov och få ett erbjudande inom 48
-                timmar.
-              </p>
-              <button className="bg-[#3db190] px-6 py-3 rounded-full text-white font-semibold hover:opacity-90 transition">
-                Kontakta oss
-              </button>
-            </div>
-
-            {/* Mobile Card */}
-            <div className="flex sm:hidden absolute top-[50%] left-4 right-4 bg-white/90 backdrop-blur-md shadow-lg rounded-xl p-4 flex-col justify-center">
-              <h3 className="text-lg font-julius font-semibold text-gray-900 mb-2">
-                Företagsboende med Tallbackens
-              </h3>
-              <p className="text-gray-600 leading-snug mb-4 text-sm">
-                Vi förenklar företagsboendet så att ni kan fokusera på ert arbete. Få ett erbjudande snabbt!
-              </p>
-              <button className="bg-[#3db190] px-5 py-2 rounded-full text-white font-semibold hover:opacity-90 transition text-sm">
-                Kontakta oss
-              </button>
-            </div>
-          </div>
-
-          {/* TEXT */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-            className="order-2 md:order-2 w-full md:w-1/2 px-6 py-20 flex flex-col justify-center space-y-6"
-          >
-            <h2 className="text-4xl md:text-5xl font-julius font-bold text-gray-900">
-              Flexibla boendelösningar för företag
-            </h2>
-            <p className="text-lg text-gray-700">
-              Som en pålitlig partner inom företagsboende hjälper Tallbackens
-              Apartments dig att hitta rätt lösning – oavsett om det gäller ett
-              kort besök på huvudkontoret eller ett längre projekt i en annan
-              stad.
             </p>
             <button className="w-fit bg-[#3db190] px-8 py-3 rounded-full text-white font-semibold hover:opacity-90 transition">
               Läs mer
