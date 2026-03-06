@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { BedDouble, Wifi, CookingPot, Car } from "lucide-react";
 
 export default function Foretagsbokning() {
@@ -11,17 +10,18 @@ export default function Foretagsbokning() {
       {/* 1. Hero Section */}
       <section className="relative w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden">
 
-        {/* Background Image */}
-        <Image
-          src="/apartments-hero.jpg" // put your image in /public
-          alt="Tallbackens Lägenheter"
-          fill
-          priority
-          className="object-cover"
+        {/* Background Video */}
+        <video
+          src="/fore.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
         />
 
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/40" />
 
         {/* Hero Content */}
         <motion.div

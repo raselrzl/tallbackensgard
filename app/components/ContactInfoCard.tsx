@@ -23,7 +23,7 @@ export default function ContactInfoCard() {
 
         {/* Contact Details */}
         <div className="text-xs md:text-sm space-y-2 text-center">
-          <p className="font-semibold">Tallbackens Gård & Vandrarhem</p>
+          <p className="font-semibold">Tallbackens Vandrarhem & Apartments</p>
           <p>Finspångsvägen 497<br />605 80 Svärtinge</p>
           <p>
             Telefon:{" "}
@@ -31,7 +31,6 @@ export default function ContactInfoCard() {
               010-333 35 36
             </a>
           </p>
-          <p>Telefontider för bokningar & förfrågningar: 10:00–17:00 alla dagar</p>
           <p>
             E-post:{" "}
             <a href="mailto:info@tallbackensgard.se" className="underline hover:text-[#47d7ac]">

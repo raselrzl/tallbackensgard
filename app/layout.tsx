@@ -30,7 +30,7 @@ export const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Tallbackens",
-  description: "Tallbackens Gård & Vandrarhem",
+  description: "Tallbackens Vandrarhem & Apartments",
 };
 
 export default function RootLayout({

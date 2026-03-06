@@ -13,7 +13,7 @@ export default function VaraLagenheterPage() {
 
         {/* Background Image */}
         <Image
-          src="/apartments-hero.jpg" // put your image in /public
+          src="/ap1.png" // put your image in /public
           alt="Tallbackens Lägenheter"
           fill
           priority
@@ -21,7 +21,7 @@ export default function VaraLagenheterPage() {
         />
 
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/10" />
 
         {/* Hero Content */}
         <motion.div

@@ -4,20 +4,16 @@ import React from "react";
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center text-white text-center">
-      {/* Background Image */}
-      <div className="absolute inset-0 bg-cover bg-center bg-black" />
-
-      {/* Background Video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src="/tl1.mp4" type="video/mp4" />
-      </video>
+    <section className="relative w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black text-white">
+        {/* Background Image */}
+         <video
+          src="/hrov.mp4" // video file in /public folder
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        />
 
       {/* Overlay */}
       {/*  <div className="absolute inset-0 bg-black/20" /> */}
@@ -44,13 +40,12 @@ const Hero: React.FC = () => {
           {/* Mobile */}
           <span className="block md:hidden font-julius">
             Tallbackens <br />
-            Gård & <br />
-            Vandrarhem
+            Vandrarhem 
           </span>
 
           {/* Desktop */}
           <span className="hidden md:block whitespace-nowrap font-julius">
-            Tallbackens Gård & Vandrarhem
+            Tallbackens Vandrarhem
           </span>
         </motion.h1>
       </div>

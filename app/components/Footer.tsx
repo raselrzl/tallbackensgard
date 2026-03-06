@@ -118,7 +118,7 @@ const Footer: React.FC = () => {
 
       {/* Bottom bar */}
       {/*    <div className="border-t border-gray-800 text-center py-4 text-sm text-gray-500">
-        © {new Date().getFullYear()} Tallbackens Gård & Vandrarhem
+        © {new Date().getFullYear()} Tallbackens Vandrarhem & Apartments
       </div> */}
     </footer>
   );

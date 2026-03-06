@@ -25,7 +25,7 @@ export default function AboutPage() {
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white text-2xl md:text-5xl font-julius tracking-widest text-center"
         >
           <h1 className="text-sm sm:text-4xl font-extrabold tracking-wide text-white font-julius">
-            Om Tallbackens Gård & Vandrarhem
+            Om Tallbackens Vandrarhem & Apartments
           </h1>
           <div className="w-16 sm:w-20 md:w-24 h-1 bg-[#47d7ac] mx-auto mt-4 sm:mt-6" />
         </motion.div>
@@ -149,7 +149,7 @@ export default function AboutPage() {
           </h2>
           <div className="w-16 h-0.5 bg-[#47d7ac] mb-4 rounded-full" />
           <p className="text-justify">
-            Tallbackens Gård & Vandrarhem är en plats för avkoppling, naturnära
+            Tallbackens Vandrarhem & Apartments är en plats för avkoppling, naturnära
             upplevelser och högkvalitativt boende. Vi har ett starkt fokus på
             personlig service och kvalitet, vilket gör att våra gäster alltid
             känner sig välkomna och trygga.
@@ -174,7 +174,7 @@ export default function AboutPage() {
           </h2>
           <div className="w-16 h-0.5 bg-[#47d7ac] mb-4 rounded-full" />
           <p>
-            Tallbackens Gård & Vandrarhem
+            Tallbackens Vandrarhem & Apartments
             <br />
             Finspångsvägen 497, 605 80 Svärtinge
           </p>

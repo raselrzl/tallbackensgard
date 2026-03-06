@@ -44,14 +44,6 @@ const servicesData: ServiceItem[] = [
     ],
   },
   {
-    title: "Kontakt",
-    icon: <MessagesSquare className="w-10 h-10 text-[#47d7ac]" />,
-    points: [
-      "Kontakta oss för en snabb och enkel offertprocess",
-      "Få respons inom 3 dagar",
-    ],
-  },
-  {
     title: "WiFi",
     icon: <Wifi className="w-10 h-10 text-[#47d7ac]" />,
     points: [
@@ -86,18 +78,12 @@ const servicesData: ServiceItem[] = [
   {
     title: "Kundservice 24/7",
     icon: <Headphones className="w-10 h-10 text-[#47d7ac]" />,
-    points: [
-      "Tillgängliga dygnet runt",
-      "Ett samtal bort när du behöver oss",
-    ],
+    points: ["Tillgängliga dygnet runt", "Ett samtal bort när du behöver oss"],
   },
   {
     title: "Mer utrymme för avkoppling",
     icon: <BedDouble className="w-10 h-10 text-[#47d7ac]" />,
-    points: [
-      "Rymliga och bekväma rum",
-      "Privat dusch och WC i alla rum",
-    ],
+    points: ["Rymliga och bekväma rum", "Privat dusch och WC i alla rum"],
   },
 ];
 
@@ -110,7 +96,9 @@ export default function ServicesSlider() {
   const middleIndexOffset = servicesData.length;
 
   useEffect(() => {
-    const firstChild = carouselRef.current?.children[0] as HTMLElement | undefined;
+    const firstChild = carouselRef.current?.children[0] as
+      | HTMLElement
+      | undefined;
     if (firstChild) {
       const width = firstChild.clientWidth + 24;
       setCardWidth(width);
@@ -123,7 +111,8 @@ export default function ServicesSlider() {
     if (!carouselRef.current || !cardWidth) return;
 
     let newIndex = activeIndex + (direction === "right" ? 1 : -1);
-    const normalizedIndex = (newIndex + servicesData.length) % servicesData.length;
+    const normalizedIndex =
+      (newIndex + servicesData.length) % servicesData.length;
     setActiveIndex(normalizedIndex);
 
     const currentScroll = carouselRef.current.scrollLeft;
@@ -206,7 +195,9 @@ export default function ServicesSlider() {
                   {/* Bigger Icon */}
                   <div className="mb-6">{item.icon}</div>
 
-                  <h3 className="text-xl font-semibold mb-4 font-julius">{item.title}</h3>
+                  <h3 className="text-xl font-semibold mb-4 font-julius">
+                    {item.title}
+                  </h3>
 
                   {/* Points */}
                   <ul className="space-y-2 text-gray-600 text-sm list-disc list-inside">
@@ -225,7 +216,9 @@ export default function ServicesSlider() {
               <button key={index} onClick={() => scrollToIndex("right")}>
                 <CircleFadingPlus
                   className={`w-4 h-4 ${
-                    activeIndex === index ? "text-[#47d7ac] scale-110" : "text-gray-300"
+                    activeIndex === index
+                      ? "text-[#47d7ac] scale-110"
+                      : "text-gray-300"
                   }`}
                 />
               </button>
