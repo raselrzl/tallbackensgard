@@ -58,10 +58,10 @@ export default function ApartmentsNavbar() {
           </Link>
 
           <Link
-            href="/apartments/foretagsbokning"
-            className={linkStyle("/apartments/foretagsbokning")}
+            href="/apartments/bokning"
+            className={linkStyle("/apartments/bokning")}
           >
-            Företagsbokning
+            bokning
           </Link>
 
           <Link
@@ -121,8 +121,8 @@ export default function ApartmentsNavbar() {
               </Link>
 
               <Link
-                href="/apartments/foretagsbokning"
-                className={linkStyle("/apartments/foretagsbokning")}
+                href="/apartments/bokning"
+                className={linkStyle("/apartments/bokning")}
                 onClick={() => setMenuOpen(false)}
               >
                 Företagsbokning

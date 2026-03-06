@@ -2,9 +2,11 @@
 
 import { motion } from "framer-motion";
 import { BedDouble, Wifi, CookingPot, Car } from "lucide-react";
+import BusinessTravelHousing from "../components/BusinessTravelHousing";
 
-export default function Foretagsbokning() {
+export default function Bokning() {
   return (
+    <>
     <div className="bg-white">
 
       {/* 1. Hero Section */}
@@ -31,7 +33,7 @@ export default function Foretagsbokning() {
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white text-center px-4"
         >
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-wide font-julius">
-            foretagsbokning
+          Bokning
           </h1>
 
           <div className="w-24 h-1 bg-[#47d7ac] mx-auto mt-6" />
@@ -40,5 +42,7 @@ export default function Foretagsbokning() {
       </section>
 
     </div>
+    <BusinessTravelHousing />
+    </>
   );
 }

@@ -65,7 +65,7 @@ export default function ASlider() {
         </h2>
 
         {/* SLIDER */}
-        <div className="grid md:grid-cols-3 gap-8 min-h-[360px]">
+        <div className="grid md:grid-cols-3 gap-8 min-h-90">
 
           <AnimatePresence mode="wait">
             {visible.map((item, i) => (

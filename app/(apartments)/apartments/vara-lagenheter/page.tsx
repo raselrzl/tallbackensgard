@@ -2,9 +2,14 @@
 
 import { motion } from "framer-motion";
 import { BedDouble, Wifi, CookingPot, Car } from "lucide-react";
+import LagenhetFeatures from "../components/LagenhetFeatures";
+import ApartmentTypes from "../components/ApartmentTypes";
+import WhyTalbackans from "../components/WhyTalbackans";
+import ApartmentCTA from "../components/ApartmentCTA";
 
 export default function VaraLagenheterPage() {
   return (
+    <>
     <div className="bg-white">
 
       {/* 1. Hero Section */}
@@ -40,5 +45,10 @@ export default function VaraLagenheterPage() {
       </section>
 
     </div>
+    <LagenhetFeatures />
+    <ApartmentTypes />
+    <WhyTalbackans />
+    <ApartmentCTA />
+    </>
   );
 }
