@@ -1,5 +1,4 @@
 "use client";
-
 import { apartments } from "../(apartments)/apartments/data";
 import ApartmentCard from "./ApartmentCard";
 
@@ -7,12 +6,10 @@ export default function ApartmentOffers() {
   return (
     <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
-
         <div className="max-w-3xl mb-12">
           <h2 className="text-3xl md:text-4xl font-julius mb-4">
             Höstens bästa erbjudanden för affärsresor
           </h2>
-
           <p className="text-gray-600 leading-relaxed">
             Från snabba arbetsresor till månadslånga projekt – Talbackans gör
             det enkelt att bo smart.
@@ -24,7 +21,6 @@ export default function ApartmentOffers() {
             <ApartmentCard key={apartment.id} {...apartment} />
           ))}
         </div>
-
       </div>
     </section>
   );

@@ -19,7 +19,7 @@ export const apartments: Apartment[] = [
     price: "680",
     description:
       "Modernt lägenhetshotell perfekt för affärsresenärer. Nära tunnelbana och restauranger.",
-    images: ["/ap.jpg", "/ap.jpg", "/ap.jpg"],
+    images: ["/herov.png", "/ap.jpg", "/ap2.png"],
   },
   {
     id: "843cc84",
@@ -30,7 +30,7 @@ export const apartments: Apartment[] = [
     price: "725",
     description:
       "Bekväma serviced apartments nära Bromma flygplats.",
-    images: ["/ap.jpg", "/ap.jpg", "/ap.jpg"],
+    images: ["/ap1.png", "/ap.jpg", "/ap2.png"],
   },
   {
     id: "8438wefw6g4",
@@ -41,6 +41,6 @@ export const apartments: Apartment[] = [
     price: "799",
     description:
       "Perfekt boende nära Arlanda flygplats.",
-    images: ["/ap.jpg", "/ap.jpg", "/ap.jpg"],
-  }
+    images: ["/ap1.png", "/ap.jpg", "/ap2.png"],
+  },
 ];
