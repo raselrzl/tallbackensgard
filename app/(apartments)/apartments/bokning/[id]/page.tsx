@@ -44,7 +44,7 @@ export default function ApartmentPage() {
               alt={apartment.title}
               width={800}
               height={500}
-              className="rounded-xl object-cover w-full h-[400px]"
+              className="rounded-xl object-cover w-full h-100"
             />
           </motion.div>
         </AnimatePresence>
