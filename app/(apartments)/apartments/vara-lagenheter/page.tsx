@@ -45,7 +45,7 @@ export default function VaraLagenheterPage() {
       </section>
 
     </div>
-    <LagenhetFeatures />
+   {/*  <LagenhetFeatures /> */}
     <ApartmentTypes />
     <WhyTalbackans />
     <ApartmentCTA />
