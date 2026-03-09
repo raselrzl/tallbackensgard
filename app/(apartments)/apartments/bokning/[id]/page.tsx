@@ -5,6 +5,7 @@ import { apartments } from "../../data";
 import { useParams } from "next/navigation";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function ApartmentPage() {
   const params = useParams();
@@ -21,16 +22,16 @@ export default function ApartmentPage() {
 
   const prevImage = () => {
     setCurrentIndex((prev) =>
-      prev === 0 ? apartment.images.length - 1 : prev - 1
+      prev === 0 ? apartment.images.length - 1 : prev - 1,
     );
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-40">
+    <section className="max-w-5xl mx-auto px-6 py-40">
       <h1 className="text-4xl font-julius mb-8">{apartment.title}</h1>
 
       {/* Carousel */}
-      <div className="relative w-full md:w-3/4 mx-auto mb-10">
+      <div className="relative w-full mx-auto mb-10">
         <AnimatePresence mode="wait">
           <motion.div
             key={apartment.images[currentIndex]}
@@ -44,7 +45,7 @@ export default function ApartmentPage() {
               alt={apartment.title}
               width={800}
               height={500}
-              className="rounded-xl object-cover w-full h-100"
+              className="rounded-xl object-cover w-full h-110 md:h-150"
             />
           </motion.div>
         </AnimatePresence>
@@ -54,24 +55,43 @@ export default function ApartmentPage() {
           onClick={prevImage}
           className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60"
         >
-          &#8592;
+          <ChevronLeft />
         </button>
         <button
           onClick={nextImage}
           className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60"
         >
-          &#8594;
+          <ChevronRight />
         </button>
+      </div>
+      {/* Thumbnails */}
+      <div className="flex gap-3 mt-4 flex-wrap">
+        {apartment.images.map((img, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrentIndex(i)}
+            className={`relative rounded-lg overflow-hidden border-2 transition
+        ${i === currentIndex ? "border-black" : "border-transparent"}
+      `}
+          >
+            <Image
+              src={img}
+              alt={`thumb-${i}`}
+              width={40}
+              height={40}
+              className={`object-cover rounded-md
+          ${i === currentIndex ? "w-10 h-10" : "w-8 h-8 opacity-70 hover:opacity-100"}
+        `}
+            />
+          </button>
+        ))}
       </div>
 
       <p className="text-gray-600 max-w-2xl mb-6">{apartment.description}</p>
 
       <ul className="flex flex-wrap gap-4 mb-6">
         {apartment.features.map((f, i) => (
-          <li
-            key={i}
-            className="bg-gray-100 px-4 py-2 rounded-lg text-sm"
-          >
+          <li key={i} className="bg-gray-100 px-4 py-2 rounded-lg text-sm">
             {f}
           </li>
         ))}
