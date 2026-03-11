@@ -1,5 +1,6 @@
 "use client";
 
+import BookButton from "@/app/components/BookButton";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -44,9 +45,7 @@ export default function BusinessTravelHousing() {
               Be om offert
             </button>
 
-            <button className="border border-black px-6 py-3 rounded-lg font-semibold hover:bg-black hover:text-white transition">
-              Boka online
-            </button>
+            <BookButton />
           </div>
         </motion.div>
 

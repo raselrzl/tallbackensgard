@@ -1,23 +1,35 @@
 "use client";
 
+import Link from "next/link";
+
 export default function ApartmentCTA() {
   return (
-    <section className="py-24 bg-black text-white text-center">
+    <section className="relative py-28 text-white text-center overflow-hidden">
 
-      <div className="max-w-3xl mx-auto px-6">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('/vararum/p1.jpg')" }}
+      />
 
-        <h2 className="text-4xl font-julius mb-6">
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/70" />
+
+      {/* Content */}
+      <div className="relative max-w-3xl mx-auto px-6">
+
+        <h2 className="text-4xl md:text-5xl font-julius mb-6">
           Behöver ditt företag boende?
         </h2>
 
-        <p className="mb-10 text-lg">
+        <p className="mb-10 text-lg text-gray-200">
           Kontakta Talbackans så hjälper vi er hitta rätt boendelösning
           för era anställda.
         </p>
 
-        <button className="bg-white text-black px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition">
+        <Link href="/apartments/kontakta-oss" className="bg-[#47d7ac] text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition">
           Kontakta Oss
-        </button>
+        </Link>
 
       </div>
 

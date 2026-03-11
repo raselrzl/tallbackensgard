@@ -4,7 +4,7 @@ import ApartmentCard from "./ApartmentCard";
 
 export default function ApartmentOffers() {
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-24 bg-[#f0f8ff]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="max-w-3xl mb-12">
           <h2 className="text-3xl md:text-4xl font-julius mb-4">
