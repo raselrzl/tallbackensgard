@@ -9,9 +9,8 @@ import ASlider from "./components/ASlider";
 export default function VandrarhemHomePage() {
   return (
     <div className="relative overflow-hidden">
-
       <AHero />
- <ASlider />
+      <ASlider />
     </div>
   );
 }

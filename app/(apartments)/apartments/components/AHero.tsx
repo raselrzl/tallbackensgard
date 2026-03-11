@@ -102,7 +102,7 @@ const AHero: React.FC = () => {
             />
 
             {/* Desktop Card */}
-            <div className="hidden sm:flex absolute -top-30 left-8 right-8 md:right-auto md:w-105 bg-white/95 backdrop-blur-md shadow-xl rounded-2xl p-8 flex-col justify-center">
+           {/*  <div className="hidden sm:flex absolute -top-30 left-8 right-8 md:right-auto md:w-105 bg-white/95 backdrop-blur-md shadow-xl rounded-2xl p-8 flex-col justify-center">
               <h3 className="text-2xl font-julius font-semibold text-gray-900 mb-3">
                 Tallbackens för företag
               </h3>
@@ -114,10 +114,10 @@ const AHero: React.FC = () => {
               <button className="bg-[#3db190] px-6 py-3 rounded-full text-white font-semibold hover:opacity-90 transition">
                 Kontakta oss
               </button>
-            </div>
+            </div> */}
 
             {/* Mobile Card */}
-            <div className="flex sm:hidden absolute top-[50%] left-4 right-4 bg-white/90 backdrop-blur-md shadow-lg rounded-xl p-4 flex-col justify-center">
+          {/*   <div className="flex sm:hidden absolute top-[50%] left-4 right-4 bg-white/90 backdrop-blur-md shadow-lg rounded-xl p-4 flex-col justify-center">
               <h3 className="text-lg font-julius font-semibold text-gray-900 mb-2">
                 Företagsboende med Tallbackens
               </h3>
@@ -128,7 +128,7 @@ const AHero: React.FC = () => {
               <button className="bg-[#3db190] px-5 py-2 rounded-full text-white font-semibold hover:opacity-90 transition text-sm">
                 Kontakta oss
               </button>
-            </div>
+            </div> */}
           </div>
 
           {/* TEXT */}
