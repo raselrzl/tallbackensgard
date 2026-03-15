@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Julius_Sans_One, Syncopate, Inter } from "next/font/google";
 import VNavbar from "./vandrarhemComponent/VNavbar";
 import Footer from "@/app/components/Footer";
+import FloatingButton from "@/app/(apartments)/apartments/components/FloatingButton";
 
 // Fonts
 export const julius = Julius_Sans_One({
@@ -40,6 +41,7 @@ export default function RootLayout({
     <>
       <VNavbar />
       {children}
+      <FloatingButton />
       <Footer />
     </>
   );
