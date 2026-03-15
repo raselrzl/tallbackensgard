@@ -1,49 +1,43 @@
 "use client";
 
-import BookButton from "@/app/components/BookButton";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function BusinessTravelHousing() {
   return (
     <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
 
-        {/* Left Text */}
+        {/* Left Boxes */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
+          className="flex flex-col justify-between h-full space-y-6"
         >
-          <h2 className="text-3xl md:text-4xl font-julius mb-6">
-            Smart boende för affärsresenärer
-          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 flex-1">
+            {/* Top two boxes */}
+            <div className="bg-[#47d7ac]/20 p-6 rounded-xl shadow-md flex-1">
+              <h3 className="font-julius font-bold text-lg mb-2">Flexibla boenden</h3>
+              <p className="text-gray-700 text-sm">
+                Vi erbjuder möblerade lägenheter som passar både korta och längre uppdrag.
+              </p>
+            </div>
+            <div className="bg-[#47d7ac]/20 p-6 rounded-xl shadow-md flex-1">
+              <h3 className="font-julius font-bold text-lg mb-2">Centrala lägen</h3>
+              <p className="text-gray-700 text-sm">
+                Våra boenden finns nära affärsdistrikt och transport för enkel tillgång.
+              </p>
+            </div>
+          </div>
 
-          <div className="w-20 h-1 bg-[#47d7ac] mb-6" />
-
-          <p className="text-gray-600 leading-relaxed text-lg">
-            Talbackans moderna lägenhetshotell och möblerade lägenheter erbjuder
-            en flexibel lösning för företag som vill ge sina medarbetare ett
-            bekvämt boende under arbetsresor.
-          </p>
-
-          <p className="text-gray-600 leading-relaxed mt-4 text-lg">
-            Oavsett om vistelsen gäller ett HQ-besök, ett projekt på annan ort
-            eller en längre uppdragsperiod, hittar vi ett upplägg som passar
-            era behov.
-          </p>
-
-          <p className="text-gray-600 leading-relaxed mt-4 text-lg">
-            Boka enkelt online eller be om offert så hjälper vi er att hitta
-            rätt boendelösning.
-          </p>
-
-          {/* Buttons */}
-          <div className="flex gap-4 mt-8 flex-wrap">
-            <button className="bg-[#47d7ac] text-black px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">
-              Be om offert
-            </button>
+          {/* Bottom box */}
+          <div className="bg-[#47d7ac]/20 p-6 rounded-xl shadow-md flex-1">
+            <h3 className="font-julius font-bold text-lg mb-2">Allt-i-ett lösning</h3>
+            <p className="text-gray-700 text-sm">
+              Komplett service med möbler, internet, städning och support för företag.
+            </p>
           </div>
         </motion.div>
 
@@ -60,7 +54,7 @@ export default function BusinessTravelHousing() {
             alt="Talbackans företagsboende"
             width={600}
             height={450}
-            className="rounded-xl shadow-xl object-cover w-full h-105"
+            className="rounded-xl shadow-xl object-cover w-full h-full"
           />
         </motion.div>
 

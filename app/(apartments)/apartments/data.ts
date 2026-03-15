@@ -28,8 +28,7 @@ export const apartments: Apartment[] = [
     rating: "7.9",
     reviews: "2078",
     price: "725",
-    description:
-      "Bekväma serviced apartments nära Bromma flygplats.",
+    description: "Bekväma serviced apartments nära Bromma flygplats.",
     images: ["/ap1.png", "/ap.jpg", "/ap2.png"],
   },
   {
@@ -39,8 +38,40 @@ export const apartments: Apartment[] = [
     rating: "7.8",
     reviews: "3516",
     price: "799",
-    description:
-      "Perfekt boende nära Arlanda flygplats.",
+    description: "Perfekt boende nära Arlanda flygplats.",
     images: ["/ap1.png", "/ap.jpg", "/ap2.png"],
+  },
+
+  {
+    id: "8438wefw6ddsgsg",
+    title: "Talbackans Aparthotel Norrköping",
+    features: ["WiFi", "Kylskåp", "Självincheckning"],
+    rating: "7.8",
+    reviews: "3516",
+    price: "799",
+    description: "Perfekt boende nära Arlanda flygplats.",
+    images: ["/ap2.png", "/ap.jpg", "/ap2.png"],
+  },
+
+  {
+    id: "8438wefw6djddsgsg",
+    title: "Talbackans Aparthotel Norrköping",
+    features: ["WiFi", "Kylskåp", "Självincheckning"],
+    rating: "7.8",
+    reviews: "3516",
+    price: "799",
+    description: "Perfekt boende nära Arlanda flygplats.",
+    images: ["/ap1.png", "/ap.jpg", "/ap2.png"],
+  },
+
+  {
+    id: "8438wefw6heuddsgsg",
+    title: "Talbackans Aparthotel Norrköping",
+    features: ["WiFi", "Kylskåp", "Självincheckning"],
+    rating: "7.8",
+    reviews: "3516",
+    price: "799",
+    description: "Perfekt boende nära Arlanda flygplats.",
+    images: ["/ap2.png", "/ap.jpg", "/ap2.png"],
   },
 ];
