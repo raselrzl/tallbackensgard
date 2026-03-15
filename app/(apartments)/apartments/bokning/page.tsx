@@ -41,7 +41,6 @@ export default function Bokning() {
       </div>
       <BusinessTravelHousing />
 
-    
       <ApartmentOffers />
     </>
   );

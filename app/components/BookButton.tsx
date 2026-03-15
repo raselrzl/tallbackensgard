@@ -5,9 +5,10 @@ export default function BookButton() {
     <Link
       href="https://5a0c3c942c361.sirvoy.me/"
      
-      className="px-6 py-3 bg-[#3db190] text-white rounded-lg"
+       className="px-8 py-3 bg-[#47d7ac] text-xs text-white font-julius font-semibold rounded-full shadow-lg hover:bg-[#36b795] transition duration-300"
+
     >
       Book Now
     </Link>
-  );
+  ); 
 }

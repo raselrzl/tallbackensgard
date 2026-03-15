@@ -44,8 +44,6 @@ export default function BusinessTravelHousing() {
             <button className="bg-[#47d7ac] text-black px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">
               Be om offert
             </button>
-
-            <BookButton />
           </div>
         </motion.div>
 

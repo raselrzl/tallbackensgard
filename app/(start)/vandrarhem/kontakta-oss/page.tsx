@@ -6,6 +6,7 @@ import ContactForm from "./ContactForm"; // Private person form
 import CorporateContactForm from "./CorporateContactForm"; // Corporate form
 import HomeMap from "@/app/components/HomeMap";
 import ContactInfoCard from "@/app/components/ContactInfoCard";
+import BookButton from "@/app/components/BookButton";
 
 export default function ContactOssPage() {
   const [activeModal, setActiveModal] = useState<
