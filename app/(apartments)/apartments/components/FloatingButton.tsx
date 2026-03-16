@@ -27,7 +27,7 @@ export default function FloatingButton() {
     },
     {
       label: "Book Online",
-      href: "https://5a0c3c942c361.sirvoy.me/",
+      href: "/vandrarhem/bokning#booking",
       icon: CalendarCheck,
     },
   ];

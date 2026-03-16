@@ -17,10 +17,10 @@ export default function SirvoyBookingForm() {
   }, []);
 
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full flex justify-center bg-white">
       <div
         id="sirvoy-form"
-        className="w-full max-w-7xl bg-white rounded-2xl shadow-xl p-6 md:p-10"
+        className="w-full max-w-7xl  p-6 md:p-10"
       />
     </div>
   );
