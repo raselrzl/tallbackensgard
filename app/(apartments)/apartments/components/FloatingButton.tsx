@@ -85,6 +85,7 @@ export default function FloatingButton() {
         <Image
           src={open ? "/c5.gif" : "/c7.gif"}
           alt="Contact support"
+          unoptimized
           width={60}
           height={60}
           className="rounded-full"
