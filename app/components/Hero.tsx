@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
       />
 
       {/* Overlay */}
-      {/* <div className="absolute inset-0 bg-black/20" /> */}
+      <div className="absolute inset-0 bg-black/40" />
 
       {/* Content */}
       <div className="relative z-10 px-4 max-w-3xl mx-auto flex flex-col items-center">
