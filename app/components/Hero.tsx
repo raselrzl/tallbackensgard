@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-124 sm:h-134 2xl:h-164 flex items-center justify-center overflow-hidden bg-black text-white">
+    <section className="relative w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black text-white">
       {/* Background Video */}
       <video
         ref={videoRef}
