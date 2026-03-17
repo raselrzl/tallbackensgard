@@ -14,6 +14,11 @@ const images = [
   "/vararum/p4.jpg",
   "/vararum/p5.jpg",
   "/vararum/p6.jpg",
+  "/vh1.jpg",
+  "/vh2.jpg",
+  "/vh3.jpg",
+  "/vh4.jpg",
+  "/vh5.jpg",
 ];
 
 export default function CoverflowCarousel() {
