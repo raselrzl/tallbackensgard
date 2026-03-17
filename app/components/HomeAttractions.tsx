@@ -39,7 +39,7 @@ const HomeAttractions: React.FC = () => {
       {/* Background Image */}
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: "url('/utflyktsmal.jpg')" }}
+        style={{ backgroundImage: "url('/vh1.jpg')" }}
       />
 
       {/* Dark Overlay */}
