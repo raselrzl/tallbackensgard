@@ -120,7 +120,7 @@ const AHero: React.FC = () => {
               stad.
             </p>
             <button className="w-fit bg-[#3db190] px-8 py-3 rounded-full text-white font-semibold hover:opacity-90 transition">
-              Läs mer
+              Book now
             </button>
           </motion.div>
         </div>
@@ -133,7 +133,7 @@ const AHero: React.FC = () => {
           <div className="order-1 md:order-2 w-full md:w-1/2 flex justify-center md:justify-end relative md:h-125 lg:h-150">
             {/* Mobile */}
             <Image
-              src="/mapb.png"
+              src="/map.png"
               alt="Apartments"
               width={600}
               height={600}
@@ -237,15 +237,13 @@ const AHero: React.FC = () => {
             className="order-2 md:order-1 w-full md:w-1/2 px-6 py-20 flex flex-col justify-center space-y-6"
           >
             <h2 className="text-4xl md:text-5xl font-julius font-bold text-gray-900">
-              Flexibla boendelösningar för företag
+             Flexibla boendelösningar för företag
             </h2>
             <p className="text-lg text-gray-700">
-              Som Europas ledande aktör inom möblerade lägenheter hjälper vi dig
-              att hitta rätt lösning – oavsett om det gäller ett kort besök på
-              huvudkontoret eller ett längre uppdrag i en annan stad.
+              Upptäck smidiga och bekväma boendelösningar i möblerade lägenheter – perfekta för både kortare och längre vistelser. Vi gör det enkelt för dig att hitta rätt, med hög komfort, flexibilitet och lösningar som anpassas efter dina behov.
             </p>
             <button className="w-fit bg-[#3db190] px-8 py-3 rounded-full text-white font-semibold hover:opacity-90 transition">
-              Läs mer
+              Book now
             </button>
           </motion.div>
         </div>
