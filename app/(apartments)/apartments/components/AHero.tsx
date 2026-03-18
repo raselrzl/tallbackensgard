@@ -239,7 +239,7 @@ const AHero: React.FC = () => {
       <section className="w-full bg-sky-100 py-24">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch gap-12">
           {/* LEFT - IMAGE */}
-          <div className="order-1 w-full md:w-1/2 relative rounded-2xl overflow-hidden shadow-lg">
+          <div className="order-1 w-full md:w-1/2 relative rounded-2xl overflow-hidden shadow-lg m-5">
             <img
               src="/moc/13.png" // you can replace with new image
               alt="Apartments"
