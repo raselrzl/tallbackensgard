@@ -41,7 +41,7 @@ export default function Lounge() {
             <Feature icon={<Wifi className="w-4 h-4" />} text="Fri Wifi" />
             <Feature
               icon={<Coffee className="w-4 h-4" />}
-              text="Frukost & Middag"
+              text="Matsal"
             />
           </div>
         </div>

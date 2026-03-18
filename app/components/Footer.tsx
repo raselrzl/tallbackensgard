@@ -135,7 +135,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Copyright + Support */}
-          <p className="order-2 md:order-1 text-gray-500 text-[10px] text-center md:text-left">
+          <p className="order-2 md:order-1 text-gray-500 text-[10px] text-center md:text-left font-julius">
             © {new Date().getFullYear()} Tallbackens Vandrarhem & Apartments{" "}
             <a
               href="https://www.souveral.com/"

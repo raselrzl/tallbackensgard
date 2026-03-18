@@ -5,12 +5,12 @@ import { Phone, Mail } from "lucide-react";
 
 export default function AboutPage() {
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-gray-50 min-h-screen ">
 
       {/* 1. Hero Section */}
-      <section className="relative w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
+      <section className="relative w-full h-124 sm:h-134 2xl:h-164 flex items-center justify-center overflow-hidden bg-black">
         <video
-          src="/v7.mp4"
+          src="/promo2.mp4"
           autoPlay
           loop
           muted
@@ -32,7 +32,7 @@ export default function AboutPage() {
       </section>
 
       {/* 2. About Us / Introduction */}
-      <section className="max-w-5xl mx-auto px-6 py-20 space-y-10 text-gray-700 dark:text-gray-300 leading-relaxed text-base md:text-lg">
+      <section className="max-w-4xl mx-auto px-6 py-20 space-y-10 text-gray-700 dark:text-gray-300 leading-relaxed text-base md:text-lg">
 
         {/* Main Heading */}
         <div className="text-left space-y-4">
@@ -75,7 +75,7 @@ export default function AboutPage() {
         </div>
 
         {/* Feature List */}
-        <div className="grid md:grid-cols-3 gap-6 pt-6">
+        <div className="grid md:grid-cols-2 gap-6 pt-6">
           <div className="p-6 border border-gray-300 rounded-xl shadow-sm">
             <h5 className="font-semibold mb-2 font-julius">Rikstäckande</h5>
             <p>Boende var ni än behöver det i Sverige.</p>
@@ -90,51 +90,15 @@ export default function AboutPage() {
             <h5 className="font-semibold mb-2 font-julius">Prisvärt</h5>
             <p>Kvalitativa lösningar till konkurrenskraftiga priser.</p>
           </div>
+
+          <div className="p-6 border border-gray-300 rounded-xl shadow-sm">
+            <h5 className="font-semibold mb-2 font-julius">Företagsvänligt</h5>
+            <p>Flexibla lösningar för företagsbokningar och gruppvistelser.</p>
+          </div>
         </div>
 
       </section>
 
-      {/* 3. Features / Philosophy */}
-      <section className="max-w-4xl mx-auto px-6 py-20 space-y-12 text-gray-700 dark:text-gray-300">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex flex-col"
-        >
-          <h3 className="text-2xl font-julius font-bold mb-2 text-gray-900 dark:text-white">
-            Charmigt boende
-          </h3>
-          <div className="w-16 h-0.5 bg-[#47d7ac] mb-4 rounded-full" />
-          <p>Personligt inredda rum med fokus på komfort och trivsel.</p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex flex-col"
-        >
-          <h3 className="text-2xl font-julius font-bold mb-2 text-gray-900 dark:text-white">
-            Natursköna omgivningar
-          </h3>
-          <div className="w-16 h-0.5 bg-[#47d7ac] mb-4 rounded-full" />
-          <p>Njut av skog, sjöar och promenadstråk direkt utanför dörren.</p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex flex-col"
-        >
-          <h3 className="text-2xl font-julius font-bold mb-2 text-gray-900 dark:text-white">
-            Företagsvänligt
-          </h3>
-          <div className="w-16 h-0.5 bg-[#47d7ac] mb-4 rounded-full" />
-          <p>Flexibla lösningar för företagsbokningar och gruppvistelser.</p>
-        </motion.div>
-      </section>
 
       {/* 4. Company Info / Ownership */}
       <section className="max-w-4xl mx-auto px-6 py-20 space-y-12 text-gray-700 dark:text-gray-300">
@@ -149,7 +113,7 @@ export default function AboutPage() {
           </h2>
           <div className="w-16 h-0.5 bg-[#47d7ac] mb-4 rounded-full" />
           <p className="text-justify">
-            Tallbackens Vandrarhem & Apartments är en plats för avkoppling, naturnära
+            Tallbackens Vandrarhem är en plats för avkoppling, naturnära
             upplevelser och högkvalitativt boende. Vi har ett starkt fokus på
             personlig service och kvalitet, vilket gör att våra gäster alltid
             känner sig välkomna och trygga.
