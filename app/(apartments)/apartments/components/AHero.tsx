@@ -136,7 +136,7 @@ const AHero: React.FC = () => {
             <div className="w-full md:w-1/2 relative mt-10 md:mt-0">
               <div className="relative w-full h-full min-h-100 md:-ml-20">
                 <Image
-                  src="/working.webp"
+                  src="/co.jpg"
                   alt="Apartments"
                   fill
                   className="object-cover rounded-2xl shadow-xl"
