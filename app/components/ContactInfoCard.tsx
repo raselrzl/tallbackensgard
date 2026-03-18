@@ -1,6 +1,6 @@
 "use client";
 
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, PhoneCall } from "lucide-react";
 
 export default function ContactInfoCard() {
   return (
@@ -31,19 +31,21 @@ export default function ContactInfoCard() {
           
           <p className="font-semibold">Tallbackens Vandrarhem & Apartments</p>
 
-          {/* Address */}
-          <p className="flex items-center justify-center gap-2">
-            <MapPin size={16} className="text-[#47d7ac]" />
-            Finspångsvägen 497, 605 80 Svärtinge
-          </p>
-
           {/* Phone */}
           <p className="flex items-center justify-center gap-2">
             <Phone size={16} className="text-[#47d7ac]" />
-            <a href="tel:0103333536" className="underline hover:text-[#47d7ac]">
-              010-333 35 36
+            <a href="+46 10-333 35 36" className="underline hover:text-[#47d7ac]">
+              +46 10-333 35 36
             </a>
           </p>
+
+           <p className="flex items-center justify-center gap-2">
+            <PhoneCall size={16} className="text-[#47d7ac]" />
+            <a href="+46 70-830 74 11" className="underline hover:text-[#47d7ac]">
+              +46 70-830 74 11
+            </a>
+          </p>
+
 
           {/* Email */}
           <p className="flex items-center justify-center gap-2">
