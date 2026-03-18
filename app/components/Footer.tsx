@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import SocialLinks from "./SocialLinks";
-import { Info, Mail, MapPin, Phone, PhoneCall } from "lucide-react";
+import { Info, Mail, MapPin, Phone, PhoneCall, Smartphone } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
               Tallbackens Vandrarhem & Apartments
             </h3>
             <div className="flex items-start gap-2">
-              <MapPin size={14} className="mt-1" />
+              <MapPin size={14} className="text-[#47d7ac] mt-1" />
 
               <p className="text-xs text-gray-300 leading-relaxed font-julius">
                 Finspångsvägen 497 <br />
@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
               href="mailto:info@tallbackensgard.se"
               className="flex items-center gap-2 mt-4 text-xs text-gray-300 underline hover:text-white transition"
             >
-              <Mail size={14} />
+              <Mail size={14} className="text-[#47d7ac]"/>
               info@tallbackensgard.se
             </a>
             {/* Phone */}
@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
               href="tel:+46103333536"
               className="flex items-center gap-2 text-xs text-gray-300 underline hover:text-white transition"
             >
-              <Phone size={14} />
+              <Phone size={14} className="text-[#47d7ac]"/>
               +46 10-333 35 36
             </a>
           </div>
@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
               href="tel:+46103333536"
               className="flex items-center gap-2 text-xs text-gray-300 underline hover:text-white transition"
             >
-              <Phone size={14} />
+              <Phone size={14} className="text-[#47d7ac]"/>
               +46 10-333 35 36
             </a>
 
@@ -74,14 +74,14 @@ const Footer: React.FC = () => {
               href="tel:+46708307411"
               className="flex items-center gap-2 text-xs text-gray-300 underline hover:text-white transition"
             >
-              <PhoneCall size={14} />
+              <Smartphone size={14} className="text-[#47d7ac]"/>
               +46 70-830 74 11
             </a>
             <Link
               href="/vandrarhem/companybooking"
               className="flex items-center gap-2 text-xs text-gray-300 underline hover:text-white transition mb-4"
             >
-              <Info size={14} />
+              <Info size={14} className="text-[#47d7ac]" />
               Bokningsinformation
             </Link>
 

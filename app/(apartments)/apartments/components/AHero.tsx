@@ -114,10 +114,7 @@ const AHero: React.FC = () => {
               Flexibla boendelösningar för företag
             </h2>
             <p className="text-lg text-gray-700">
-              Som en pålitlig partner inom företagsboende hjälper Tallbackens
-              Apartments dig att hitta rätt lösning – oavsett om det gäller ett
-              kort besök på huvudkontoret eller ett längre projekt i en annan
-              stad.
+              Upptäck smidiga och bekväma boendelösningar i möblerade lägenheter – perfekta för både kortare och längre vistelser. Vi gör det enkelt för dig att hitta rätt, med hög komfort, flexibilitet och lösningar som anpassas efter dina behov.
             </p>
             <button className="w-fit bg-[#3db190] px-8 py-3 rounded-full text-white font-semibold hover:opacity-90 transition">
               Book now

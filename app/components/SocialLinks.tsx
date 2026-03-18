@@ -6,7 +6,7 @@ export default function SocialLinks() {
   const socialLinks = [
     {
       name: "LinkedIn",
-      href: "https://www.linkedin.com", // ändra till din länk
+      href: "https://www.linkedin.com/company/tallbackens-vandrarhem-apartments/about/?viewAsMember=true", // ändra till din länk
       icon: "/ic/in.png",
     },
     {

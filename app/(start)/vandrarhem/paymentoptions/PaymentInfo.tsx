@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FileText, Phone, Info } from "lucide-react";
+import { FileText, Phone, Info, Mail } from "lucide-react";
 
 export default function PaymentInfo() {
   const paymentMethods = [
@@ -61,15 +61,32 @@ export default function PaymentInfo() {
       gradient: "bg-gradient-to-tr from-purple-400 to-purple-600",
     },
     {
-      icon: <Phone className="w-8 h-8 text-white" />,
-      title: "Kontakt",
-      points: [
-        "Maila info@tallbackensgard.se",
-        "Ring 010-3333536",
-        "Telefontider: 10:00–17:00 alla dagar",
-      ],
-      gradient: "bg-gradient-to-tr from-red-400 to-red-600",
-    },
+  icon: <Phone className="w-8 h-8 text-white" />,
+  title: "Kontakt",
+  noListStyle: true, // 👈 add this
+  points: [
+    <span key="mail" className="flex items-center gap-2">
+      <Mail size={14} className="text-[#47d7ac]" />
+      <a
+        href="mailto:info@tallbackensgard.se"
+        className="underline decoration-[#47d7ac] underline-offset-4 hover:text-[#47d7ac] transition"
+      >
+        info@tallbackensgard.se
+      </a>
+    </span>,
+
+    <span key="phone" className="flex items-center gap-2">
+      <Phone size={14} className="text-[#47d7ac]" />
+      <a
+        href="tel:0103333536"
+        className="underline decoration-[#47d7ac] underline-offset-4 hover:text-[#47d7ac] transition"
+      >
+        010-333 35 36
+      </a>
+    </span>,
+  ],
+  gradient: "bg-gradient-to-tr from-red-400 to-red-600",
+}
   ];
 
   return (
@@ -93,8 +110,11 @@ export default function PaymentInfo() {
             </h3>
 
             {/* Dotted Points */}
-            <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm md:text-base space-y-1 text-left">
-              {method.points.map((point, i) => (
+            <ul
+  className={`text-gray-700 dark:text-gray-300 text-sm md:text-base space-y-2 text-left ${
+    method.noListStyle ? "" : "list-disc list-inside"
+  }`}
+>  {method.points.map((point, i) => (
                 <li key={i}>{point}</li>
               ))}
             </ul>
