@@ -2,28 +2,34 @@
 
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
+// Updated items with different images
 const items = [
   {
     title: "En smidig och kostnadseffektiv lösning",
     text: "Vi matchar dina behov med rätt boende – snabbt, enkelt och utan krångel, oavsett hur specifika eller tidskritiska önskemålen är.",
+    image: "/vararum/room.jpg",
   },
   {
     title: "Kostnadseffektiva och skräddarsydda lösningar",
-    text: "Vi skapar genomtänkta och kostnadseffektiva boendelösningar anpassade efter dina behov. Med fokus på flexibilitet och en sömlös upplevelse. Vi säkerställer att varje vistelse fungerar smidigt, oavsett omfattning eller längd.",
+    text: "Vi skapar genomtänkta och kostnadseffektiva boendelösningar anpassade efter dina behov. Med fokus på flexibilitet och en sömlös upplevelse.",
+    image: "/moc/21.png",
   },
   {
     title: "Fullt utrustade kök",
     text: "Njut av friheten att laga din egen mat i ett fullt utrustat kök – med allt du behöver för en bekväm och flexibel vardag.",
+    image: "/card/kok.jpg",
   },
   {
     title: "Bekväma tvättmöjligheter",
     text: "För din komfort erbjuder vi smidiga tvättlösningar – antingen direkt i lägenheten eller via tillgång till fastighetens gemensamma faciliteter.",
+    image: "/ap.jpg",
   },
   {
-    title: "24/7",
+    title: "24/7 Support",
     text: "Vi finns här när du behöver oss. Med ett samtal ser vi till att allt fungerar smidigt – så att du kan fokusera på det som är viktigast.",
+    image: "/moc/8.png",
   },
 ];
 
@@ -49,8 +55,6 @@ export default function ASlider() {
     setIndex((prev) => (prev === 0 ? maxIndex : prev - perView));
   };
 
-  const visible = items.slice(index, index + perView);
-
   return (
     <section className="w-full bg-white py-24">
       <div className="max-w-7xl mx-auto px-6">
@@ -68,21 +72,22 @@ export default function ASlider() {
           >
             {items.map((item, i) => (
               <div key={i} className="w-full md:w-1/3 shrink-0 px-4">
-                <div className="bg-gray-50 rounded-xl overflow-hidden shadow-sm h-full">
+                <div className="bg-gray-50 rounded-xs overflow-hidden shadow-lg h-full flex flex-col">
                   <img
-                    src="/ap.jpg"
+                    src={item.image}
                     alt="Tallbackens boende"
-                    className="w-full h-56 object-cover"
+                    className="w-full h-56 md:h-64 object-cover rounded-xs"
                   />
 
-                  <div className="p-6 space-y-3">
-                    <h3 className="font-julius text-xl text-gray-900 leading-snug">
-                      {item.title}
-                    </h3>
-
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {item.text}
-                    </p>
+                  <div className="p-6 space-y-3 flex-1 flex flex-col justify-between">
+                    <div>
+                      <h3 className="font-julius text-xl text-gray-900 leading-snug mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        {item.text}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -106,13 +111,10 @@ export default function ASlider() {
           <div className="flex gap-3">
             {(mobile ? items : [0, 3]).map((_, i) => {
               const dotIndex = mobile ? i : i * 3;
-
               return (
                 <motion.div
                   key={i}
-                  animate={{
-                    scale: index === dotIndex ? 1.3 : 1,
-                  }}
+                  animate={{ scale: index === dotIndex ? 1.3 : 1 }}
                   className={`rounded-full transition ${
                     index === dotIndex
                       ? "w-4 h-4 bg-[#3db190]"

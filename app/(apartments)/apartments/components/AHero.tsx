@@ -1,6 +1,7 @@
 "use client";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect } from "react";
 
 const CounterCircle = () => {
@@ -92,41 +93,64 @@ const AHero: React.FC = () => {
         </motion.div>
       </section>
 
-      {/* SECTION WITH CARD */}
-      <section className="w-full bg-stone-100">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch">
-          <div className="order-1 md:order-2 w-full md:w-1/2 relative pb-32 md:pb-0">
-            <img
-              src="/ap.jpg"
-              alt="Apartments"
-              className="w-full h-full object-cover"
-            />
-          </div>
+      <section className="w-full bg-white py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-stretch relative">
+            {/* LEFT - TEXT BLOCK */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
+              className="w-full md:w-1/2 bg-stone-100 rounded-2xl p-8 md:p-12 flex flex-col justify-center z-10"
+            >
+              <div className="max-w-md space-y-6">
+                {/* Small label */}
+                <span className="text-sm uppercase tracking-widest text-[#47d7ac] font-semibold">
+                  För företag
+                </span>
 
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-            className="order-2 md:order-2 w-full md:w-1/2 px-6 py-20 flex flex-col justify-center space-y-6"
-          >
-            <h2 className="text-4xl md:text-5xl font-julius font-bold text-gray-900">
-              Flexibla boendelösningar för företag
-            </h2>
-            <p className="text-lg text-gray-700">
-              Upptäck smidiga och bekväma boendelösningar i möblerade lägenheter – perfekta för både kortare och längre vistelser. Vi gör det enkelt för dig att hitta rätt, med hög komfort, flexibilitet och lösningar som anpassas efter dina behov.
-            </p>
-            <button className="w-fit bg-[#3db190] px-8 py-3 rounded-full text-white font-semibold hover:opacity-90 transition">
-              Book now
-            </button>
-          </motion.div>
+                {/* Heading */}
+                <h2 className="text-xl md:text-3xl font-julius font-bold text-gray-900 leading-tight">
+                  Flexibla boendelösningar
+                </h2>
+
+                {/* Text */}
+                <p className="text-gray-700 text-base md:text-sm leading-relaxed">
+                  Upptäck smidiga och bekväma boendelösningar i möblerade
+                  lägenheter – perfekta för både kortare och längre vistelser.
+                  Vi anpassar varje lösning efter dina behov.
+                </p>
+
+                {/* Button */}
+                <Link
+                  href="/apartments/bokning"
+                  className="w-fit bg-[#47d7ac] px-8 py-3 rounded-full text-white font-semibold hover:bg-[#36b795] transition"
+                >
+                  Boka nu
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* RIGHT - IMAGE */}
+            <div className="w-full md:w-1/2 relative mt-10 md:mt-0">
+              <div className="relative w-full h-full min-h-100 md:-ml-20">
+                <Image
+                  src="/working.webp"
+                  alt="Apartments"
+                  fill
+                  className="object-cover rounded-2xl shadow-xl"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* CORPORATE SECTION */}
       <section className="relative w-full overflow-hidden pt-10">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
-          {/* IMAGE */}
+          {/* IMAGE (MAP - unchanged) */}
           <div className="order-1 md:order-2 w-full md:w-1/2 flex justify-center md:justify-end relative md:h-125 lg:h-150">
             {/* Mobile */}
             <Image
@@ -146,12 +170,12 @@ const AHero: React.FC = () => {
               height={800}
               priority
               className="
-    hidden md:block 
-    absolute top-0 
-    -right-4 lg:-right-4 xl:-right-80
-    h-full w-[120%] 
-    object-cover
-  "
+          hidden md:block 
+          absolute top-0 
+          -right-4 lg:-right-4 xl:-right-80
+          h-full w-[120%] 
+          object-cover
+        "
             />
           </div>
 
@@ -161,87 +185,104 @@ const AHero: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="order-2 md:order-1 w-full md:w-1/2 max-w-lg space-y-8"
+            className="order-2 md:order-1 w-full md:w-1/2 max-w-lg space-y-10"
           >
-            <h2 className="text-4xl md:text-5xl font-julius font-bold text-gray-900 pt-10">
+            <h2 className="text-xl md:text-2xl font-julius font-bold text-gray-900 pt-10">
               Boendelösningar i hela Sverige
             </h2>
-            <p className="text-lg text-gray-700">
-              Vi erbjuder moderna och möblerade lägenheter för företag över hela
-              Sverige.
+
+            <p className="text-sm text-gray-700">
+              Vi erbjuder moderna och flexibla boendelösningar över hela
+              Sverige, anpassade efter företag och projekt av alla storlekar.
             </p>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.7 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="flex justify-start"
-            >
-              <CounterCircle />
-            </motion.div>
+            {/* PREMIUM FLOATING GLASS KEYWORDS */}
+            <div className="relative w-full h-85 mt-4">
+              {[
+                { text: "Shortstay", style: "top-6 left-6 scale-110" },
+                { text: "Longstay", style: "top-0 right-10" },
+                { text: "Entreprenadboende", style: "top-24 left-0" },
+                { text: "Projektboende", style: "top-32 right-0 scale-105" },
+                { text: "Vandrarhem", style: "bottom-20 left-10" },
+                { text: "Lägenheter", style: "bottom-10 right-16 scale-110" },
+                { text: "Lägenhetshotell", style: "top-1/2 left-1/3" },
+                { text: "Stugor", style: "bottom-0 left-1/3 scale-95" },
+                { text: "Hus", style: "top-16 left-1/2" },
+                { text: "Modulboende", style: "bottom-8 right-1/3" },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className={`
+        absolute ${item.style}
+        px-5 py-2 rounded-full
+        text-sm font-medium
+        text-gray-800
+        backdrop-blur-md bg-white/60
+        border border-white/40
+        shadow-[0_8px_30px_rgba(0,0,0,0.08)]
+        hover:scale-110 hover:bg-[#47d7ac] hover:text-white
+        transition duration-300
+      `}
+                >
+                  {item.text}
+                </div>
+              ))}
 
-            <div className="grid grid-cols-3 gap-6 pt-4">
-              <div>
-                <p className="text-3xl font-bold text-[#47d7ac]">150+</p>
-                <p className="text-sm text-gray-600">Städer i Sverige</p>
-              </div>
-              <div>
-                <p className="text-3xl font-bold text-[#47d7ac]">1600</p>
-                <p className="text-sm text-gray-600">Nya lägenheter / år</p>
-              </div>
-              <div>
-                <p className="text-3xl font-bold text-[#47d7ac]">400</p>
-                <p className="text-sm text-gray-600">Lokala experter</p>
-              </div>
+              {/* Soft gradient glow behind */}
+              <div className="absolute inset-0 bg-linear-to-tr from-[#47d7ac]/10 via-transparent to-[#47d7ac]/10 blur-2xl pointer-events-none" />
             </div>
-
-            <button className="mt-6 mb-4 bg-[#3db190] px-8 py-3 rounded-full text-white font-semibold hover:opacity-90 transition">
-              Kontakta
-            </button>
           </motion.div>
         </div>
       </section>
 
-      {/* SECTION */}
-      <section className="w-full bg-sky-100">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch">
-          <div className="order-1 w-full md:w-1/2 relative">
+      {/* CIRCLE DISCOUNT SECTION */}
+      <section className="w-full bg-sky-100 py-24">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch gap-12">
+          {/* LEFT - IMAGE */}
+          <div className="order-1 w-full md:w-1/2 relative rounded-2xl overflow-hidden shadow-lg">
             <img
-              src="/ap2.png"
+              src="/moc/13.png" // you can replace with new image
               alt="Apartments"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transform hover:scale-105 transition duration-500"
             />
 
-            <div className="absolute top-4 left-4 bg-white rounded-full w-24 h-24 md:w-30 md:h-30 flex flex-col items-center justify-center text-center shadow-lg">
-              <span className="text-xs md:text-sm font-semibold text-gray-700">
-                up till
+            {/* CIRCLE DISCOUNT / SERVICE */}
+            <div className="absolute top-6 left-6 w-32 h-32 md:w-40 md:h-40 rounded-full bg-white shadow-lg flex flex-col items-center justify-center text-center p-3">
+              <span className="text-xs md:text-sm font-semibold text-gray-700 mb-1">
+                Upp till
               </span>
-              <span className="text-2xl md:text-3xl font-bold text-gray-900">
+              <span className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">
                 -25%
               </span>
-              <span className="text-xs md:text-sm font-semibold text-gray-700">
+              <span className="text-xs md:text-sm font-semibold text-gray-700 mb-2">
                 på boende
               </span>
             </div>
           </div>
 
+          {/* RIGHT - TEXT BLOCK */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="order-2 md:order-1 w-full md:w-1/2 px-6 py-20 flex flex-col justify-center space-y-6"
+            className="order-2 md:order-1 w-full md:w-1/2 px-6 py-10 flex flex-col justify-center space-y-6"
           >
-            <h2 className="text-4xl md:text-5xl font-julius font-bold text-gray-900">
-             Flexibla boendelösningar för företag
+            <h2 className="text-xl md:text-3xl font-julius font-bold text-gray-900">
+              Flexibla boendelösningar för alla
             </h2>
             <p className="text-lg text-gray-700">
-              Upptäck smidiga och bekväma boendelösningar i möblerade lägenheter – perfekta för både kortare och längre vistelser. Vi gör det enkelt för dig att hitta rätt, med hög komfort, flexibilitet och lösningar som anpassas efter dina behov.
+              Upptäck smidiga och bekväma boenden i möblerade lägenheter, hus
+              eller stugor – perfekta för både företag och privatpersoner. Dra
+              nytta av våra rabatter och välj lösningar som passar just dina
+              behov.
             </p>
-            <button className="w-fit bg-[#3db190] px-8 py-3 rounded-full text-white font-semibold hover:opacity-90 transition">
-              Book now
-            </button>
+            <Link
+              href="/apartments/kontakta-oss"
+              className="w-fit bg-[#3db190] px-8 py-3 rounded-full text-white font-semibold hover:opacity-90 transition"
+            >
+              Kontakta oss
+            </Link>
           </motion.div>
         </div>
       </section>

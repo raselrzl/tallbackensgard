@@ -1,16 +1,16 @@
 "use client";
 import { motion } from "framer-motion";
 import BookingInfo from "./BookingInfo";
-import SearchBookingModal from "./SearchBookingModal"; 
+import SearchBookingModal from "./SearchBookingModal";
 import BookButton from "@/app/components/BookButton";
 import BookingSection from "@/app/components/BookingSection";
 
 export default function BokningPage() {
   return (
-    <>
+    <div className="bg-gray-50">
       <section className="relative w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
         {/* Background Image */}
-         <video
+        <video
           src="/ved5.mp4" // video file in /public folder
           autoPlay
           loop
@@ -34,20 +34,17 @@ export default function BokningPage() {
           </h1>
 
           {/* Search Booking Button / Modal */}
-        {/*   <div className="m-6">
+          {/*   <div className="m-6">
             <SearchBookingModal />
           </div> */}
-           <div className="w-24 h-1 bg-[#47d7ac] mx-auto mt-6" />
-         {/*  <div className="my-8"><BookButton /></div> */}
+          <div className="w-24 h-1 bg-[#47d7ac] mx-auto mt-6" />
+          {/*  <div className="my-8"><BookButton /></div> */}
 
           {/* Elegant Divider */}
-         
         </motion.div>
       </section>
-      <BookingSection />
-
       <BookingInfo />
-
-    </>
+      <BookingSection />
+    </div>
   );
 }

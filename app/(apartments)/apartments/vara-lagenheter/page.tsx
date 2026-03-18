@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import ApartmentTypes from "../components/ApartmentTypes";
 import WhyTalbackans from "../components/WhyTalbackans";
 import ApartmentCTA from "../components/ApartmentCTA";
+import LagenhetFeatures from "../components/LagenhetFeatures";
 
 export default function VaraLagenheterPage() {
   return (
@@ -39,17 +40,17 @@ export default function VaraLagenheterPage() {
           </motion.div>
         </section>
       </div>
-      {/*  <LagenhetFeatures /> */}
+      <LagenhetFeatures />
       <ApartmentTypes />
-      
+
       <ApartmentCTA />
       <WhyTalbackans />
       <section className="bg-[#f0f8ff]">
         <div className="max-w-7xl mx-auto pb-16 px-4 border-b border-gray-900/10 ">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             {[
-              { title: "150+", desc: "Lägenheter över hela Sverige" },
-              { title: "500+", desc: "Nöjda företagskunder" },
+              { title: "150+", desc: "Boendealternativ över hela Sverige" },
+              { title: "250+", desc: "Nöjda företagskunder" },
               { title: "24/7", desc: "Support för våra gäster" },
               { title: "✓", desc: "Flexibla företagslösningar" },
             ].map((item, idx) => (
@@ -60,10 +61,12 @@ export default function VaraLagenheterPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: idx * 0.1 }}
               >
-                <h3 className="text-4xl font-extrabold text-[#47d7ac]">
+                <h3 className="text-4xl font-extrabold text-[#47d7ac] ">
                   {item.title}
                 </h3>
-                <p className="text-lg text-gray-700 mt-2">{item.desc}</p>
+                <p className="text-sm text-gray-700 mt-2 font-julius">
+                  {item.desc}
+                </p>
               </motion.div>
             ))}
           </div>

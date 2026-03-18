@@ -4,9 +4,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ContactForm from "./ContactForm"; // Private person form
 import CorporateContactForm from "./CorporateContactForm"; // Corporate form
-import HomeMap from "@/app/components/HomeMap";
 import ContactInfoCard from "@/app/components/ContactInfoCard";
-import BookButton from "@/app/components/BookButton";
+import VandrarhemMap from "@/app/components/MapVandrarhem";
 
 export default function ContactOssPage() {
   const [activeModal, setActiveModal] = useState<
@@ -103,7 +102,7 @@ export default function ContactOssPage() {
       </section>
       <ContactInfoCard />
       {/* Map Section */}
-      <HomeMap />
+      <VandrarhemMap />
 
       {/* Private Person Modal */}
       <AnimatePresence>

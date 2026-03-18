@@ -1,7 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BedDouble, Wifi, CookingPot, Car, Tv, ShowerHead, WashingMachine } from "lucide-react";
+import { useRef } from "react";
+import {
+  BedDouble,
+  Wifi,
+  CookingPot,
+  Car,
+  Tv,
+  ShowerHead,
+  WashingMachine,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 
 const features = [
   {
@@ -42,27 +53,43 @@ const features = [
 ];
 
 export default function LagenhetFeatures() {
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (!sliderRef.current) return;
+    const { current } = sliderRef;
+    const scrollAmount = 300;
+
+    current.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section className="py-24 bg-stone-50">
       <div className="max-w-7xl mx-auto px-6">
+           {/* Slider Controls */}
+        <div className="flex justify-end gap-3 mb-6">
+          <button
+            onClick={() => scroll("left")}
+            className="p-2 rounded-full bg-white shadow hover:scale-110 transition"
+          >
+            <ChevronLeft />
+          </button>
+          <button
+            onClick={() => scroll("right")}
+            className="p-2 rounded-full bg-white shadow hover:scale-110 transition"
+          >
+            <ChevronRight />
+          </button>
+        </div>
 
-        {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+        {/* Slider */}
+        <div
+          ref={sliderRef}
+          className="flex gap-6 overflow-x-auto scroll-smooth pr-6 snap-x snap-mandatory no-scrollbar"
         >
-          <h2 className="text-4xl md:text-5xl font-julius text-gray-900">
-            Vad ingår i våra lägenheter
-          </h2>
-          <div className="w-24 h-1 bg-[#47d7ac] mx-auto mt-6" />
-        </motion.div>
-
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-
           {features.map((feature, i) => {
             const Icon = feature.icon;
 
@@ -74,24 +101,18 @@ export default function LagenhetFeatures() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
                 whileHover={{ y: -6 }}
-                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition"
+                className="min-w-70 max-w-70 bg-white p-6 rounded-xl shadow-sm hover:shadow-md shrink-0 snap-start transition"
               >
-                <Icon
-                  size={36}
-                  className="text-[#47d7ac] mb-4"
-                />
-
-                <h3 className="font-julius text-xl text-gray-900 mb-2">
+                <Icon size={32} className="text-[#47d7ac] mb-4" />
+                <h3 className="font-julius text-lg text-gray-900 mb-2">
                   {feature.title}
                 </h3>
-
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {feature.text}
                 </p>
               </motion.div>
             );
           })}
-
         </div>
       </div>
     </section>

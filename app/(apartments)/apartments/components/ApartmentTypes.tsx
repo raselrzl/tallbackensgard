@@ -7,17 +7,17 @@ const apartments = [
   {
     title: "Enkelrum",
     text: "Prisvärda enkelrum för kortare projekt eller enskilda konsulter.",
-    img: "/ap.jpg",
+    img: "/ap1.png", 
   },
   {
     title: "Möblerade Lägenheter",
     text: "Fullt möblerade lägenheter med kök, wifi och bekväma arbetsytor.",
-    img: "/ap.jpg",
+    img: "/moc/11.png",
   },
-  {
+  { 
     title: "Projektboende",
     text: "Flexibla lösningar för större team under längre projekt.",
-    img: "/ap.jpg",
+    img: "/vara-rum.jpg",
   },
 ];
 
@@ -36,7 +36,7 @@ export default function ApartmentTypes() {
             <motion.div
               key={i}
               whileHover={{ y: -6 }}
-              className="bg-white shadow-lg rounded-xl overflow-hidden"
+              className="bg-white shadow-lg rounded-xs overflow-hidden"
             >
               <Image
                 src={item.img}
@@ -47,7 +47,7 @@ export default function ApartmentTypes() {
               />
 
               <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold mb-3">
+                <h3 className="text-xl font-semibold mb-3  font-julius">
                   {item.title}
                 </h3>
 

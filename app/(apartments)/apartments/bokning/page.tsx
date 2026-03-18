@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { BedDouble, Wifi, CookingPot, Car } from "lucide-react";
 import BusinessTravelHousing from "../components/BusinessTravelHousing";
 import ApartmentOffers from "@/app/components/ApartmentOffers";
+import ContactCardWithImage from "./ContactCardWithImage";
 
 export default function Bokning() {
   return (
@@ -39,7 +40,8 @@ export default function Bokning() {
           </motion.div>
         </section>
       </div>
-      <BusinessTravelHousing />
+      {/* <BusinessTravelHousing /> */}
+      <ContactCardWithImage />
 
       <ApartmentOffers />
     </>

@@ -8,7 +8,7 @@ const HomeMap: React.FC = () => {
   return (
     <section className="relative w-full">
       {/* Address Card */}
-{/*       <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20 bg-white/95 backdrop-blur-md shadow-lg rounded-xl px-6 py-4 text-center max-w-sm w-[90%]">
+     {/*  <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20 bg-white/95 backdrop-blur-md shadow-lg rounded-xl px-6 py-4 text-center max-w-sm w-[90%]">
         <p className="font-extrabold text-base sm:text-lg text-gray-900">
           Tallbackens Gård
         </p>
@@ -21,10 +21,11 @@ const HomeMap: React.FC = () => {
       {/* Map */}
       <div className="w-full h-120 overflow-hidden">
         <iframe
-          title="Tallbackens Gård Location"
+          title="Sweden Map"
+          // Lower zoom to 4 = more zoomed out, shows full Sweden
           src={`https://www.google.com/maps?q=${encodeURIComponent(
             address
-          )}&output=embed`}
+          )}&z=4&output=embed`}
           className="w-full h-full border-0"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"

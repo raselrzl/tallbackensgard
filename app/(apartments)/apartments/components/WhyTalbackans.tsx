@@ -26,16 +26,16 @@ export default function WhyTalbackans() {
     <section className="py-24 bg-[#f0f8ff]">
       <div className="max-w-7xl mx-auto px-4 text-center">
         <motion.h2
-          className="text-2xl md:text-5xl font-extrabold leading-tight text-center mb-2 text-[#47d7ac]"
+          className="text-2xl md:text-5xl font-extrabold leading-tight text-center mb-2 text-[#47d7ac] font-julius"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          Varför välja Talbackans?
+          Varför välja Tallbackens?
         </motion.h2>
 
         <motion.p
-          className="text-center text-sm text-gray-700 mt-2 font-semibold mb-10"
+          className="text-center text-sm text-gray-600 mt-2 font-semibold mb-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.7 }}
@@ -61,7 +61,7 @@ export default function WhyTalbackans() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+                <h3 className="text-xl font-semibold mb-3 font-julius">{item.title}</h3>
 
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {item.text}

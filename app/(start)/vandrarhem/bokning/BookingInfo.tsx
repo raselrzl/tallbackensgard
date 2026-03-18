@@ -14,7 +14,7 @@ export default function BookingInfo() {
         "Avgift: 10 000 SEK",
       ],
     },
-    {
+/*     {
       icon: <Calendar className="w-6 h-6 text-blue-500" />,
       bg: "bg-blue-100",
       title: "Avbokning",
@@ -22,7 +22,7 @@ export default function BookingInfo() {
         "Fri avbokning upp till 48 timmar före ankomst",
         "Senare avbokning: 100% debitering",
       ],
-    },
+    }, */
     {
       icon: <Phone className="w-6 h-6 text-green-500" />,
       bg: "bg-green-100",
@@ -38,12 +38,12 @@ export default function BookingInfo() {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto p-4 md:p-8 space-y-6 mb-10">
+    <section className="max-w-7xl mx-auto p-4 md:p-8 space-y-6 mb-10 bg-gray-50">
       <h2 className="text-2xl md:text-3xl font-julius font-bold text-gray-900 dark:text-white text-center mb-6">
         Bokningsinformation
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {infoData.map((item, idx) => (
           <div
             key={idx}
