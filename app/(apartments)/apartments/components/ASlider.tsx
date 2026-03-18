@@ -6,28 +6,24 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const items = [
   {
-    title: "Tallbackens förvandlade fiskestugor till hem på Smøla i Norge",
-    text: "Underhåll av 75 vindturbiner krävde 20 ingenjörer på plats i fem månader på en avlägsen ö.",
+    title: "En smidig och kostnadseffektiv lösning",
+    text: "Vi matchar dina behov med rätt boende – snabbt, enkelt och utan krångel, oavsett hur specifika eller tidskritiska önskemålen är.",
   },
   {
-    title: "Enkelt och prisvärt boende för sjuksköterskor över hela Finland",
-    text: "Tallbackens organiserade smidigt boende nära arbetsplatserna med kök och tvättmöjligheter.",
+    title: "Kostnadseffektiva och skräddarsydda lösningar",
+    text: "Vi tar fram genomtänkta och kostnadseffektiva boendelösningar som anpassas helt efter dina behov. Med fokus på flexibilitet och en sömlös upplevelse säkerställer vi att varje vistelse fungerar smidigt  oavsett omfattning eller längd.",
   },
   {
-    title: "Konsult med regelbundna besök till huvudkontoret i Köpenhamn",
-    text: "Konsulten bokade enkelt och prisvärt boende för 7 nätter via Tallbackens onlinebokning.",
+    title: "Fullt utrustade kök",
+    text: "Njut av friheten att laga din egen mat i ett fullt utrustat kök – med allt du behöver för en bekväm och flexibel vardag.",
   },
   {
-    title: "Projektboende till 40 anställda i en bioproduktfabrik",
-    text: "Tallbackens organiserade över 500 lägenheter för att matcha kundens behov i finska Lappland.",
+    title: "Bekväma tvättmöjligheter",
+    text: "För din komfort erbjuder vi smidiga tvättlösningar – antingen direkt i lägenheten eller via tillgång till fastighetens gemensamma faciliteter.",
   },
   {
-    title: "Ett nytt hem till global familj – från Indien till Stockholm",
-    text: "Tallbackens hjälpte familjen hitta långtidsboende när de flyttade från Bangalore till Stockholm.",
-  },
-  {
-    title: "Hemtrevlig lägenhet för 3 chefer under en 10 dagars jobbresa",
-    text: "Företagsledningen behövde boende i Finland under ett viktigt sammanslagningsprojekt.",
+    title: "24/7",
+    text: "Vi finns här när du behöver oss. Med ett samtal ser vi till att allt fungerar smidigt – så att du kan fokusera på det som är viktigast.",
   },
 ];
 
