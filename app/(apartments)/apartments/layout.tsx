@@ -5,6 +5,8 @@ import Footer from "@/app/components/Footer";
 import VNavbar from "@/app/(start)/vandrarhem/vandrarhemComponent/VNavbar";
 import ApartmentsNavbar from "./components/apartmentsNavbar";
 import FloatingButton from "./components/FloatingButton";
+import FloatingButtonForVandrarhem from "./components/FloatingButton";
+import FloatingButtonForApartment from "./components/FloatingButtonForApartment";
 
 // Fonts
 export const julius = Julius_Sans_One({
@@ -42,7 +44,7 @@ export default function RootLayout({
     <>
       <ApartmentsNavbar />
       {children}
-      <FloatingButton />
+      <FloatingButtonForApartment />
       <Footer />
     </>
   );

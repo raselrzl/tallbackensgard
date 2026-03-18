@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Phone, Mail, CalendarCheck, MessageCircle, Smartphone } from "lucide-react";
 import Image from "next/image";
 
-export default function FloatingButtonForVandrarhem() {
+export default function FloatingButtonForApartment() {
   const [open, setOpen] = useState(false);
 
 
@@ -27,7 +27,7 @@ export default function FloatingButtonForVandrarhem() {
     },
     {
       label: "Book Online",
-      href: "/vandrarhem/bokning#booking",
+      href: "/apartments/bokning",
       icon: CalendarCheck,
     },
   ];
