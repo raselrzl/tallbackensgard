@@ -83,7 +83,7 @@ export default function FloatingButtonForApartment() {
         className="rounded-full shadow-lg hover:scale-110 transition"
       >
         <Image
-          src={open ? "/c5.gif" : "/c7.gif"}
+          src={open ? "/c3.gif" : "/c7.gif"}
           alt="Contact support"
           unoptimized
           width={60}

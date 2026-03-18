@@ -30,48 +30,62 @@ export default function CancellationPolicyPage() {
         </motion.div>
       </section>
 
-      {/* Content */}
-      <section className="max-w-4xl mx-auto px-6 py-20">
-        <div className="space-y-12 text-gray-700 leading-relaxed text-base md:text-lg">
-          {/* Policy Section */}
-          <div>
-            <h2 className="text-2xl font-julius tracking-wide mb-4">
+      {/* Dark Premium Cancellation Policy Section */}
+      <section className="relative bg-gray-200 py-24 px-6 md:px-12 text-gray-200">
+        <div className="max-w-4xl mx-auto bg-gray-800 bg-opacity-80 backdrop-blur-lg rounded-3xl p-12 md:p-16 border border-gray-700 shadow-xl">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-julius font-bold tracking-wider text-[#47d7ac]">
               Avbokning
             </h2>
-            <div className="w-16 h-0.5 bg-[#47d7ac] mb-6 rounded-full" />
+            <div className="mt-4 mx-auto w-24 h-1 rounded-full bg-linear-to-r from-[#47d7ac] to-[#2bbf9c]" />
+          </div>
 
-            <ul className="list-disc list-inside space-y-3">
+          {/* Content */}
+          <div className="space-y-8 text-base md:text-lg leading-relaxed">
+            <ul className="space-y-4 list-disc list-inside marker:text-[#47d7ac]">
               <li>
                 För vistelser om{" "}
-                <span className="font-semibold">7 nätter eller fler</span> måste
-                avbokning ske senast{" "}
-                <span className="font-semibold">5 dagar före ankomst</span> för
-                full återbetalning.
+                <span className="font-semibold text-white">
+                  7 nätter eller fler
+                </span>{" "}
+                måste avbokning ske senast{" "}
+                <span className="font-semibold text-white">
+                  5 dagar före ankomst
+                </span>{" "}
+                för full återbetalning.
               </li>
               <li>
                 För vistelser kortare än 7 nätter gäller avbokning senast{" "}
-                <span className="font-semibold">2 dagar före ankomst</span>.
+                <span className="font-semibold text-white">
+                  2 dagar före ankomst
+                </span>
+                .
               </li>
               <li>Vid senare avbokning debiteras hela vistelsen.</li>
             </ul>
 
-            <p className="mt-6">
+            <p>
               Avbokning görs via e-post till{" "}
               <a
                 href="mailto:info@tallbackensgard.se"
-                className="underline underline-offset-4 hover:text-[#47d7ac] transition"
+                className="text-[#47d7ac] font-medium underline underline-offset-4 hover:text-[#2bbf9c] transition"
               >
                 info@tallbackensgard.se
               </a>
               .
             </p>
 
-            <p className="mt-4">
+            <p>
               Avbokningar som inkommer efter kl. 16:00 behandlas nästkommande
               arbetsdag.
             </p>
           </div>
         </div>
+
+        {/* Accent Circles */}
+        <div className="absolute top-10 left-1/4 w-56 h-56 bg-[#47d7ac]/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-10 right-1/4 w-72 h-72 bg-[#2bbf9c]/20 rounded-full blur-2xl pointer-events-none" />
       </section>
     </div>
   );
