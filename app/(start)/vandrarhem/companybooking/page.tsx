@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { Phone, Smartphone } from "lucide-react";
 
 export default function CompanyBookingPage() {
   return (
@@ -37,7 +38,6 @@ export default function CompanyBookingPage() {
       {/* Information & Contact Section */}
       <section className="max-w-5xl mx-auto px-6 py-20">
         <div className="space-y-16 text-gray-700 dark:text-gray-300 leading-relaxed text-base md:text-lg">
-          
           {/* Information */}
           <div>
             <h2 className="text-2xl md:text-3xl font-julius tracking-wide mb-4 text-gray-900 dark:text-white">
@@ -46,13 +46,16 @@ export default function CompanyBookingPage() {
             <div className="w-16 h-0.5 bg-[#47d7ac] mb-6 rounded-full" />
 
             <p className="mb-6">
-              Företags- och föreningsbokningar kan inte göras via hemsidan, men vi utvecklar gärna skräddarsydda lösningar som passar just er.
+              Företags- och föreningsbokningar kan inte göras via hemsidan, men
+              vi utvecklar gärna skräddarsydda lösningar som passar just er.
             </p>
 
             <ul className="list-disc list-inside space-y-2">
               <li>Anpassade boenden för grupper, föreningar och företag</li>
               <li>Flexibla lösningar för byggföretag och entreprenadprojekt</li>
-              <li>Möjlighet till längre vistelser med fullt utrustade rum och kök</li>
+              <li>
+                Möjlighet till längre vistelser med fullt utrustade rum och kök
+              </li>
               <li>Personlig service och rådgivning</li>
             </ul>
           </div>
@@ -65,8 +68,9 @@ export default function CompanyBookingPage() {
             <div className="w-16 h-0.5 bg-[#47d7ac] mb-6 rounded-full" />
 
             <ul className="list-disc list-inside space-y-2">
-              <li>
-                <span className="font-semibold">Telefon:</span>{" "}
+              <li className="flex items-center gap-2">
+                <Phone size={16} className="text-[#47d7ac]" />
+                <span className="font-semibold"></span>
                 <a
                   href="tel:+46103333536"
                   className="underline decoration-[#47d7ac] underline-offset-4 hover:text-[#47d7ac] transition"
@@ -74,8 +78,10 @@ export default function CompanyBookingPage() {
                   +46 10‑333 35 36
                 </a>
               </li>
-              <li>
-                <span className="font-semibold">Mobil / Car:</span>{" "}
+
+              <li className="flex items-center gap-2">
+                <Smartphone size={16} className="text-[#47d7ac]" />
+                <span className="font-semibold"></span>
                 <a
                   href="tel:+46708307411"
                   className="underline decoration-[#47d7ac] underline-offset-4 hover:text-[#47d7ac] transition"

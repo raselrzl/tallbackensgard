@@ -10,14 +10,14 @@ export default function AboutPage() {
       {/* 1. Hero Section */}
       <section className="relative w-full h-124 sm:h-134 2xl:h-164 flex items-center justify-center overflow-hidden bg-black">
         <video
-          src="/promo2.mp4"
+          src="/ved1.mp4"
           autoPlay
           loop
           muted
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-black/50" />
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
