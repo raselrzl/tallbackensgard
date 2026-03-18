@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import SocialLinks from "./SocialLinks";
+import { Info, Mail, MapPin, Phone, PhoneCall } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
@@ -28,48 +29,59 @@ const Footer: React.FC = () => {
           {/* Section 2 – Kontakt */}
           <div className="font-julius">
             <h3 className="text-sm font-bold mb-2 font-julius">
-              Tallbackens Vandrarhem & Apartments 
+              Tallbackens Vandrarhem & Apartments
             </h3>
-            <p className="text-xs text-gray-300 leading-relaxed font-julius">
-              Finspångsvägen 497 <br />
-              605 80 Svärtinge
-            </p>
+            <div className="flex items-start gap-2">
+              <MapPin size={14} className="mt-1" />
+
+              <p className="text-xs text-gray-300 leading-relaxed font-julius">
+                Finspångsvägen 497 <br />
+                605 80 Svärtinge
+              </p>
+            </div>
             <a
               href="mailto:info@tallbackensgard.se"
-              className="block mt-4 text-xs text-gray-300 underline hover:text-white transition"
+              className="flex items-center gap-2 mt-4 text-xs text-gray-300 underline hover:text-white transition"
             >
+              <Mail size={14} />
               info@tallbackensgard.se
             </a>
             {/* Phone */}
             <a
               href="tel:+46103333536"
-              className="block  text-xs text-gray-300 underline hover:text-white transition"
+              className="flex items-center gap-2 text-xs text-gray-300 underline hover:text-white transition"
             >
-              +46 10-333 35 36 
+              <Phone size={14} />
+              +46 10-333 35 36
             </a>
           </div>
 
           {/* Section 3 – Företag */}
           <div className="font-julius">
-            <h3 className="text-sm font-bold mb-4 font-julius">Företagsbokningar</h3>
+            <h3 className="text-sm font-bold mb-4 font-julius">
+              Företagsbokningar
+            </h3>
 
             <a
               href="tel:+46103333536"
-              className="block text-xs text-gray-300 underline hover:text-white transition"
+              className="flex items-center gap-2 text-xs text-gray-300 underline hover:text-white transition"
             >
+              <Phone size={14} />
               +46 10-333 35 36
             </a>
 
             <a
               href="tel:+46708307411"
-              className="block text-sm text-gray-300 underline hover:text-white transition"
+              className="flex items-center gap-2 text-xs text-gray-300 underline hover:text-white transition"
             >
+              <PhoneCall size={14} />
               +46 70-830 74 11
             </a>
             <Link
               href="/vandrarhem/companybooking"
-              className="block text-xs text-gray-300 underline hover:text-white transition mb-4"
+              className="flex items-center gap-2 text-xs text-gray-300 underline hover:text-white transition mb-4"
             >
+              <Info size={14} />
               Bokningsinformation
             </Link>
 
@@ -78,10 +90,8 @@ const Footer: React.FC = () => {
 
           {/* Section 4 – Övrigt */}
           <div className="font-julius">
-             <h3 className="text-sm font-bold mb-2 font-julius">
-              Info
-            </h3>
-           <Link
+            <h3 className="text-sm font-bold mb-2 font-julius">Info</h3>
+            <Link
               href="/vandrarhem/privacy-policy"
               className="block text-gray-300 underline text-xs font-bold hover:text-white transition"
             >
@@ -93,33 +103,51 @@ const Footer: React.FC = () => {
             >
               Avbokning
             </Link>
-             <Link
+            <Link
               href="/vandrarhem/paymentoptions"
-              className="block text-sm font-bold text-gray-300 underline hover:text-white transition "
+              className="block text-xs font-bold text-gray-300 underline hover:text-white transition "
             >
               Betalningsalternativ
             </Link>
-             <Link
+            <Link
               href="/vandrarhem/about"
               className="block text-xs font-bold text-gray-300 underline hover:text-white transition"
             >
               Om oss
             </Link>
-              <Link
+            <Link
               href="/vandrarhem/karriar"
               className="block text-xs font-bold text-gray-300 underline hover:text-white transition mb-4"
             >
               Karriärmöjligheter
             </Link>
-            <SocialLinks />
           </div>
         </div>
       </div>
 
       {/* Bottom bar */}
-      {/*    <div className="border-t border-gray-800 text-center py-4 text-sm text-gray-500">
-        © {new Date().getFullYear()} Tallbackens Vandrarhem & Apartments
-      </div> */}
+      <div className="border-t border-gray-800 py-1 text-[10px] text-gray-500">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2 md:gap-0">
+          <div></div>
+          {/* Social Links - First on mobile, right on desktop */}
+          <div className="order-1 md:order-3">
+            <SocialLinks />
+          </div>
+
+          {/* Copyright + Support */}
+          <p className="order-2 md:order-1 text-gray-500 text-[10px] text-center md:text-left">
+            © {new Date().getFullYear()} Tallbackens Vandrarhem & Apartments{" "}
+            <a
+              href="https://www.souveral.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-500 text-[10px] underline hover:text-white transition"
+            >
+              Support
+            </a>
+          </p>
+        </div>
+      </div>
     </footer>
   );
 };
