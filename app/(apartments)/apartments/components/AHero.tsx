@@ -133,7 +133,7 @@ const AHero: React.FC = () => {
           <div className="order-1 md:order-2 w-full md:w-1/2 flex justify-center md:justify-end relative md:h-125 lg:h-150">
             {/* Mobile */}
             <Image
-              src="/map15.png"
+              src="/mapsv.png"
               alt="Apartments"
               width={600}
               height={600}
@@ -143,7 +143,7 @@ const AHero: React.FC = () => {
 
             {/* Desktop */}
             <Image
-              src="/map15.png"
+              src="/mapsv.png"
               alt="Apartments"
               width={800}
               height={800}
