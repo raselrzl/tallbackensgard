@@ -11,7 +11,7 @@ const items = [
   },
   {
     title: "Kostnadseffektiva och skräddarsydda lösningar",
-    text: "Vi tar fram genomtänkta och kostnadseffektiva boendelösningar som anpassas helt efter dina behov. Med fokus på flexibilitet och en sömlös upplevelse säkerställer vi att varje vistelse fungerar smidigt  oavsett omfattning eller längd.",
+    text: "Vi skapar genomtänkta och kostnadseffektiva boendelösningar anpassade efter dina behov. Med fokus på flexibilitet och en sömlös upplevelse. Vi säkerställer att varje vistelse fungerar smidigt, oavsett omfattning eller längd.",
   },
   {
     title: "Fullt utrustade kök",
@@ -54,50 +54,44 @@ export default function ASlider() {
   return (
     <section className="w-full bg-white py-24">
       <div className="max-w-7xl mx-auto px-6">
-
         {/* TITLE */}
         <h2 className="text-4xl md:text-5xl font-julius text-center text-gray-900 mb-16">
           Hur företag använder Tallbackens
         </h2>
 
-        {/* SLIDER */}
-        <div className="grid md:grid-cols-3 gap-8 min-h-90">
+        <div className="overflow-hidden">
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{
+              transform: `translateX(-${index * (100 / perView)}%)`,
+            }}
+          >
+            {items.map((item, i) => (
+              <div key={i} className="w-full md:w-1/3 shrink-0 px-4">
+                <div className="bg-gray-50 rounded-xl overflow-hidden shadow-sm h-full">
+                  <img
+                    src="/ap.jpg"
+                    alt="Tallbackens boende"
+                    className="w-full h-56 object-cover"
+                  />
 
-          <AnimatePresence mode="wait">
-            {visible.map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 40, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -40, scale: 0.95 }}
-                transition={{ duration: 0.45, ease: "easeOut" }}
-                whileHover={{ y: -6 }}
-                className="bg-gray-50 rounded-xl overflow-hidden shadow-sm"
-              >
-                <img
-                  src="/ap.jpg"
-                  alt="Tallbackens boende"
-                  className="w-full h-56 object-cover"
-                />
+                  <div className="p-6 space-y-3">
+                    <h3 className="font-julius text-xl text-gray-900 leading-snug">
+                      {item.title}
+                    </h3>
 
-                <div className="p-6 space-y-3">
-                  <h3 className="font-julius text-xl text-gray-900 leading-snug">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {item.text}
-                  </p>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {item.text}
+                    </p>
+                  </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </AnimatePresence>
-
+          </div>
         </div>
 
         {/* NAVIGATION */}
         <div className="flex justify-center items-center gap-8 mt-12">
-
           {/* LEFT */}
           <motion.button
             whileHover={{ scale: 1.1 }}
@@ -138,9 +132,7 @@ export default function ASlider() {
           >
             <ChevronRight size={22} />
           </motion.button>
-
         </div>
-
       </div>
     </section>
   );
