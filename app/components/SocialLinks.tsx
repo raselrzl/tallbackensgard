@@ -34,8 +34,8 @@ export default function SocialLinks() {
           <Image
             src={item.icon}
             alt={item.name}
-            width={30}
-            height={30}
+            width={24}
+            height={24}
             className="object-contain"
           />
         </a>
