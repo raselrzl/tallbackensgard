@@ -32,7 +32,7 @@ export default function ApartmentContactOssPage() {
   const modalWrapperClasses =
     "fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4";
   const modalContentClasses =
-    "bg-white dark:bg-gray-900 rounded-2xl shadow-2xl w-full max-w-xl m-2 overflow-hidden relative";
+    "bg-white rounded-2xl shadow-2xl w-full max-w-xl m-2 overflow-hidden relative";
 
   return (
     <>
