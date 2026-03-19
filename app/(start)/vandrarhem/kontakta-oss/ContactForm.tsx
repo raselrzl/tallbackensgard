@@ -26,11 +26,48 @@ export default function ContactForm() {
     }));
   };
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    console.log("Form Data:", formData);
-    alert("Form submitted! Check console for data.");
-  };
+  const handleSubmit = async (e: FormEvent) => {
+  e.preventDefault();
+
+  // Simple captcha check
+  if (formData.captcha !== "5") {
+    alert("Wrong captcha!");
+    return;
+  }
+
+  if (!formData.consent) {
+    alert("You must accept the privacy policy.");
+    return;
+  }
+
+  try {
+    const res = await fetch("/api/VandrarhemPrivateContact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+    if (res.ok) {
+      alert("Message sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+        consent: false,
+        captcha: "",
+      });
+    } else {
+      alert(data.message || "Something went wrong");
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Failed to send message");
+  }
+};
 
   return (
     <section className="font-julius w-full px-4 sm:px-6 md:px-8">
