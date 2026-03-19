@@ -39,13 +39,53 @@ export default function CorporateContactForm({
     }));
   };
 
-  const handleSubmit = (e: FormEvent) => {
+ /*  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     console.log("Företagsformulär:", formData);
     alert("Formuläret skickat! Kolla konsolen för data.");
     onClose();
-  };
+  }; */
+const handleSubmit = async (e: FormEvent) => {
+  e.preventDefault();
 
+  if (!formData.consent) {
+    alert("You must accept the privacy policy.");
+    return;
+  }
+
+  try {
+    const res = await fetch("/api/company-contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      alert("Message sent successfully!");
+      onClose();
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        customerType: "",
+        country: "",
+        message: "",
+        consent: false,
+      });
+    } else {
+      alert(data.message || "Something went wrong");
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Failed to send message");
+  }
+};
   return (
     <section className="font-julius w-full px-4 sm:px-6 md:px-8">
       <div className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto bg-white dark:bg-gray-900 pb-8 px-4 rounded-2xl overflow-y-auto max-h-[90vh]">
