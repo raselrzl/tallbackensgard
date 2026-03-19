@@ -243,7 +243,7 @@ const AHero: React.FC = () => {
     {
       text: "Stugor",
       icon: "🌲",
-      style: "bottom-0 left-1/3 scale-95",
+      style: "bottom-0 left-1/4 scale-95",
       mobileStyle: "top-96 left-1/3",
     },
     {
