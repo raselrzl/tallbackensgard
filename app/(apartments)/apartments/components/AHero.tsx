@@ -230,7 +230,7 @@ const AHero: React.FC = () => {
                 },
                 {
                   text: "Lägenhetshotell",
-                  style: "top-1/2 left-1/3",
+                  style: "top-1/2 left-1/2",
                   mobileStyle: "top-84 left-1/2",
                 },
                 {
@@ -262,7 +262,7 @@ const AHero: React.FC = () => {
         border-2 border-[#47d7ac]
         shadow-[0_8px_30px_rgba(0,0,0,0.08)]
         hover:scale-110 hover:bg-[#47d7ac] hover:text-white
-        transition duration-300
+        transition duration-300 shadow-[#47d7ac]
         cursor-pointer
       `}
                 >
