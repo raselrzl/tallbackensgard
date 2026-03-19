@@ -185,7 +185,7 @@ const AHero: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="order-2 md:order-1 w-full md:w-1/2 max-w-lg space-y-10"
+            className="order-2 md:order-1 w-full md:w-1/2 max-w-lg space-y-10 bg-white"
           >
             <h2 className="text-xl md:text-2xl font-julius font-bold text-gray-900 pt-10">
               Boendelösningar i hela Sverige
@@ -196,7 +196,7 @@ const AHero: React.FC = () => {
               Sverige, anpassade efter företag och projekt av alla storlekar.
             </p>
 
-            <div className="relative w-full h-[700px] md:h-[600px] mt-4">
+            <div className="relative w-full h-[700px] md:h-[600px] mt-4 bg-white">
   {[
     {
       text: "Shortstay",
