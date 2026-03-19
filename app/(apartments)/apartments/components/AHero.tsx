@@ -197,7 +197,7 @@ const AHero: React.FC = () => {
               Sverige, anpassade efter företag och projekt av alla storlekar.
             </p>
 
-            <div className="relative w-full h-[700px] md:h-[600px] mt-4 bg-white">
+            <div className="relative w-full h-175 md:h-150 mt-4 bg-white">
               {[
                 {
                   text: "Shortstay",

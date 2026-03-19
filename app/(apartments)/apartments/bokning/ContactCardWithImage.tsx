@@ -14,7 +14,7 @@ import Link from "next/link";
 
 export default function ContactCardWithImage() {
   return (
-    <section className="w-full bg-gray-100 dark:bg-gray-800 py-16">
+    <section className="w-full bg-gray-100 py-16">
       {/* Container */}
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-stretch gap-10">
         
