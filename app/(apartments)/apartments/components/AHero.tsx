@@ -255,11 +255,11 @@ const AHero: React.FC = () => {
         absolute
         ${item.mobileStyle} md:${item.style}
         flex items-center justify-center
-        rounded-full h-25 w-25
-        text-[10px] font-medium
-        text-gray-800
+        rounded-full h-26 w-26
+        text-[9px] font-medium
+        text-gray-800 font-julius
         backdrop-blur-md bg-white/60
-        border border-[#47d7ac]
+        border-2 border-[#47d7ac]
         shadow-[0_8px_30px_rgba(0,0,0,0.08)]
         hover:scale-110 hover:bg-[#47d7ac] hover:text-white
         transition duration-300
