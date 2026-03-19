@@ -214,14 +214,14 @@ const AHero: React.FC = () => {
                 {
                   text: "Entreprenadboende",
                   icon: "🏢",
-                  style: "top-24 left-0",
-                  mobileStyle: "top-36 left-1/4",
+                  style: "top-22 left-0",
+                  mobileStyle: "top-34 left-1/3",
                 },
                 {
                   text: "Projektboende",
                   icon: "🛋️",
-                  style: "top-32 right-0 scale-105",
-                  mobileStyle: "top-48 left-3/4",
+                  style: "top-32 right-1 scale-105",
+                  mobileStyle: "top-52 left-3/5",
                 },
                 {
                   text: "Vandrarhem",
@@ -232,8 +232,8 @@ const AHero: React.FC = () => {
                 {
                   text: "Lägenheter",
                   icon: "🏘️",
-                  style: "bottom-10 right-16 scale-110",
-                  mobileStyle: "top-80 left-1",
+                  style: "bottom-8 right-10 scale-110",
+                  mobileStyle: "top-90 left-1",
                 },
                 {
                   text: "Lägenhetshotell",
@@ -245,7 +245,7 @@ const AHero: React.FC = () => {
                   text: "Stugor",
                   icon: "🌲",
                   style: "bottom-0 left-1/4 scale-95",
-                  mobileStyle: "top-96 left-1/3",
+                  mobileStyle: "top-145 left-1/2",
                 },
                 {
                   text: "Hus",
