@@ -246,7 +246,7 @@ const AHero: React.FC = () => {
                 {
                   text: "Modulboende",
                   style: "bottom-8 right-1/3",
-                  mobileStyle: "top-120 left-1/2",
+                  mobileStyle: "top-120 left-8",
                 },
               ].map((item, i) => (
                 <div
