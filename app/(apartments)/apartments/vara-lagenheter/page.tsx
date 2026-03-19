@@ -5,6 +5,7 @@ import ApartmentTypes from "../components/ApartmentTypes";
 import WhyTalbackans from "../components/WhyTalbackans";
 import ApartmentCTA from "../components/ApartmentCTA";
 import LagenhetFeatures from "../components/LagenhetFeatures";
+import CardForBokningPage from "../components/CardForBokningPage";
 
 export default function VaraLagenheterPage() {
   return (
@@ -40,8 +41,10 @@ export default function VaraLagenheterPage() {
           </motion.div>
         </section>
       </div>
+     
       <LagenhetFeatures />
-      <ApartmentTypes />
+       <CardForBokningPage />
+     {/*  <ApartmentTypes /> */}
 
       <ApartmentCTA />
       <WhyTalbackans />

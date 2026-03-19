@@ -67,7 +67,7 @@ export default function LagenhetFeatures() {
   };
 
   return (
-    <section className="py-24 bg-stone-50">
+    <section className="py-10 bg-stone-50">
       <div className="max-w-7xl mx-auto px-6">
            {/* Slider Controls */}
         <div className="flex justify-end gap-3 mb-6">

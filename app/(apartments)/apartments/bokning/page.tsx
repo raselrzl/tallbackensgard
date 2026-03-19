@@ -5,6 +5,7 @@ import { BedDouble, Wifi, CookingPot, Car } from "lucide-react";
 import BusinessTravelHousing from "../components/BusinessTravelHousing";
 import ApartmentOffers from "@/app/components/ApartmentOffers";
 import ContactCardWithImage from "./ContactCardWithImage";
+import CardForBokningPage from "../components/CardForBokningPage";
 
 export default function Bokning() {
   return (
@@ -43,7 +44,8 @@ export default function Bokning() {
       {/* <BusinessTravelHousing /> */}
       <ContactCardWithImage />
 
-      <ApartmentOffers />
+     {/*  <ApartmentOffers /> */}
+     {/* <CardForBokningPage /> */}
     </>
   );
 }

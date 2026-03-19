@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function ApartmentCTA() {
   return (
-    <section className="relative py-40 md:py-60 text-white text-center overflow-hidden">
+    <section className="relative py-30 text-white text-center overflow-hidden">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
