@@ -27,7 +27,7 @@ export default function ApartmentCTA() {
 
         <Link
           href="/apartments/kontakta-oss"
-          className="bg-[#47d7ac] text-black px-8 py-4 rounded-full font-semibold hover:scale-105 transition uppercase font-julius"
+          className="bg-[#47d7ac] font-julius text-black px-8 py-4 rounded-full font-semibold hover:scale-105 transition uppercase font-julius"
         >
           Kontakta Oss
         </Link>
