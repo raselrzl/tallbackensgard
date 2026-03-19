@@ -4,19 +4,19 @@ import Image from "next/image";
 const CardForBokningPage = () => {
   const items = [
     {
-      image: "/ap.jpg",
+      image: "/moc/18.png",
       heading: "Lägenhetshotel",
       text: "Lättillgängligt boende for både semester och affärsresor",
       link: "#contact",
     },
     {
-      image: "/ap.jpg",
+      image: "/moc/11.png",
       heading: "Vandrarhem",
       text: "Privärt boende privata sovrum och gemensamt kök",
       link: "#contact",
     },
     {
-      image: "/ap.jpg",
+      image: "/moc/23.png",
       heading: "Möblerade Lägenheter",
       text: "Alt från en till fyrarumlägenheter i hela Sweden",
       link: "#contact",

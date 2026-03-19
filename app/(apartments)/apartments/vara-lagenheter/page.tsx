@@ -41,10 +41,10 @@ export default function VaraLagenheterPage() {
           </motion.div>
         </section>
       </div>
-     
+
       <LagenhetFeatures />
-       <CardForBokningPage />
-     {/*  <ApartmentTypes /> */}
+      <CardForBokningPage />
+      {/*  <ApartmentTypes /> */}
 
       <ApartmentCTA />
       <WhyTalbackans />
@@ -52,7 +52,7 @@ export default function VaraLagenheterPage() {
         <div className="max-w-7xl mx-auto pb-16 px-4 border-b border-gray-900/10 ">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             {[
-              { title: "150+", desc: "Boendealternativ över hela Sverige" },
+              { title: "250+", desc: "Boendealternativ över hela Sverige" },
               { title: "250+", desc: "Nöjda företagskunder" },
               { title: "24/7", desc: "Support för våra gäster" },
               { title: "✓", desc: "Flexibla företagslösningar" },

@@ -62,7 +62,7 @@ export default function ContactCardWithImage() {
           </div>
 
           {/* Button bottom aligned */}
-          <Link href="/apartments/kontakta-oss" className="mt-10 w-fit bg-[#47d7ac] hover:bg-[#36b795] text-white px-6 py-3 rounded-full text-sm md:text-base font-semibold transition">
+          <Link href="/apartments/kontakta-oss" className="mt-10 font-julius w-fit bg-[#47d7ac] hover:bg-[#36b795] text-white px-6 py-3 rounded-full text-sm md:text-base font-semibold transition">
             Kontakta oss
           </Link>
         </div>

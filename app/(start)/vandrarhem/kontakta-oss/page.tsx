@@ -90,7 +90,7 @@ export default function ContactOssPage() {
                 <div className="mt-4 sm:mt-6">
                   <button
                     onClick={option.action}
-                    className="bg-[#47d7ac] hover:bg-[#36b795] text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-full w-full sm:w-auto transition text-xs"
+                    className="bg-[#47d7ac] font-julius hover:bg-[#36b795] text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-full w-full sm:w-auto transition text-xs"
                   >
                     {option.buttonText}
                   </button>

@@ -68,7 +68,7 @@ export default function LagenhetFeatures() {
 
   return (
     <section className="py-10 bg-stone-50">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto p-2">
            {/* Slider Controls */}
         <div className="flex justify-end gap-3 mb-6">
           <button
@@ -88,7 +88,7 @@ export default function LagenhetFeatures() {
         {/* Slider */}
         <div
           ref={sliderRef}
-          className="flex gap-6 overflow-x-auto scroll-smooth pr-6 snap-x snap-mandatory no-scrollbar"
+          className="flex gap-6 overflow-x-auto overflow-y-hidden scroll-smooth pr-6 snap-x snap-mandatory no-scrollbar"
         >
           {features.map((feature, i) => {
             const Icon = feature.icon;
@@ -101,7 +101,7 @@ export default function LagenhetFeatures() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
                 whileHover={{ y: -6 }}
-                className="min-w-70 max-w-70 bg-white p-6 rounded-xl shadow-sm hover:shadow-md shrink-0 snap-start transition"
+                className="min-w-70 max-w-70 h-60 overflow-y-hidden bg-white p-6 rounded-xl shadow-sm hover:shadow-md shrink-0 snap-start transition"
               >
                 <Icon size={32} className="text-[#47d7ac] mb-4" />
                 <h3 className="font-julius text-lg text-gray-900 mb-2">

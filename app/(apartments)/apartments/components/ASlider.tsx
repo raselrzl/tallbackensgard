@@ -60,7 +60,7 @@ export default function ASlider() {
       <div className="max-w-7xl mx-auto px-6">
         {/* TITLE */}
         <h2 className="text-4xl md:text-5xl font-julius text-center text-gray-900 mb-16">
-          Hur företag använder Tallbackens
+          Vi förenklar för företag
         </h2>
 
         <div className="overflow-hidden">
@@ -81,10 +81,10 @@ export default function ASlider() {
 
                   <div className="p-6 space-y-3 flex-1 flex flex-col justify-between">
                     <div>
-                      <h3 className="font-julius text-xl text-gray-900 leading-snug mb-2">
+                      <h3 className="font-julius text-xl font-bold text-gray-900 leading-snug mb-2">
                         {item.title}
                       </h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">
+                      <p className="text-gray-500 text-sm leading-relaxed">
                         {item.text}
                       </p>
                     </div>

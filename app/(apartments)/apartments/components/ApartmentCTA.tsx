@@ -21,13 +21,13 @@ export default function ApartmentCTA() {
         </h2>
 
         <p className="mb-10 text-lg text-gray-200">
-          Kontakta Talbackans så hjälper vi er hitta rätt boendelösning för era
+          Kontakta oss så hjälper vi er att hitta rätt boendelösning för era
           anställda.
         </p>
 
         <Link
           href="/apartments/kontakta-oss"
-          className="bg-[#47d7ac] text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition"
+          className="bg-[#47d7ac] text-black px-8 py-4 rounded-full font-semibold hover:scale-105 transition uppercase font-julius"
         >
           Kontakta Oss
         </Link>

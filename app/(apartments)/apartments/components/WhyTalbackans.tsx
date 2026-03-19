@@ -31,7 +31,7 @@ export default function WhyTalbackans() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          Varför välja Tallbackens?
+          Varför välja OSS?
         </motion.h2>
 
         <motion.p

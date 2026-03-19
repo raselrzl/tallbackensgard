@@ -117,15 +117,15 @@ const AHero: React.FC = () => {
 
                 {/* Text */}
                 <p className="text-gray-700 text-base md:text-sm leading-relaxed">
-                  Upptäck smidiga och bekväma boendelösningar i möblerade
-                  lägenheter – perfekta för både kortare och längre vistelser.
-                  Vi anpassar varje lösning efter dina behov.
+                  Upptäck smidiga och bekväma boendelösningar från möblerade
+                  lägenheter till andra flexibla boendeformer, anpassade efter ditt företags behov. Perfekta för både kortare och längre vistelser,
+                  där varje lösning skräddarsys för att just er.
                 </p>
 
                 {/* Button */}
                 <Link
                   href="/apartments/bokning"
-                  className="w-fit bg-[#47d7ac] px-8 py-3 rounded-full text-white font-semibold hover:bg-[#36b795] transition"
+                  className="w-fit bg-[#47d7ac] font-julius px-8 py-3 rounded-full text-white font-semibold hover:bg-[#36b795] transition"
                 >
                   Boka nu
                 </Link>
@@ -136,7 +136,7 @@ const AHero: React.FC = () => {
             <div className="w-full md:w-1/2 relative mt-10 md:mt-0">
               <div className="relative w-full h-full min-h-100 md:-ml-20">
                 <Image
-                  src="/co.jpg"
+                  src="/tal.png"
                   alt="Apartments"
                   fill
                   className="object-cover rounded-2xl shadow-xl"
@@ -196,32 +196,74 @@ const AHero: React.FC = () => {
               Sverige, anpassade efter företag och projekt av alla storlekar.
             </p>
 
-            {/* PREMIUM FLOATING GLASS KEYWORDS */}
-            <div className="relative w-full h-85 mt-4">
+            <div className="relative w-full h-160 md:h-150">
               {[
-                { text: "Shortstay", style: "top-6 left-6 scale-110" },
-                { text: "Longstay", style: "top-0 right-10" },
-                { text: "Entreprenadboende", style: "top-24 left-0" },
-                { text: "Projektboende", style: "top-32 right-0 scale-105" },
-                { text: "Vandrarhem", style: "bottom-20 left-10" },
-                { text: "Lägenheter", style: "bottom-10 right-16 scale-110" },
-                { text: "Lägenhetshotell", style: "top-1/2 left-1/3" },
-                { text: "Stugor", style: "bottom-0 left-1/3 scale-95" },
-                { text: "Hus", style: "top-16 left-1/2" },
-                { text: "Modulboende", style: "bottom-8 right-1/3" },
+                {
+                  text: "Shortstay",
+                  style: "top-6 left-6 scale-110",
+                  mobileStyle: "top-4 left-1/4",
+                },
+                {
+                  text: "Longstay",
+                  style: "top-0 right-10",
+                  mobileStyle: "top-20 left-3/4",
+                },
+                {
+                  text: "Entreprenadboende",
+                  style: "top-24 left-0",
+                  mobileStyle: "top-36 left-1/4",
+                },
+                {
+                  text: "Projektboende",
+                  style: "top-32 right-0 scale-105",
+                  mobileStyle: "top-48 left-3/4",
+                },
+                {
+                  text: "Vandrarhem",
+                  style: "bottom-20 left-10",
+                  mobileStyle: "top-60 left-1/4",
+                },
+                {
+                  text: "Lägenheter",
+                  style: "bottom-10 right-16 scale-110",
+                  mobileStyle: "top-72 left-3/4",
+                },
+                {
+                  text: "Lägenhetshotell",
+                  style: "top-1/2 left-1/3",
+                  mobileStyle: "top-84 left-1/2",
+                },
+                {
+                  text: "Stugor",
+                  style: "bottom-0 left-1/3 scale-95",
+                  mobileStyle: "top-96 left-1/3",
+                },
+                {
+                  text: "Hus",
+                  style: "top-16 left-1/2",
+                  mobileStyle: "top-108 left-2/3",
+                },
+                {
+                  text: "Modulboende",
+                  style: "bottom-8 right-1/3",
+                  mobileStyle: "top-120 left-1/2",
+                },
               ].map((item, i) => (
                 <div
                   key={i}
                   className={`
-        absolute ${item.style}
-        px-5 py-2 rounded-full
-        text-sm font-medium
+        absolute
+        ${item.mobileStyle} md:${item.style}
+        flex items-center justify-center
+        rounded-full h-25 w-25
+        text-[10px] font-medium
         text-gray-800
         backdrop-blur-md bg-white/60
-        border border-white/40
+        border border-[#47d7ac]
         shadow-[0_8px_30px_rgba(0,0,0,0.08)]
         hover:scale-110 hover:bg-[#47d7ac] hover:text-white
         transition duration-300
+        cursor-pointer
       `}
                 >
                   {item.text}
@@ -241,13 +283,13 @@ const AHero: React.FC = () => {
           {/* LEFT - IMAGE */}
           <div className="order-1 w-full md:w-1/2 relative rounded-2xl overflow-hidden shadow-lg m-5">
             <img
-              src="/moc/13.png" // you can replace with new image
+              src="/moc/16.png" // you can replace with new image
               alt="Apartments"
               className="w-full h-full object-cover transform hover:scale-105 transition duration-500"
             />
 
             {/* CIRCLE DISCOUNT / SERVICE */}
-            <div className="absolute top-6 left-6 w-32 h-32 md:w-40 md:h-40 rounded-full bg-white shadow-lg flex flex-col items-center justify-center text-center p-3">
+{/*             <div className="absolute top-6 left-6 w-32 h-32 md:w-40 md:h-40 rounded-full bg-white shadow-lg flex flex-col items-center justify-center text-center p-3">
               <span className="text-xs md:text-sm font-semibold text-gray-700 mb-1">
                 Upp till
               </span>
@@ -257,7 +299,7 @@ const AHero: React.FC = () => {
               <span className="text-xs md:text-sm font-semibold text-gray-700 mb-2">
                 på boende
               </span>
-            </div>
+            </div> */}
           </div>
 
           {/* RIGHT - TEXT BLOCK */}
@@ -279,7 +321,7 @@ const AHero: React.FC = () => {
             </p>
             <Link
               href="/apartments/kontakta-oss"
-              className="w-fit bg-[#3db190] px-8 py-3 rounded-full text-white font-semibold hover:opacity-90 transition"
+              className="w-fit bg-[#3db190] font-julius px-8 py-3 rounded-full text-white font-semibold hover:opacity-90 transition"
             >
               Kontakta oss
             </Link>
