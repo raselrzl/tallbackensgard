@@ -5,7 +5,7 @@ const CardForBokningPage = () => {
   const items = [
     {
       image: "/moc/18.png",
-      heading: "Lägenhetshotel",
+      heading: "LÄGENHETSHOTELL",
       text: "Lättillgängligt boende for både semester och affärsresor",
       link: "#contact",
     },
@@ -18,7 +18,7 @@ const CardForBokningPage = () => {
     {
       image: "/moc/23.png",
       heading: "Möblerade Lägenheter",
-      text: "Alt från en till fyrarumlägenheter i hela Sweden",
+      text: "Bekväma, fullt utrustade lägenheter för företag på kort och lång sikt.",
       link: "#contact",
     },
   ];

@@ -53,7 +53,7 @@ export default function VaraLagenheterPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             {[
               { title: "250+", desc: "Boendealternativ över hela Sverige" },
-              { title: "250+", desc: "Nöjda företagskunder" },
+              { title: "300+", desc: "Nöjda företagskunder" },
               { title: "24/7", desc: "Support för våra gäster" },
               { title: "✓", desc: "Flexibla företagslösningar" },
             ].map((item, idx) => (
