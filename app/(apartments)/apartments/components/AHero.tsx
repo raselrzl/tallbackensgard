@@ -196,83 +196,95 @@ const AHero: React.FC = () => {
               Sverige, anpassade efter företag och projekt av alla storlekar.
             </p>
 
-            <div className="relative w-full h-160 md:h-150">
-              {[
-                {
-                  text: "Shortstay",
-                  style: "top-6 left-6 scale-110",
-                  mobileStyle: "top-4 left-1/4",
-                },
-                {
-                  text: "Longstay",
-                  style: "top-0 right-10",
-                  mobileStyle: "top-20 left-3/4",
-                },
-                {
-                  text: "Entreprenadboende",
-                  style: "top-24 left-0",
-                  mobileStyle: "top-36 left-1/4",
-                },
-                {
-                  text: "Projektboende",
-                  style: "top-32 right-0 scale-105",
-                  mobileStyle: "top-48 left-3/4",
-                },
-                {
-                  text: "Vandrarhem",
-                  style: "bottom-20 left-10",
-                  mobileStyle: "top-60 left-1/4",
-                },
-                {
-                  text: "Lägenheter",
-                  style: "bottom-10 right-16 scale-110",
-                  mobileStyle: "top-80 left-1",
-                },
-                {
-                  text: "Lägenhetshotell",
-                  style: "top-1/2 left-1/2",
-                  mobileStyle: "top-84 left-1/2",
-                },
-                {
-                  text: "Stugor",
-                  style: "bottom-0 left-1/3 scale-95",
-                  mobileStyle: "top-96 left-1/3",
-                },
-                {
-                  text: "Hus",
-                  style: "top-16 left-1/2",
-                  mobileStyle: "top-108 left-2/3",
-                },
-                {
-                  text: "Modulboende",
-                  style: "bottom-8 right-1/3",
-                  mobileStyle: "top-120 left-8",
-                },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className={`
+            <div className="relative w-full h-[700px] md:h-[600px] mt-4">
+  {[
+    {
+      text: "Shortstay",
+      icon: "🏨",
+      style: "top-6 left-6 scale-110",
+      mobileStyle: "top-4 left-1/4",
+    },
+    {
+      text: "Longstay",
+      icon: "🛏️",
+      style: "top-0 right-10",
+      mobileStyle: "top-20 left-3/4",
+    },
+    {
+      text: "Entreprenadboende",
+      icon: "🏢",
+      style: "top-24 left-0",
+      mobileStyle: "top-36 left-1/4",
+    },
+    {
+      text: "Projektboende",
+      icon: "🛋️",
+      style: "top-32 right-0 scale-105",
+      mobileStyle: "top-48 left-3/4",
+    },
+    {
+      text: "Vandrarhem",
+      icon: "🏠",
+      style: "bottom-20 left-10",
+      mobileStyle: "top-60 left-1/4",
+    },
+    {
+      text: "Lägenheter",
+      icon: "🏘️",
+      style: "bottom-10 right-16 scale-110",
+      mobileStyle: "top-80 left-1",
+    },
+    {
+      text: "Lägenhetshotell",
+      icon: "🛎️",
+      style: "top-1/2 left-1/2",
+      mobileStyle: "top-84 left-1/2",
+    },
+    {
+      text: "Stugor",
+      icon: "🌲",
+      style: "bottom-0 left-1/3 scale-95",
+      mobileStyle: "top-96 left-1/3",
+    },
+    {
+      text: "Hus",
+      icon: "🏡",
+      style: "top-16 left-1/2",
+      mobileStyle: "top-108 left-2/3",
+    },
+    {
+      text: "Modulboende",
+      icon: "🏗️",
+      style: "bottom-8 right-1/3",
+      mobileStyle: "top-120 left-8",
+    },
+  ].map((item, i) => (
+    <div
+      key={i}
+      className={`
         absolute
         ${item.mobileStyle} md:${item.style}
-        flex items-center justify-center
+        flex flex-col items-center justify-center
         rounded-full h-26 w-26
         text-[9px] font-medium
         text-gray-800 font-julius
         backdrop-blur-md bg-white/60
-         border-[#47d7ac]
-        shadow-lg
+        shadow-lg shadow-[#47d7ac]
         hover:scale-110 hover:bg-[#47d7ac] hover:text-white
-        transition duration-300 shadow-[#47d7ac]
+        transition duration-300
         cursor-pointer
       `}
-                >
-                  {item.text}
-                </div>
-              ))}
+    >
+      {/* ICON */}
+      <span className="text-xl mb-1">{item.icon}</span>
+      {/* TEXT */}
+      <span className="text-[9px] text-center">{item.text}</span>
+    </div>
+  ))}
 
-              {/* Soft gradient glow behind */}
-              <div className="absolute inset-0 bg-linear-to-tr from-[#47d7ac]/10 via-transparent to-[#47d7ac]/10 blur-2xl pointer-events-none" />
-            </div>
+  {/* Soft gradient glow behind */}
+  <div className="absolute inset-0 bg-linear-to-tr from-[#47d7ac]/10 via-transparent to-[#47d7ac]/10 blur-2xl pointer-events-none" />
+</div>
           </motion.div>
         </div>
       </section>
