@@ -158,7 +158,7 @@ const AHero: React.FC = () => {
               src="/map18.png"
               alt="Apartments"
               width={600}
-              height={600}
+              height={400}
               priority
               className="w-full md:hidden object-contain"
             />
@@ -173,7 +173,7 @@ const AHero: React.FC = () => {
               className="
           hidden md:block 
           absolute top-0 
-          -right-4 lg:-right-4 xl:-right-80
+          -right-4 lg:-right-4 xl:-right-20
           h-full w-[120%] 
           object-cover
         "
@@ -197,7 +197,7 @@ const AHero: React.FC = () => {
               Sverige, anpassade efter företag och projekt av alla storlekar.
             </p>
 
-            <div className="relative w-full h-175 md:h-150 mt-4 bg-white">
+            <div className="relative w-full h-175 md:h-175 mt-4 bg-white">
               {[
                 {
                   text: "Shortstay",
@@ -209,7 +209,7 @@ const AHero: React.FC = () => {
                   text: "Longstay",
                   icon: "🛏️",
                   style: "top-0 right-10",
-                  mobileStyle: "top-20 left-3/4",
+                  mobileStyle: "top-10 left-3/5",
                 },
                 {
                   text: "Entreprenadboende",
@@ -227,12 +227,12 @@ const AHero: React.FC = () => {
                   text: "Vandrarhem",
                   icon: "🏠",
                   style: "bottom-20 left-10",
-                  mobileStyle: "top-60 left-1/4",
+                  mobileStyle: "top-56 left-1/4",
                 },
                 {
                   text: "Lägenheter",
                   icon: "🏘️",
-                  style: "bottom-8 right-10 scale-110",
+                  style: "bottom-10 right-30 scale-110",
                   mobileStyle: "top-90 left-1",
                 },
                 {
@@ -244,8 +244,8 @@ const AHero: React.FC = () => {
                 {
                   text: "Stugor",
                   icon: "🌲",
-                  style: "bottom-0 left-1/4 scale-95",
-                  mobileStyle: "top-145 left-1/2",
+                  style: "bottom-8 left-2/4 scale-95",
+                  mobileStyle: "top-145 left-1/4",
                 },
                 {
                   text: "Hus",
@@ -257,7 +257,7 @@ const AHero: React.FC = () => {
                   text: "Modulboende",
                   icon: "🏗️",
                   style: "bottom-8 right-1/3",
-                  mobileStyle: "top-120 left-8",
+                  mobileStyle: "top-120 left-30",
                 },
               ].map((item, i) => (
                 <div
@@ -269,7 +269,7 @@ const AHero: React.FC = () => {
         rounded-full h-26 w-26
         text-[9px] font-medium
         text-gray-800 font-julius
-        backdrop-blur-md bg-white/60
+        backdrop-blur-md bg-[#47d7ac]/10
         shadow-lg shadow-[#47d7ac]
         hover:scale-110 hover:bg-[#47d7ac] hover:text-white
         transition duration-300
