@@ -226,7 +226,7 @@ const AHero: React.FC = () => {
                 {
                   text: "Lägenheter",
                   style: "bottom-10 right-16 scale-110",
-                  mobileStyle: "top-72 left-3/4",
+                  mobileStyle: "top-80 left-1",
                 },
                 {
                   text: "Lägenhetshotell",
