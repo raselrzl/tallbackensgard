@@ -71,7 +71,7 @@ export async function POST(req: Request) {
     const userMail = {
       from: `"Support Team" <${process.env.SMTP_USER}>`,
       to: data.email,
-      subject: "We received your corporate inquiry",
+      subject: "We received your inquiry",
       html: `
         <h2>Thank you for contacting us!</h2>
         <p>Hi ${data.firstName},</p>
