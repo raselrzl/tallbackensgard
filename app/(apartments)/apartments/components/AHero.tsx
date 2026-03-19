@@ -118,8 +118,9 @@ const AHero: React.FC = () => {
                 {/* Text */}
                 <p className="text-gray-700 text-base md:text-sm leading-relaxed">
                   Upptäck smidiga och bekväma boendelösningar från möblerade
-                  lägenheter till andra flexibla boendeformer, anpassade efter ditt företags behov. Perfekta för både kortare och längre vistelser,
-                  där varje lösning skräddarsys för att just er.
+                  lägenheter till andra flexibla boendeformer, anpassade efter
+                  ditt företags behov. Perfekta för både kortare och längre
+                  vistelser, där varje lösning skräddarsys för att just er.
                 </p>
 
                 {/* Button */}
@@ -197,71 +198,71 @@ const AHero: React.FC = () => {
             </p>
 
             <div className="relative w-full h-[700px] md:h-[600px] mt-4 bg-white">
-  {[
-    {
-      text: "Shortstay",
-      icon: "🏨",
-      style: "top-6 left-6 scale-110",
-      mobileStyle: "top-4 left-1/4",
-    },
-    {
-      text: "Longstay",
-      icon: "🛏️",
-      style: "top-0 right-10",
-      mobileStyle: "top-20 left-3/4",
-    },
-    {
-      text: "Entreprenadboende",
-      icon: "🏢",
-      style: "top-24 left-0",
-      mobileStyle: "top-36 left-1/4",
-    },
-    {
-      text: "Projektboende",
-      icon: "🛋️",
-      style: "top-32 right-0 scale-105",
-      mobileStyle: "top-48 left-3/4",
-    },
-    {
-      text: "Vandrarhem",
-      icon: "🏠",
-      style: "bottom-20 left-10",
-      mobileStyle: "top-60 left-1/4",
-    },
-    {
-      text: "Lägenheter",
-      icon: "🏘️",
-      style: "bottom-10 right-16 scale-110",
-      mobileStyle: "top-80 left-1",
-    },
-    {
-      text: "Lägenhetshotell",
-      icon: "🛎️",
-      style: "top-1/2 left-1/2",
-      mobileStyle: "top-84 left-1/2",
-    },
-    {
-      text: "Stugor",
-      icon: "🌲",
-      style: "bottom-0 left-1/4 scale-95",
-      mobileStyle: "top-96 left-1/3",
-    },
-    {
-      text: "Hus",
-      icon: "🏡",
-      style: "top-16 left-1/2",
-      mobileStyle: "top-108 left-2/3",
-    },
-    {
-      text: "Modulboende",
-      icon: "🏗️",
-      style: "bottom-8 right-1/3",
-      mobileStyle: "top-120 left-8",
-    },
-  ].map((item, i) => (
-    <div
-      key={i}
-      className={`
+              {[
+                {
+                  text: "Shortstay",
+                  icon: "🏨",
+                  style: "top-6 left-6 scale-110",
+                  mobileStyle: "top-4 left-1/4",
+                },
+                {
+                  text: "Longstay",
+                  icon: "🛏️",
+                  style: "top-0 right-10",
+                  mobileStyle: "top-20 left-3/4",
+                },
+                {
+                  text: "Entreprenadboende",
+                  icon: "🏢",
+                  style: "top-24 left-0",
+                  mobileStyle: "top-36 left-1/4",
+                },
+                {
+                  text: "Projektboende",
+                  icon: "🛋️",
+                  style: "top-32 right-0 scale-105",
+                  mobileStyle: "top-48 left-3/4",
+                },
+                {
+                  text: "Vandrarhem",
+                  icon: "🏠",
+                  style: "bottom-20 left-10",
+                  mobileStyle: "top-60 left-1/4",
+                },
+                {
+                  text: "Lägenheter",
+                  icon: "🏘️",
+                  style: "bottom-10 right-16 scale-110",
+                  mobileStyle: "top-80 left-1",
+                },
+                {
+                  text: "Lägenhetshotell",
+                  icon: "🛎️",
+                  style: "top-1/2 left-1/2",
+                  mobileStyle: "top-84 left-1/2",
+                },
+                {
+                  text: "Stugor",
+                  icon: "🌲",
+                  style: "bottom-0 left-1/4 scale-95",
+                  mobileStyle: "top-96 left-1/3",
+                },
+                {
+                  text: "Hus",
+                  icon: "🏡",
+                  style: "top-16 left-1/2",
+                  mobileStyle: "top-108 left-2/3",
+                },
+                {
+                  text: "Modulboende",
+                  icon: "🏗️",
+                  style: "bottom-8 right-1/3",
+                  mobileStyle: "top-120 left-8",
+                },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className={`
         absolute
         ${item.mobileStyle} md:${item.style}
         flex flex-col items-center justify-center
@@ -274,17 +275,17 @@ const AHero: React.FC = () => {
         transition duration-300
         cursor-pointer
       `}
-    >
-      {/* ICON */}
-      <span className="text-xl mb-1">{item.icon}</span>
-      {/* TEXT */}
-      <span className="text-[9px] text-center">{item.text}</span>
-    </div>
-  ))}
+                >
+                  {/* ICON */}
+                  <span className="text-xl mb-1">{item.icon}</span>
+                  {/* TEXT */}
+                  <span className="text-[9px] text-center">{item.text}</span>
+                </div>
+              ))}
 
-  {/* Soft gradient glow behind */}
-  <div className="absolute inset-0 bg-linear-to-tr from-[#47d7ac]/10 via-transparent to-[#47d7ac]/10 blur-2xl pointer-events-none" />
-</div>
+              {/* Soft gradient glow behind */}
+              <div className="absolute inset-0 bg-linear-to-tr from-[#47d7ac]/10 via-transparent to-[#47d7ac]/10 blur-2xl pointer-events-none" />
+            </div>
           </motion.div>
         </div>
       </section>
@@ -301,7 +302,7 @@ const AHero: React.FC = () => {
             />
 
             {/* CIRCLE DISCOUNT / SERVICE */}
-{/*             <div className="absolute top-6 left-6 w-32 h-32 md:w-40 md:h-40 rounded-full bg-white shadow-lg flex flex-col items-center justify-center text-center p-3">
+            {/*             <div className="absolute top-6 left-6 w-32 h-32 md:w-40 md:h-40 rounded-full bg-white shadow-lg flex flex-col items-center justify-center text-center p-3">
               <span className="text-xs md:text-sm font-semibold text-gray-700 mb-1">
                 Upp till
               </span>
