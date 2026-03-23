@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Julius_Sans_One, Syncopate } from "next/font/google"; // import both
+import { Inter, Julius_Sans_One, Syncopate } from "next/font/google";
+import Script from "next/script"; // ✅ ADD THIS
 import "./globals.css";
-import ScrollToTop from "./components/ScrollToTop";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 
-// Julius Sans One (for button)
+// Julius Sans One
 export const julius = Julius_Sans_One({
   subsets: ["latin"],
   weight: "400",
@@ -13,7 +11,7 @@ export const julius = Julius_Sans_One({
   display: "swap",
 });
 
-// Syncopate (for global text)
+// Syncopate
 export const syncopate = Syncopate({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -21,9 +19,10 @@ export const syncopate = Syncopate({
   display: "swap",
 });
 
+// Inter
 export const inter = Inter({
   subsets: ["latin"],
-  weight: ["300","400","500","600","700", "900"],
+  weight: ["300","400","500","600","700","900"],
   variable: "--font-inter",
   display: "swap",
 });
@@ -40,12 +39,24 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* Include both font variables */}
       <body className={`${syncopate.variable} ${julius.variable} ${inter.variable} antialiased`}>
+
+        {/* ✅ Google Tag */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-799883623"
+          strategy="afterInteractive"
+        />
+        <Script id="google-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-799883623');
+          `}
+        </Script>
+
         {children}
       </body>
     </html>
   );
 }
-
-
