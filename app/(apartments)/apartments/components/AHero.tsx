@@ -120,7 +120,7 @@ const AHero: React.FC = () => {
                   Upptäck smidiga och bekväma boendelösningar från möblerade
                   lägenheter till andra flexibla boendeformer, anpassade efter
                   ditt företags behov. Perfekta för både kortare och längre
-                  vistelser, där varje lösning skräddarsys för att just er.
+                  vistelser, där varje lösning skräddarsys för just er.
                 </p>
 
                 {/* Button */}
