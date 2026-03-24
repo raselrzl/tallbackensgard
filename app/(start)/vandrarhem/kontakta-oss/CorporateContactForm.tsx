@@ -88,7 +88,7 @@ const handleSubmit = async (e: FormEvent) => {
 };
   return (
     <section className="font-julius w-full px-4 sm:px-6 md:px-8">
-      <div className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto bg-white dark:bg-gray-900 pb-8 px-4 rounded-2xl overflow-y-auto max-h-[90vh]">
+      <div className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto bg-white pb-8 px-4 rounded-2xl overflow-y-auto max-h-[90vh]">
         {/* GIF */}
         <div className="flex justify-center mb-4 sm:mb-6">
           <img
