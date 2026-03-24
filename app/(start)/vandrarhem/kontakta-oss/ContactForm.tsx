@@ -71,7 +71,7 @@ export default function ContactForm() {
 
   return (
     <section className="font-julius w-full px-4 sm:px-6 md:px-8">
-      <div className="max-w-2xl mx-auto bg-white dark:bg-gray-900 pb-8 px-4">
+      <div className="max-w-2xl mx-auto bg-white pb-8 px-4">
         {/* GIF at the top */}
         <div className="flex justify-center">
           <img
