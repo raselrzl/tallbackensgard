@@ -4,10 +4,23 @@ import BookingInfo from "./BookingInfo";
 import SearchBookingModal from "./SearchBookingModal";
 import BookButton from "@/app/components/BookButton";
 import BookingSection from "@/app/components/BookingSection";
+import Script from "next/script";
 
 export default function BokningPage() {
   return (
     <div className="bg-gray-50">
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-799883623"
+        strategy="afterInteractive"
+      />
+      <Script id="google-tag" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-799883623');
+          `}
+      </Script>
       <section className="relative w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
         {/* Background Image */}
         <video

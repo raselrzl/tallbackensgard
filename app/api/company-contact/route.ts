@@ -27,15 +27,14 @@ export async function POST(req: Request) {
     ) {
       return new Response(
         JSON.stringify({ message: "Missing required fields" }),
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     if (!data.consent) {
-      return new Response(
-        JSON.stringify({ message: "Consent required" }),
-        { status: 400 }
-      );
+      return new Response(JSON.stringify({ message: "Consent required" }), {
+        status: 400,
+      });
     }
 
     // ✅ Create transporter (Hostinger)
@@ -69,20 +68,31 @@ export async function POST(req: Request) {
 
     // ✅ Auto-reply to user
     const userMail = {
-      from: `"Support Team" <${process.env.SMTP_USER}>`,
+      from: `"Tallbackens Vandrarhem & Apartments" <${process.env.SMTP_USER}>`,
       to: data.email,
-      subject: "We received your inquiry",
+      subject: "Vi har mottagit din förfrågan",
       html: `
-        <h2>Thank you for contacting us!</h2>
-        <p>Hi ${data.firstName},</p>
-        <p>We have received your request regarding <strong>${data.customerType}</strong>.</p>
-        <p>Our team will get back to you shortly.</p>
-        <br/>
-        <p><strong>Your message:</strong></p>
-        <p>${data.message}</p>
-        <br/>
-        <p>Best regards,<br/>Support Team</p>
-      `,
+    <div style="font-family: Arial, sans-serif; color: #000;">
+  
+
+      <h2>Hej ${data.firstName}!</h2>
+      <p>Tack för ditt meddelande. Vi har påbörjat hanteringen av ditt ärende.</p>
+      <p>Vår målsättning är att återkoppla samma dag (vid förfrågan under kontorstid), annars senast påföljande arbetsdag. Vi finns tillgängliga även under helger med något begränsad svarstid.</p>
+      <p>Vi återkommer till dig inom kort!</p>
+      <p>Vill du ha direkt återkoppling, kontakta oss på: <strong>+46 10 333 35 36</strong></p>
+      <br/>
+      <p><strong>Din förfrågan gällde:</strong> <em>${data.customerType}</em></p>
+      <p><strong>Ditt meddelande:</strong></p>
+      <p>${data.message}</p>
+      <br/>
+      <p>Med vänlig hälsning,<br/>
+      Tallbackens Vandrarhem & Apartments</p>
+          <!-- Logo -->
+      <div style="text-align: center; margin-bottom: 20px;">
+        <img src="https://tallbackensgard.se/logo/logoc.png" alt="Tallbackens Vandrarhem & Apartments" width="150" style="display: block; margin: 0 auto;" />
+      </div>
+    </div>
+  `,
     };
 
     // ✅ Send emails
@@ -91,14 +101,14 @@ export async function POST(req: Request) {
 
     return new Response(
       JSON.stringify({ message: "Corporate message sent successfully" }),
-      { status: 200 }
+      { status: 200 },
     );
   } catch (error) {
     console.error("Corporate email error:", error);
 
     return new Response(
       JSON.stringify({ message: "Failed to send corporate message" }),
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

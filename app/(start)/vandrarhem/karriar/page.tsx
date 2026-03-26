@@ -2,11 +2,23 @@
 
 import { motion } from "framer-motion";
 import { Mail, Send } from "lucide-react";
+import Script from "next/script";
 
 export default function KarriarPage() {
   return (
     <div className="bg-gray-50 min-h-screen">
-
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-799883623"
+        strategy="afterInteractive"
+      />
+      <Script id="google-tag" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-799883623');
+          `}
+      </Script>
       {/* 1. Hero Section */}
       <section className="relative w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
         <video
@@ -18,7 +30,7 @@ export default function KarriarPage() {
           className="absolute top-0 left-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/60" />
-         <motion.div
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -34,10 +46,14 @@ export default function KarriarPage() {
       {/* 2. Introduction */}
       <section className="max-w-4xl mx-auto px-6 py-20 space-y-8 text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed">
         <p className="text-justify">
-          Vi tar gärna emot spontana ansökningar från drivna och serviceinriktade personer som vill bidra till en personlig och välkomnande gästupplevelse.
+          Vi tar gärna emot spontana ansökningar från drivna och
+          serviceinriktade personer som vill bidra till en personlig och
+          välkomnande gästupplevelse.
         </p>
         <p className="text-justify">
-          Oavsett om du är ny inom hotell- och servicebranschen eller har lång erfarenhet, erbjuder vår naturnära miljö en inspirerande arbetsplats där engagemang värderas högt.
+          Oavsett om du är ny inom hotell- och servicebranschen eller har lång
+          erfarenhet, erbjuder vår naturnära miljö en inspirerande arbetsplats
+          där engagemang värderas högt.
         </p>
       </section>
 
@@ -52,16 +68,22 @@ export default function KarriarPage() {
           <div className="flex items-start gap-4 mb-6">
             <Mail className="w-7 h-7 text-[#47d7ac]" />
             <div>
-              <h2 className="text-2xl font-semibold mb-2">Skicka in din ansökan</h2>
+              <h2 className="text-2xl font-semibold mb-2">
+                Skicka in din ansökan
+              </h2>
               <p className="text-gray-600">
-                Skicka ditt CV och en kort presentation av dig själv till vår e-postadress nedan. Märk gärna mejlet med <strong>“Jobbansökan”</strong>.
+                Skicka ditt CV och en kort presentation av dig själv till vår
+                e-postadress nedan. Märk gärna mejlet med{" "}
+                <strong>“Jobbansökan”</strong>.
               </p>
             </div>
           </div>
 
           {/* Email Box */}
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 flex flex-col md:flex-row items-center justify-between gap-4">
-            <span className="text-lg font-medium text-gray-800">info@tallbackensgard.se</span>
+            <span className="text-lg font-medium text-gray-800">
+              info@tallbackensgard.se
+            </span>
             <a
               href="mailto:info@tallbackensgard.se"
               className="flex items-center gap-2 bg-[#47d7ac] text-white px-6 py-3 rounded-lg hover:opacity-90 transition"
@@ -73,7 +95,8 @@ export default function KarriarPage() {
 
           <div className="mt-8 text-gray-600 leading-relaxed">
             <p>
-              Vi kontaktar dig om din profil matchar våra behov. Tveka inte att höra av dig – vi ser fram emot att lära känna dig!
+              Vi kontaktar dig om din profil matchar våra behov. Tveka inte att
+              höra av dig – vi ser fram emot att lära känna dig!
             </p>
           </div>
         </motion.div>
@@ -99,7 +122,6 @@ export default function KarriarPage() {
           </ul>
         </motion.div>
       </section>
-
     </div>
   );
 }

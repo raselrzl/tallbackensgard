@@ -2,13 +2,27 @@
 import { motion } from "framer-motion";
 import AdditionalServices from "../vara-rum/AdditionalService";
 import PaymentInfo from "./PaymentInfo";
+import Script from "next/script";
 
 export default function PaymentPage() {
   return (
     <>
+      {" "}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-799883623"
+        strategy="afterInteractive"
+      />
+      <Script id="google-tag" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-799883623');
+          `}
+      </Script>
       {/* Hero Section */}
       <section className="relative w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
-         <video
+        <video
           src="/pay.mp4" // video file in /public folder
           autoPlay
           loop
@@ -33,15 +47,12 @@ export default function PaymentPage() {
           <div className="w-16 sm:w-20 md:w-24 h-1 bg-[#47d7ac] mx-auto mt-4 sm:mt-6" />
         </motion.div>
       </section>
-
       {/* Payment Methods Section */}
       <section className="">
         <div className="max-w-7xl mx-auto px-6">
-
           <PaymentInfo />
         </div>
       </section>
-
       {/* Additional Services Section */}
       <AdditionalServices />
     </>

@@ -7,6 +7,7 @@ import ApartmentsNavbar from "./components/apartmentsNavbar";
 import FloatingButton from "./components/FloatingButton";
 import FloatingButtonForVandrarhem from "./components/FloatingButton";
 import FloatingButtonForApartment from "./components/FloatingButtonForApartment";
+import Script from "next/script";
 
 // Fonts
 export const julius = Julius_Sans_One({
@@ -42,6 +43,19 @@ export default function RootLayout({
 }) {
   return (
     <>
+      {" "}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-799883623"
+        strategy="afterInteractive"
+      />
+      <Script id="google-tag" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-799883623');
+          `}
+      </Script>
       <ApartmentsNavbar />
       {children}
       <FloatingButtonForApartment />

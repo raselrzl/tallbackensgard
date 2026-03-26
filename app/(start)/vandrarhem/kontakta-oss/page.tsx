@@ -6,6 +6,7 @@ import ContactForm from "./ContactForm"; // Private person form
 import CorporateContactForm from "./CorporateContactForm"; // Corporate form
 import ContactInfoCard from "@/app/components/ContactInfoCard";
 import VandrarhemMap from "@/app/components/MapVandrarhem";
+import Script from "next/script";
 
 export default function ContactOssPage() {
   const [activeModal, setActiveModal] = useState<
@@ -36,6 +37,19 @@ export default function ContactOssPage() {
 
   return (
     <>
+      {" "}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-799883623"
+        strategy="afterInteractive"
+      />
+      <Script id="google-tag" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-799883623');
+          `}
+      </Script>
       {/* Hero Section */}
       <section className="relative font-julius w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
         <video
@@ -59,7 +73,6 @@ export default function ContactOssPage() {
           <div className="w-16 sm:w-20 md:w-24 h-1 bg-[#47d7ac] mx-auto mt-4 sm:mt-6" />
         </motion.div>
       </section>
-
       {/* Options Section */}
       <section className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -103,7 +116,6 @@ export default function ContactOssPage() {
       <ContactInfoCard />
       {/* Map Section */}
       <VandrarhemMap />
-
       {/* Private Person Modal */}
       <AnimatePresence>
         {activeModal === "private" && (
@@ -132,7 +144,6 @@ export default function ContactOssPage() {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Corporate Modal */}
       <AnimatePresence>
         {activeModal === "corporate" && (

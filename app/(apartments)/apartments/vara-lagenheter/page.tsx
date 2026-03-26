@@ -6,10 +6,23 @@ import WhyTalbackans from "../components/WhyTalbackans";
 import ApartmentCTA from "../components/ApartmentCTA";
 import LagenhetFeatures from "../components/LagenhetFeatures";
 import CardForBokningPage from "../components/CardForBokningPage";
+import Script from "next/script";
 
 export default function VaraLagenheterPage() {
   return (
     <>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-799883623"
+        strategy="afterInteractive"
+      />
+      <Script id="google-tag" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-799883623');
+          `}
+      </Script>
       <div className="bg-white">
         {/* 1. Hero Section */}
         <section className="relative w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden">

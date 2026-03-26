@@ -2,11 +2,23 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Phone, Mail } from "lucide-react";
+import Script from "next/script";
 
 export default function AboutPage() {
   return (
     <div className="bg-gray-50 min-h-screen ">
-
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-799883623"
+        strategy="afterInteractive"
+      />
+      <Script id="google-tag" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-799883623');
+          `}
+      </Script>
       {/* 1. Hero Section */}
       <section className="relative w-full h-124 sm:h-134 2xl:h-164 flex items-center justify-center overflow-hidden bg-black">
         <video
@@ -33,20 +45,18 @@ export default function AboutPage() {
 
       {/* 2. About Us / Introduction */}
       <section className="max-w-4xl mx-auto px-6 py-20 space-y-10 text-gray-700 dark:text-gray-300 leading-relaxed text-base md:text-lg">
-
         {/* Main Heading */}
         <div className="text-left space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white font-julius">
-           Skräddarsydda boendelösningar över hela Sverige
+            Skräddarsydda boendelösningar över hela Sverige
           </h2>
-
         </div>
 
         {/* Intro Text */}
         <p className="text-justify">
-          Vi är din partner för flexibla och prisvärda boenden. Vi erbjuder allt från 
-          enskilda rum till fullt möblerade lägenheter, helt anpassade efter era 
-          specifika behov.
+          Vi är din partner för flexibla och prisvärda boenden. Vi erbjuder allt
+          från enskilda rum till fullt möblerade lägenheter, helt anpassade
+          efter era specifika behov.
         </p>
 
         {/* Section Block */}
@@ -55,10 +65,11 @@ export default function AboutPage() {
             Vi löser boendet – över hela landet
           </h4>
           <p className="text-justify">
-            Vi har specialiserat oss på att skräddarsy boendelösningar för företag över 
-            hela Sverige. Oavsett ort, omfattning eller tidsperiod hittar vi rätt 
-            lösning för er personal. Vi erbjuder smidiga och kostnadseffektiva alternativ 
-            till traditionella hotell, alltid till konkurrenskraftiga priser.
+            Vi har specialiserat oss på att skräddarsy boendelösningar för
+            företag över hela Sverige. Oavsett ort, omfattning eller tidsperiod
+            hittar vi rätt lösning för er personal. Vi erbjuder smidiga och
+            kostnadseffektiva alternativ till traditionella hotell, alltid till
+            konkurrenskraftiga priser.
           </p>
         </div>
 
@@ -68,9 +79,9 @@ export default function AboutPage() {
             Ni har önskemålen – vi gör dem till verklighet
           </h4>
           <p className="text-justify">
-            Vår verksamhet bygger på lyhördhet. Vi utgår från era unika krav och ser till 
-            att logistiken kring boendet fungerar felfritt, så att ni kan fokusera på 
-            er kärnverksamhet.
+            Vår verksamhet bygger på lyhördhet. Vi utgår från era unika krav och
+            ser till att logistiken kring boendet fungerar felfritt, så att ni
+            kan fokusera på er kärnverksamhet.
           </p>
         </div>
 
@@ -96,9 +107,7 @@ export default function AboutPage() {
             <p>Flexibla lösningar för företagsbokningar och gruppvistelser.</p>
           </div>
         </div>
-
       </section>
-
 
       {/* 4. Company Info / Ownership */}
       <section className="max-w-4xl mx-auto px-6 py-20 space-y-12 text-gray-700 dark:text-gray-300">
@@ -119,8 +128,10 @@ export default function AboutPage() {
             känner sig välkomna och trygga.
           </p>
           <p className="text-justify">
-            Vår ägare, <span className="font-semibold">Centralis Group Invest AB</span>, 
-            garanterar långsiktig stabilitet och professionalism i all verksamhet.
+            Vår ägare,{" "}
+            <span className="font-semibold">Centralis Group Invest AB</span>,
+            garanterar långsiktig stabilitet och professionalism i all
+            verksamhet.
           </p>
         </motion.div>
       </section>
@@ -165,7 +176,6 @@ export default function AboutPage() {
           </p>
         </motion.div>
       </section>
-
     </div>
   );
 }

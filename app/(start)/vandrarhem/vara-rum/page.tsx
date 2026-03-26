@@ -7,13 +7,26 @@ import WifiSection from "./Wifi";
 import AdditionalServices from "./AdditionalService";
 import PhotoGallery from "./PhotoGallery";
 import KitchenSection from "./KitchenSection";
+import Script from "next/script";
 
 export default function VaraRumPage() {
   return (
     <div className="bg-gray-100">
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-799883623"
+        strategy="afterInteractive"
+      />
+      <Script id="google-tag" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-799883623');
+          `}
+      </Script>
       <section className="relative w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
         {/* Background Image */}
-         <video
+        <video
           src="/ved7.mp4" // video file in /public folder
           autoPlay
           loop
@@ -31,7 +44,6 @@ export default function VaraRumPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white text-3xl md:text-5xl font-julius tracking-widest text-center"
-
         >
           <h1 className="text-white text-4xl md:text-6xl font-extrabold tracking-wide font-julius">
             Våra rum
@@ -47,8 +59,8 @@ export default function VaraRumPage() {
       <KitchenSection />
 
       <Lounge />
-      
-    {/*   <WifiSection /> */}
+
+      {/*   <WifiSection /> */}
       <AdditionalServices />
       <PhotoGallery />
     </div>

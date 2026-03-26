@@ -1,10 +1,23 @@
 "use client";
 import { motion } from "framer-motion";
 import { Phone, Smartphone } from "lucide-react";
+import Script from "next/script";
 
 export default function CompanyBookingPage() {
   return (
     <div className="bg-white">
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-799883623"
+        strategy="afterInteractive"
+      />
+      <Script id="google-tag" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-799883623');
+          `}
+      </Script>
       {/* Hero Section */}
       <section className="relative w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center bg-black">
         {/* Background Video */}
