@@ -26,7 +26,7 @@ const CardForBokningPage = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       <h1 className="text-2xl md:text-4xl mb-4 font-julius font-semibold text-gray-900 dark:text-white leading-snug">
-           Företagsbostäder i hela Sweden</h1>
+           Företagsbostäder i hela Sverige</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {items.map((item, index) => (
           <div key={index} className="bg-white flex flex-col">
