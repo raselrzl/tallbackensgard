@@ -33,7 +33,7 @@ export default function ContactOssPage() {
   const modalWrapperClasses =
     "fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4";
   const modalContentClasses =
-    "bg-white dark:bg-gray-900 rounded-2xl shadow-2xl w-full max-w-xl m-2 overflow-hidden relative";
+    "bg-white  rounded-2xl shadow-2xl w-full max-w-xl m-2 overflow-hidden relative";
 
   return (
     <>
@@ -135,7 +135,7 @@ export default function ContactOssPage() {
             >
               <button
                 onClick={() => setActiveModal(null)}
-                className="absolute top-4 right-4 text-gray-600 dark:text-gray-300 text-2xl sm:text-3xl"
+                className="absolute top-4 right-4 text-gray-600  text-2xl sm:text-3xl"
               >
                 ×
               </button>
@@ -163,7 +163,7 @@ export default function ContactOssPage() {
             >
               <button
                 onClick={() => setActiveModal(null)}
-                className="absolute top-4 right-4 text-gray-600 dark:text-gray-300 text-2xl sm:text-3xl"
+                className="absolute top-4 right-4 text-gray-600  text-2xl sm:text-3xl"
               >
                 ×
               </button>

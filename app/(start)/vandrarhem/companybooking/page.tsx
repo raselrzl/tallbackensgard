@@ -50,10 +50,10 @@ export default function CompanyBookingPage() {
 
       {/* Information & Contact Section */}
       <section className="max-w-5xl mx-auto px-6 py-20">
-        <div className="space-y-16 text-gray-700 dark:text-gray-300 leading-relaxed text-base md:text-lg">
+        <div className="space-y-16 text-gray-700  leading-relaxed text-base md:text-lg">
           {/* Information */}
           <div>
-            <h2 className="text-2xl md:text-3xl font-julius tracking-wide mb-4 text-gray-900 dark:text-white">
+            <h2 className="text-2xl md:text-3xl font-julius tracking-wide mb-4 text-gray-900 ">
               Information
             </h2>
             <div className="w-16 h-0.5 bg-[#47d7ac] mb-6 rounded-full" />
@@ -75,7 +75,7 @@ export default function CompanyBookingPage() {
 
           {/* Contact */}
           <div>
-            <h2 className="text-2xl md:text-3xl font-julius tracking-wide mb-4 text-gray-900 dark:text-white">
+            <h2 className="text-2xl md:text-3xl font-julius tracking-wide mb-4 text-gray-900 ">
               Kontakt
             </h2>
             <div className="w-16 h-0.5 bg-[#47d7ac] mb-6 rounded-full" />

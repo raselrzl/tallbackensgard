@@ -23,11 +23,11 @@ export default function ContactCardWithImage() {
           
           {/* Top Content */}
           <div>
-            <h2 className="text-2xl md:text-4xl mb-4 font-julius font-semibold text-gray-900 dark:text-white leading-snug">
+            <h2 className="text-2xl md:text-4xl mb-4 font-julius font-semibold text-gray-900 leading-snug">
               Varje förfrågan är unik.
             </h2>
 
-            <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base max-w-lg mb-8">
+            <p className="text-gray-600 text-sm md:text-base max-w-lg mb-8">
               Kontakta oss direkt så skapar vi en skräddarsydd och optimal
               boendelösning för just dina behov.
             </p>
@@ -45,7 +45,7 @@ export default function ContactCardWithImage() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="rounded-lg bg-white dark:bg-gray-900 text-black dark:text-white shadow-md shadow-[#47d7ac]/30 py-6 px-4 flex flex-col items-center justify-center text-center gap-2 hover:scale-[1.03] transition group"
+                  className="rounded-lg bg-white  text-black shadow-md shadow-[#47d7ac]/30 py-6 px-4 flex flex-col items-center justify-center text-center gap-2 hover:scale-[1.03] transition group"
                 >
                   {/* Icon */}
                   <div className="text-[#47d7ac] group-hover:scale-110 transition">

@@ -43,7 +43,7 @@ export default function SearchBookingModal() {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-white dark:bg-gray-900 rounded-lg shadow-xl max-w-xs p-6 relative"
+              className="bg-white  rounded-lg shadow-xl max-w-xs p-6 relative"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
@@ -52,16 +52,16 @@ export default function SearchBookingModal() {
               {/* Close Button */}
               <button
                 onClick={() => setOpen(false)}
-                className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 dark:hover:text-white"
+                className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 "
               >
                 <X className="w-6 h-6" />
               </button>
 
               {/* Modal Header */}
-              <h3 className="text-2xl font-julius font-bold text-gray-900 dark:text-white mb-4 text-center">
+              <h3 className="text-2xl font-julius font-bold text-gray-900  mb-4 text-center">
                 Sök befintlig bokning
               </h3>
-              <p className="text-gray-700 dark:text-gray-300 text-center mb-6">
+              <p className="text-gray-700  text-center mb-6">
                 Fyll i ditt bokningsnummer och efternamn för att hitta din bokning.
               </p>
 
@@ -73,7 +73,7 @@ export default function SearchBookingModal() {
                   placeholder="Bokningsnummer"
                   value={formData.bookingNumber}
                   onChange={handleChange}
-                  className="w-full bg-gray-100 dark:bg-gray-800 rounded-xs p-3 outline-none text-gray-900 dark:text-white"
+                  className="w-full bg-gray-100  rounded-xs p-3 outline-none text-gray-900 "
                   required
                 />
                 <input
@@ -82,7 +82,7 @@ export default function SearchBookingModal() {
                   placeholder="Efternamn"
                   value={formData.lastName}
                   onChange={handleChange}
-                  className="w-full bg-gray-100 dark:bg-gray-800 rounded-xs p-3 outline-none text-gray-900 dark:text-white"
+                  className="w-full bg-gray-100  rounded-xs p-3 outline-none text-gray-900 "
                   required
                 />
                 <button

@@ -39,7 +39,7 @@ export default function BookingInfo() {
 
   return (
     <section className="max-w-7xl mx-auto p-4 md:p-8 space-y-6 mb-10 bg-gray-50">
-      <h2 className="text-2xl md:text-3xl font-julius font-bold text-gray-900 dark:text-white text-center mb-6">
+      <h2 className="text-2xl md:text-3xl font-julius font-bold text-gray-900  text-center mb-6">
         Bokningsinformation
       </h2>
 
@@ -47,7 +47,7 @@ export default function BookingInfo() {
         {infoData.map((item, idx) => (
           <div
             key={idx}
-            className="relative bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform"
+            className="relative bg-white  rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform"
           >
             {/* Colored accent bar */}
             <div
@@ -63,10 +63,10 @@ export default function BookingInfo() {
 
               {/* Heading + Bullet Points */}
               <div>
-                <h3 className="font-julius font-semibold text-gray-900 dark:text-white mb-2">
+                <h3 className="font-julius font-semibold text-gray-900  mb-2">
                   {item.title}
                 </h3>
-                <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm space-y-1">
+                <ul className="list-disc list-inside text-gray-700  text-sm space-y-1">
                   {item.points.map((point, i) => (
                     <li key={i}>{point}</li>
                   ))}

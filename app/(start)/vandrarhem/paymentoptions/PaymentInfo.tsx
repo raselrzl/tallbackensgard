@@ -95,7 +95,7 @@ export default function PaymentInfo() {
         {paymentMethods.map((method, idx) => (
           <div
             key={idx}
-            className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300"
+            className="bg-white  rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300"
           >
             {/* Icon / Logo */}
             <div
@@ -105,13 +105,13 @@ export default function PaymentInfo() {
             </div>
 
             {/* Heading */}
-            <h3 className="font-julius text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            <h3 className="font-julius text-lg md:text-xl font-semibold text-gray-900  mb-2">
               {method.title}
             </h3>
 
             {/* Dotted Points */}
             <ul
-  className={`text-gray-700 dark:text-gray-300 text-sm md:text-base space-y-2 text-left ${
+  className={`text-gray-700  text-sm md:text-base space-y-2 text-left ${
     method.noListStyle ? "" : "list-disc list-inside"
   }`}
 >  {method.points.map((point, i) => (

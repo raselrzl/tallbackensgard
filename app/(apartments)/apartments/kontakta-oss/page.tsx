@@ -136,7 +136,7 @@ export default function ApartmentContactOssPage() {
             >
               <button
                 onClick={() => setActiveModal(null)}
-                className="absolute top-4 right-4 text-gray-600 dark:text-gray-300 text-2xl sm:text-3xl"
+                className="absolute top-4 right-4 text-gray-600  text-2xl sm:text-3xl"
               >
                 ×
               </button>
@@ -165,7 +165,7 @@ export default function ApartmentContactOssPage() {
             >
               <button
                 onClick={() => setActiveModal(null)}
-                className="absolute top-4 right-4 text-gray-600 dark:text-gray-300 text-2xl sm:text-3xl"
+                className="absolute top-4 right-4 text-gray-600  text-2xl sm:text-3xl"
               >
                 ×
               </button>

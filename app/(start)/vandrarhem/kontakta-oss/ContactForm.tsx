@@ -85,59 +85,59 @@ export default function ContactForm() {
           className="space-y-2 md:space-y-6"
           onSubmit={handleSubmit}
         >
-          <div className="flex items-center gap-3 bg-gray-100 dark:bg-gray-800 rounded-xl p-3">
-            <User className="w-5 h-5 text-gray-500 dark:text-gray-300" />
+          <div className="flex items-center gap-3 bg-gray-100  rounded-xl p-3">
+            <User className="w-5 h-5 text-gray-500 " />
             <input
               type="text"
               name="name"
               placeholder="Namn"
               value={formData.name}
               onChange={handleChange}
-              className="flex-1 bg-transparent outline-none text-gray-900 dark:text-white"
+              className="flex-1 bg-transparent outline-none text-gray-900 "
               required
             />
           </div>
 
-          <div className="flex items-center gap-3 bg-gray-100 dark:bg-gray-800 rounded-xl p-3">
-            <Mail className="w-5 h-5 text-gray-500 dark:text-gray-300" />
+          <div className="flex items-center gap-3 bg-gray-100  rounded-xl p-3">
+            <Mail className="w-5 h-5 text-gray-500 " />
             <input
               type="email"
               name="email"
               placeholder="Email"
               value={formData.email}
               onChange={handleChange}
-              className="flex-1 bg-transparent outline-none text-gray-900 dark:text-white"
+              className="flex-1 bg-transparent outline-none text-gray-900 "
               required
             />
           </div>
 
-          <div className="flex items-center gap-3 bg-gray-100 dark:bg-gray-800 rounded-xl p-3">
-            <Edit3 className="w-5 h-5 text-gray-500 dark:text-gray-300" />
+          <div className="flex items-center gap-3 bg-gray-100  rounded-xl p-3">
+            <Edit3 className="w-5 h-5 text-gray-500 " />
             <input
               type="text"
               name="subject"
               placeholder="Ämne"
               value={formData.subject}
               onChange={handleChange}
-              className="flex-1 bg-transparent outline-none text-gray-900 dark:text-white"
+              className="flex-1 bg-transparent outline-none text-gray-900 "
               required
             />
           </div>
 
-          <div className="flex items-start gap-3 bg-gray-100 dark:bg-gray-800 rounded-xl p-3">
-            <MessageCircle className="w-5 h-5 text-gray-500 dark:text-gray-300 mt-1" />
+          <div className="flex items-start gap-3 bg-gray-100  rounded-xl p-3">
+            <MessageCircle className="w-5 h-5 text-gray-500  mt-1" />
             <textarea
               name="message"
               placeholder="Meddelande"
               value={formData.message}
               onChange={handleChange}
               rows={5}
-              className="flex-1 bg-transparent outline-none text-gray-900 dark:text-white resize-none"
+              className="flex-1 bg-transparent outline-none text-gray-900  resize-none"
               required
             />
           </div>
 
-          <label className="flex items-center gap-2 text-gray-700 dark:text-gray-300 text-[10px] ">
+          <label className="flex items-center gap-2 text-gray-700  text-[10px] ">
             <input
               type="checkbox"
               name="consent"
@@ -149,13 +149,13 @@ export default function ContactForm() {
           </label>
 
           <div className="flex items-center gap-3">
-            <span className="text-gray-700 dark:text-gray-300 text-xs">4 + 1 =</span>
+            <span className="text-gray-700  text-xs">4 + 1 =</span>
             <input
               type="text"
               name="captcha"
               value={formData.captcha}
               onChange={handleChange}
-              className="flex-1 bg-gray-100 dark:bg-gray-800 rounded-xl p-3 outline-none text-gray-900 dark:text-white text-xs"
+              className="flex-1 bg-gray-100  rounded-xl p-3 outline-none text-gray-900  text-xs"
               required
             />
           </div>

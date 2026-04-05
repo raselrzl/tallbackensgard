@@ -44,7 +44,7 @@ export default function KarriarPage() {
       </section>
 
       {/* 2. Introduction */}
-      <section className="max-w-4xl mx-auto px-6 py-20 space-y-8 text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed">
+      <section className="max-w-4xl mx-auto px-6 py-20 space-y-8 text-gray-700  text-base md:text-lg leading-relaxed">
         <p className="text-justify">
           Vi tar gärna emot spontana ansökningar från drivna och
           serviceinriktade personer som vill bidra till en personlig och
@@ -103,14 +103,14 @@ export default function KarriarPage() {
       </section>
 
       {/* 4. Why Work With Us */}
-      <section className="max-w-4xl mx-auto px-6 py-20 space-y-12 text-gray-700 dark:text-gray-300">
+      <section className="max-w-4xl mx-auto px-6 py-20 space-y-12 text-gray-700 ">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="flex flex-col"
         >
-          <h3 className="text-2xl font-julius font-bold mb-2 text-gray-900 dark:text-white">
+          <h3 className="text-2xl font-julius font-bold mb-2 text-gray-900 ">
             Varför jobba hos oss?
           </h3>
           <div className="w-16 h-0.5 bg-[#47d7ac] mb-4 rounded-full" />

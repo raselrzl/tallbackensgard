@@ -101,7 +101,7 @@ const handleSubmit = async (e: FormEvent) => {
         <h2 className="text-2xl sm:text-3xl font-bold text-center mb-2">
           Kontakta oss
         </h2>
-        <p className="text-center text-gray-600 dark:text-gray-300 mb-6 text-sm sm:text-base">
+        <p className="text-center text-gray-600  mb-6 text-sm sm:text-base">
           Lämna din kontaktinformation och beskriv ditt boendebehov!
         </p>
 
@@ -113,7 +113,7 @@ const handleSubmit = async (e: FormEvent) => {
               placeholder="Förnamn"
               value={formData.firstName}
               onChange={handleChange}
-              className="w-full p-3 rounded-xl bg-gray-100 dark:bg-gray-800 outline-none text-gray-900 dark:text-white"
+              className="w-full p-3 rounded-xl bg-gray-100  outline-none text-gray-900 "
               required
             />
             <input
@@ -122,7 +122,7 @@ const handleSubmit = async (e: FormEvent) => {
               placeholder="Efternamn"
               value={formData.lastName}
               onChange={handleChange}
-              className="w-full p-3 rounded-xl bg-gray-100 dark:bg-gray-800 outline-none text-gray-900 dark:text-white"
+              className="w-full p-3 rounded-xl bg-gray-100  outline-none text-gray-900 "
               required
             />
           </div>
@@ -134,7 +134,7 @@ const handleSubmit = async (e: FormEvent) => {
               placeholder="Email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full p-3 rounded-xl bg-gray-100 dark:bg-gray-800 outline-none text-gray-900 dark:text-white"
+              className="w-full p-3 rounded-xl bg-gray-100  outline-none text-gray-900 "
               required
             />
             <input
@@ -143,7 +143,7 @@ const handleSubmit = async (e: FormEvent) => {
               placeholder="Phone Number"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full p-3 rounded-xl bg-gray-100 dark:bg-gray-800 outline-none text-gray-900 dark:text-white"
+              className="w-full p-3 rounded-xl bg-gray-100  outline-none text-gray-900 "
               required
             />
           </div>
@@ -153,7 +153,7 @@ const handleSubmit = async (e: FormEvent) => {
               name="customerType"
               value={formData.customerType}
               onChange={handleChange}
-              className="w-full p-3 rounded-xl bg-gray-100 dark:bg-gray-800 outline-none text-gray-900 dark:text-white"
+              className="w-full p-3 rounded-xl bg-gray-100  outline-none text-gray-900 "
               required
             >
               <option value="">Kundtyp </option>
@@ -167,7 +167,7 @@ const handleSubmit = async (e: FormEvent) => {
               value={formData.country}
               onChange={handleChange}
               placeholder="Land"
-              className="w-full p-3 rounded-xl bg-gray-100 dark:bg-gray-800 outline-none text-gray-900 dark:text-white"
+              className="w-full p-3 rounded-xl bg-gray-100  outline-none text-gray-900 "
               required
             />
           </div>
@@ -179,11 +179,11 @@ const handleSubmit = async (e: FormEvent) => {
             onChange={handleChange}
             rows={5}
             maxLength={1000}
-            className="w-full p-3 rounded-xl bg-gray-100 dark:bg-gray-800 outline-none text-gray-900 dark:text-white resize-none"
+            className="w-full p-3 rounded-xl bg-gray-100  outline-none text-gray-900  resize-none"
             required
           />
 
-          <label className="flex items-center gap-2 text-gray-700 dark:text-gray-300 text-[10px]">
+          <label className="flex items-center gap-2 text-gray-700  text-[10px]">
             <input
               type="checkbox"
               name="consent"

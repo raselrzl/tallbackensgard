@@ -44,10 +44,10 @@ export default function AboutPage() {
       </section>
 
       {/* 2. About Us / Introduction */}
-      <section className="max-w-4xl mx-auto px-6 py-20 space-y-10 text-gray-700 dark:text-gray-300 leading-relaxed text-base md:text-lg">
+      <section className="max-w-4xl mx-auto px-6 py-20 space-y-10 text-gray-700  leading-relaxed text-base md:text-lg">
         {/* Main Heading */}
         <div className="text-left space-y-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white font-julius">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900  font-julius">
             Skräddarsydda boendelösningar över hela Sverige
           </h2>
         </div>
@@ -61,7 +61,7 @@ export default function AboutPage() {
 
         {/* Section Block */}
         <div className="space-y-4">
-          <h4 className="text-xl font-semibold text-gray-900 dark:text-white font-julius">
+          <h4 className="text-xl font-semibold text-gray-900  font-julius">
             Vi löser boendet – över hela landet
           </h4>
           <p className="text-justify">
@@ -75,7 +75,7 @@ export default function AboutPage() {
 
         {/* Section Block */}
         <div className="space-y-4">
-          <h4 className="text-xl font-semibold text-gray-900 dark:text-white font-julius">
+          <h4 className="text-xl font-semibold text-gray-900  font-julius">
             Ni har önskemålen – vi gör dem till verklighet
           </h4>
           <p className="text-justify">
@@ -110,14 +110,14 @@ export default function AboutPage() {
       </section>
 
       {/* 4. Company Info / Ownership */}
-      <section className="max-w-4xl mx-auto px-6 py-20 space-y-12 text-gray-700 dark:text-gray-300">
+      <section className="max-w-4xl mx-auto px-6 py-20 space-y-12 text-gray-700 ">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="flex flex-col"
         >
-          <h2 className="text-2xl md:text-3xl font-julius font-bold text-gray-900 dark:text-white">
+          <h2 className="text-2xl md:text-3xl font-julius font-bold text-gray-900 ">
             Vår verksamhet
           </h2>
           <div className="w-16 h-0.5 bg-[#47d7ac] mb-4 rounded-full" />
@@ -137,14 +137,14 @@ export default function AboutPage() {
       </section>
 
       {/* 5. Contact Info */}
-      <section className="max-w-4xl mx-auto px-6 py-20 space-y-12 text-gray-700 dark:text-gray-300">
+      <section className="max-w-4xl mx-auto px-6 py-20 space-y-12 text-gray-700 ">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="flex flex-col"
         >
-          <h2 className="text-2xl md:text-3xl font-julius font-bold text-gray-900 dark:text-white">
+          <h2 className="text-2xl md:text-3xl font-julius font-bold text-gray-900 ">
             Kontaktinformation
           </h2>
           <div className="w-16 h-0.5 bg-[#47d7ac] mb-4 rounded-full" />

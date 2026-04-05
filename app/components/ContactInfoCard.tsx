@@ -4,8 +4,8 @@ import { MapPin, Phone, Mail, PhoneCall } from "lucide-react";
 
 export default function ContactInfoCard() {
   return (
-    <section className="w-full flex items-center justify-center bg-gray-50 dark:bg-gray-900 ">
-      <div className="max-w-5xl w-full dark:bg-gray-800 rounded-2xl px-4 sm:px-6 lg:px-8 pb-8 mb-10 mx-3 font-julius text-black dark:text-white shadow-md border border-gray-200 space-y-6 bg-white">
+    <section className="w-full flex items-center justify-center bg-gray-50  ">
+      <div className="max-w-5xl w-full  rounded-2xl px-4 sm:px-6 lg:px-8 pb-8 mb-10 mx-3 font-julius text-black  shadow-md border border-gray-200 space-y-6 bg-white">
         
         {/* Logo */}
         <div className="flex justify-center mb-2">
